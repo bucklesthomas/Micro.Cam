@@ -94,10 +94,9 @@ var SCORES = [
         return { badge: 'Definite', level: 'high', text: 'Definite IE — ' + summary };
       if ((c.major === 1 && c.minor >= 1) || c.minor >= 3)
         return { badge: 'Possible', level: 'mid', text: 'Possible IE — ' + summary };
-      return { badge: 'Not met', level: 'low', text: 'Criteria for possible IE not met — ' + summary +
-               '. "Rejected" also needs a firm alternative diagnosis, resolution with ≤ 4 days of antibiotics, or no IE at surgery/autopsy.' };
+      return { badge: 'Not met', level: 'low', text: 'Criteria for possible IE not met — ' + summary };
     },
-    note: 'Blood culture major criteria count once in total; echo/regurgitation major criteria count once in total. Single positive cultures for coagulase-negative staphylococci and organisms that do not cause IE are excluded from the minor microbiology criterion.',
+    note: 'IE is only "rejected" with a firm alternative diagnosis, resolution with ≤ 4 days of antibiotics, or no IE at surgery/autopsy after ≤ 4 days of antibiotics. Blood culture major criteria count once in total; echo/regurgitation major criteria count once in total. Single positive cultures for coagulase-negative staphylococci and organisms that do not cause IE are excluded from the minor microbiology criterion.',
     ref: 'Li JS et al. Clin Infect Dis 2000. See also the 2023 Duke-ISCVID criteria (Fowler VG et al. Clin Infect Dis 2023)'
   }
 ];
