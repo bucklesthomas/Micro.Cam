@@ -257,3 +257,8 @@ a:hover { text-decoration: underline; }
   .pico > div { grid-template-columns: 1fr; gap: 4px; }
   .cite { margin-left: 0; width: 100%; }
 }
+
+/* Links page: stack cards in columns so each sits directly under the one above */
+.grid.masonry { display: block; columns: 3 300px; column-gap: 14px; }
+.grid.masonry > .card { break-inside: avoid; margin-bottom: 14px; display: block; }
+.grid.masonry > .card[hidden] { display: none; }
