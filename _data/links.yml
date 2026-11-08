@@ -127,6 +127,10 @@
     - name: MDCalc
       url: "https://www.mdcalc.com/"
       tags: scores calculators
+    - name: Endocarditis therapy guide (this site)
+      url: "/endocarditis/"
+      note: Step-by-step antibiotic choice, based on ESC 2023
+      tags: ie infective endocarditis antibiotics regimen treatment staphylococcus streptococcus enterococcus hacek empirical esc
     - name: Key ID & micro trials (this site)
       url: "/trials/"
       note: 60 trials in PICO format with UK takeaways

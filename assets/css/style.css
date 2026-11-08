@@ -359,3 +359,72 @@ fieldset.row.choice:first-child { border-top: 0; }
 .opt.toggle:has(input:checked) .tick::after { opacity: 1; }
 .opt.toggle:has(input:checked) .opt-text { font-weight: 400; color: var(--ink); }
 .score.wide form { gap: 18px 24px; }
+
+/* ── Endocarditis therapy guide ─────────────────────────── */
+.ie-wrap { max-width: 860px; }
+.ie-disclaimer {
+  margin: 0 0 18px; padding: 10px 14px; font-size: 13.5px; color: var(--muted);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.ie { display: flex; flex-direction: column; gap: 10px; }
+.ie-done {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px;
+  padding: 10px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.ie-q { color: var(--muted); font-size: 14px; }
+.ie-ans {
+  display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  font: inherit; font-size: 14.5px; font-weight: 700; color: var(--accent-ink);
+  background: var(--accent-soft); border: 1.5px solid var(--accent); border-radius: 8px; padding: 6px 10px;
+}
+.ie-change { font-size: 11px; font-weight: 400; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.ie-ans:hover .ie-change { color: var(--accent-ink); text-decoration: underline; }
+.ie-step {
+  margin: 0; padding: 16px 18px 18px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--accent); border-radius: var(--radius);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.ie-step legend { float: left; width: 100%; padding: 0; margin: 0 0 12px; font-size: 18px; font-weight: 700; text-wrap: balance; }
+.ie-opts { clear: both; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 8px; }
+.ie-opt { font: inherit; color: var(--ink); min-height: 64px; padding: 12px 14px; align-items: flex-start; justify-content: center; text-align: left; gap: 4px; }
+.ie-opt .opt-text { font-size: 15.5px; font-weight: 700; }
+.ie-sub { font-size: 12.5px; line-height: 1.4; color: var(--muted); }
+.ie-opt:hover { background: var(--accent-soft); }
+.ie-opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.ie-result {
+  padding: 18px 20px 16px; background: var(--surface); border: 1.5px solid var(--accent); border-radius: var(--radius);
+  box-shadow: 0 0 0 3px var(--accent-soft); outline: none;
+}
+.ie-eyebrow { margin: 0 0 2px; font-size: 11px; font-weight: 700; color: var(--accent-ink); text-transform: uppercase; letter-spacing: 0.07em; }
+.ie-result h2 { margin: 0 0 12px; font-size: 20px; line-height: 1.3; text-wrap: balance; }
+.ie-verify {
+  margin: 0 0 12px; padding: 8px 12px; font-size: 13px; line-height: 1.45;
+  color: var(--mid); background: var(--mid-bg); border-radius: 7px;
+}
+.ie-regimen { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.ie-rname { margin: 0; padding: 7px 12px; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); background: var(--bg); border-bottom: 1px solid var(--line); }
+.ie-regimen ul { list-style: none; margin: 0; padding: 0; }
+.ie-regimen li {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "drug dur" "dose dose";
+  gap: 2px 12px; padding: 10px 12px; border-top: 1px solid var(--line);
+}
+.ie-regimen li:first-child { border-top: 0; }
+.ie-drug { grid-area: drug; font-weight: 700; font-size: 15px; }
+.ie-dose { grid-area: dose; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+.ie-dur {
+  grid-area: dur; align-self: start; white-space: nowrap; font-size: 12.5px; font-weight: 700;
+  color: var(--accent-ink); background: var(--accent-soft); padding: 2px 8px; border-radius: 999px;
+}
+.ie-or { margin: 6px 0; text-align: center; font-size: 12px; font-style: italic; color: var(--muted); }
+.ie-notes { margin: 14px 0 0; padding-left: 18px; font-size: 13.5px; line-height: 1.55; display: flex; flex-direction: column; gap: 5px; }
+.ie-ref { margin: 12px 0 0; font-size: 12px; color: var(--muted); }
+.ie-actions { display: flex; justify-content: flex-start; }
+.ie-source { margin: 22px 0 0; font-size: 12.5px; color: var(--muted); }
+
+/* Four nav tabs: let them scroll sideways on narrow phones rather than squash */
+@media (max-width: 480px) {
+  .topbar nav { overflow-x: auto; scrollbar-width: none; min-width: 0; flex: 1 1 auto; justify-content: flex-end; }
+  .topbar nav::-webkit-scrollbar { display: none; }
+  .topbar nav a { padding: 6px 9px; font-size: 14px; white-space: nowrap; flex: none; }
+}
