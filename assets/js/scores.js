@@ -2,10 +2,10 @@
  * Score definitions. To add a points-based score, copy the CURB-65 block.
  *
  * items:
- *   { label, pts }                         → checkbox worth pts
+ *   { label, pts }                         → selectable box worth pts
  *   { label, options: [[text, pts], ...] } → a row of selectable boxes, one per option
  *   { heading: 'text' }                    → small subheading inside the card
- *   { label, group: 'major' }              → checkbox counted by group (used by Duke)
+ *   { label, group: 'major' }              → selectable box counted by group (used by Duke)
  *
  * Points scores use `bands`: the first band with total <= max is shown.
  * Classification tools (like Duke) use `evaluate(counts)` instead, returning
@@ -126,12 +126,14 @@ var SCORES = [
                   '</span><span class="opt-pts">+' + o[1] + '</span></label>';
         });
         html += '</div></fieldset>';
-      } else if (it.group) {
-        html += '<label class="row" for="' + fid + '"><input type="checkbox" id="' + fid + '" data-group="' + it.group + '"' +
-                (it.key ? ' data-key="' + it.key + '"' : '') + '><span>' + it.label + '</span></label>';
       } else {
-        html += '<label class="row" for="' + fid + '"><input type="checkbox" id="' + fid + '" value="' + it.pts + '">' +
-                '<span>' + it.label + '</span><b>+' + it.pts + '</b></label>';
+        // Yes/no criterion: the whole criterion is one selectable box
+        var attrs = it.group
+          ? ' data-group="' + it.group + '"' + (it.key ? ' data-key="' + it.key + '"' : '')
+          : ' value="' + it.pts + '"';
+        html += '<label class="opt toggle" for="' + fid + '"><input type="checkbox" id="' + fid + '"' + attrs + '>' +
+                '<span class="tick" aria-hidden="true"></span><span class="opt-text">' + it.label + '</span>' +
+                (it.group ? '' : '<span class="opt-pts">+' + it.pts + '</span>') + '</label>';
       }
     });
     html += (opened ? '</div>' : '') + '</form><div class="result" aria-live="polite"><span class="total">0</span><span class="interp"></span></div>' +

@@ -334,3 +334,28 @@ fieldset.row.choice:first-child { border-top: 0; }
   .ss-kbd { display: none; }
   html { scroll-padding-top: 120px; }
 }
+
+/* Yes/no criteria as selectable boxes (CURB-65, qSOFA, Duke) */
+.score form { gap: 6px; }
+.group { gap: 6px; }
+.subhead { margin-bottom: 2px; }
+.score form > .subhead:not(:first-child), .group .subhead { margin-top: 0; }
+.opt.toggle {
+  flex-direction: row; align-items: center; justify-content: flex-start; gap: 11px;
+  min-height: 46px; padding: 10px 12px; text-align: left;
+}
+.opt.toggle .opt-text { flex: 1; min-width: 0; font-size: 14px; line-height: 1.45; }
+.opt.toggle .opt-pts { flex: none; font-size: 12px; }
+.tick {
+  flex: none; width: 20px; height: 20px; border-radius: 50%;
+  border: 1.5px solid var(--line); background: var(--surface);
+  display: grid; place-items: center;
+}
+.tick::after {
+  content: ""; width: 6px; height: 10px; margin-top: -2px;
+  border: solid var(--surface); border-width: 0 2px 2px 0; transform: rotate(45deg); opacity: 0;
+}
+.opt.toggle:has(input:checked) .tick { background: var(--accent); border-color: var(--accent); }
+.opt.toggle:has(input:checked) .tick::after { opacity: 1; }
+.opt.toggle:has(input:checked) .opt-text { font-weight: 400; color: var(--ink); }
+.score.wide form { gap: 18px 24px; }
