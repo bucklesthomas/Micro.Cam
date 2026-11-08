@@ -1,0 +1,56 @@
+---
+layout: default
+title: Trials
+permalink: /trials/
+scripts:
+  - /assets/js/trials.js
+---
+{% assign t = site.data.trials %}
+<h1 class="page-title">Key trials</h1>
+<p class="lede">{{ t.intro }}</p>
+
+<div class="pico-legend" aria-label="Colour key">
+  <span class="pico-key p"><b>P</b> Population</span>
+  <span class="pico-key i"><b>I</b> Intervention</span>
+  <span class="pico-key c"><b>C</b> Comparison</span>
+  <span class="pico-key o"><b>O</b> Outcome</span>
+  <span class="pico-key uk"><b>UK</b> UK-led trial</span>
+</div>
+
+<details class="caveats">
+  <summary>Before you quote a number</summary>
+  <ul>{% for c in t.caveats %}<li>{{ c }}</li>{% endfor %}</ul>
+</details>
+
+<div class="search">
+  <input id="tq" type="search" placeholder="Filter trials… e.g. SAB, oral, CAP, fungal (press / to focus)" autocomplete="off" aria-label="Filter trials">
+  <span id="tcount" class="count" aria-live="polite"></span>
+</div>
+
+<nav class="jump" aria-label="Topics">
+  {% for s in t.sections %}<a href="#{{ s.id }}">{{ s.short }} <span class="n">{{ s.trials | size }}</span></a>{% endfor %}
+</nav>
+
+{% for s in t.sections %}
+<section class="topic" id="{{ s.id }}">
+  <header class="topic-head">
+    <h2>{{ s.title }}</h2>
+    {% for l in s.lead %}<p>{{ l }}</p>{% endfor %}
+  </header>
+  <div class="trials">
+  {% for tr in s.trials %}
+    <article class="trial" data-search="{{ tr.name | downcase }} {{ tr.cite | downcase }} {{ s.title | downcase }} {{ tr.p | strip_html | downcase }} {{ tr.i | strip_html | downcase }} {{ tr.c | strip_html | downcase }} {{ tr.o | strip_html | downcase }} {{ tr.takeaway | strip_html | downcase }}{% if tr.uk %} uk{% endif %}">
+      <h3><span class="tname">{{ tr.name }}</span>{% if tr.uk %} <span class="uk-tag" title="UK-led trial">UK</span>{% endif %}<span class="cite">{{ tr.cite }}</span></h3>
+      <dl class="pico">
+        <div class="p"><dt><b>P</b><span>Population</span></dt><dd>{{ tr.p }}</dd></div>
+        <div class="i"><dt><b>I</b><span>Intervention</span></dt><dd>{{ tr.i }}</dd></div>
+        <div class="c"><dt><b>C</b><span>Comparison</span></dt><dd>{{ tr.c }}</dd></div>
+        <div class="o"><dt><b>O</b><span>Outcome</span></dt><dd>{{ tr.o }}</dd></div>
+      </dl>
+      <p class="takeaway"><span>UK takeaway</span>{{ tr.takeaway }}</p>
+    </article>
+  {% endfor %}
+  </div>
+</section>
+{% endfor %}
+<p id="tempty" class="empty" hidden>No trials match that filter.</p>

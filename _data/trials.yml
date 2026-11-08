@@ -1,0 +1,556 @@
+# Generated from the "Key ID & Microbiology Trials for UK Practice" doc.
+# Edit trials here: each has name, cite, uk (true/false), p, i, c, o, takeaway.
+intro: These are the trials that shape day-to-day UK infection practice and come up in FRCPath and consults. Each is set out as population (P), intervention (I), comparison (C) and outcome (O), with a one-line UK takeaway.
+caveats:
+- <strong>Figures are approximate and from memory.</strong> Check the original paper before quoting a number in teaching, a guideline or an exam answer.
+- <strong>Recent trials move fast.</strong> Trials published in 2025–26 may be missing; check UKHSA, NICE and society updates.
+- <strong>UK takeaway</strong> reflects how the trial is generally applied in the UK, not a formal recommendation. Local guidelines take precedence.
+sections:
+- title: Bloodstream infection and S. aureus bacteraemia
+  short: Bacteraemia
+  id: bloodstream-infection-and-s-aureus-bacteraemia
+  lead:
+  - Adjuncts to standard SAB therapy have not helped; early oral switch in low-risk SAB is now supported.
+  - For MSSA, the beta-lactam choice (flucloxacillin vs cefazolin) is being tested in the SNAP adaptive platform trial; watch for published results.
+  trials:
+  - name: ARREST
+    cite: Lancet 2018
+    uk: true
+    p: Adults with S. aureus bacteraemia, on standard therapy
+    i: Adjunctive rifampicin for 2 weeks
+    c: Placebo
+    o: No difference in treatment failure, recurrence or death at 12 weeks (~17% vs 18%); fewer recurrences but more drug interactions
+    takeaway: Do not add rifampicin routinely to SAB therapy
+  - name: CAMERA2
+    cite: JAMA 2020
+    uk: false
+    p: Adults with MRSA bacteraemia
+    i: Vancomycin or daptomycin plus an antistaphylococcal beta-lactam
+    c: Vancomycin or daptomycin alone
+    o: No difference in 90-day composite outcome; more acute kidney injury with combination (~23% vs 6%); stopped early
+    takeaway: Do not add a beta-lactam to MRSA bacteraemia therapy
+  - name: SABATO
+    cite: Lancet Infect Dis 2024
+    uk: false
+    p: Low-risk SAB (no deep focus, no prosthetic material), after 5–7 days IV
+    i: Switch to oral therapy
+    c: Continued IV therapy
+    o: Oral non-inferior for SAB complications at 90 days (~14% vs 13%)
+    takeaway: Supports early oral switch in carefully selected uncomplicated SAB
+  - name: DOTS
+    cite: JAMA 2025
+    uk: false
+    p: Complicated SAB after bloodstream clearance
+    i: Two doses of dalbavancin
+    c: Standard IV therapy
+    o: Dalbavancin not superior on desirability of outcome ranking; outcomes broadly similar
+    takeaway: Dalbavancin is an option where prolonged IV access is a problem; check the paper for detail
+- title: Endocarditis
+  short: Endocarditis
+  id: endocarditis
+  lead:
+  - Stable left-sided endocarditis can be finished orally, and large vegetations favour early surgery.
+  trials:
+  - name: POET
+    cite: NEJM 2019
+    uk: false
+    p: Stable left-sided IE due to streptococci, E. faecalis, S. aureus or CoNS, after at least 10 days IV (7 after surgery)
+    i: Switch to two oral antibiotics
+    c: Continued IV therapy
+    o: Oral non-inferior for the composite of death, embolism, unplanned surgery or relapse at 6 months (~9% vs 12%); 5-year follow-up favoured oral
+    takeaway: Adopted in ESC 2023; oral step-down is reasonable in selected stable patients
+  - name: EASE
+    cite: Kang, NEJM 2012
+    uk: false
+    p: Left-sided IE with vegetation over 10 mm and severe valve disease
+    i: Surgery within 48 hours
+    c: Conventional care with surgery if needed
+    o: Death or embolism at 6 weeks ~3% vs 23%, driven by fewer embolic events
+    takeaway: Supports early surgery for large vegetations; discuss early with the endocarditis team
+- title: Bone and joint infection
+  short: Bone & joint
+  id: bone-and-joint-infection
+  lead:
+  - Oral therapy works for most bone and joint infection, but PJI managed with DAIR needs 12 weeks.
+  trials:
+  - name: OVIVA
+    cite: NEJM 2019
+    uk: true
+    p: Adults with bone or joint infection, including PJI and metalwork, within 7 days of surgery or starting IV
+    i: Oral antibiotics for the first 6 weeks
+    c: IV antibiotics for the first 6 weeks
+    o: Treatment failure at 1 year ~13% vs 15%; oral non-inferior and cheaper
+    takeaway: Default to early oral therapy with good bioavailability; reduces OPAT and line use
+  - name: DATIPO
+    cite: NEJM 2021
+    uk: false
+    p: PJI managed surgically (DAIR or one- or two-stage revision)
+    i: 6 weeks of antibiotics
+    c: 12 weeks of antibiotics
+    o: Persistent infection ~18% vs 9%; 6 weeks not non-inferior, gap largest after DAIR
+    takeaway: Give 12 weeks for PJI, especially after DAIR
+  - name: Bernard
+    cite: Lancet 2015
+    uk: false
+    p: Pyogenic vertebral osteomyelitis
+    i: 6 weeks of antibiotics
+    c: 12 weeks of antibiotics
+    o: Cure at 1 year ~91% in both arms; 6 weeks non-inferior
+    takeaway: 6 weeks is standard for most native vertebral osteomyelitis
+  - name: Gariani
+    cite: CID 2021
+    uk: false
+    p: Diabetic foot osteomyelitis after surgical debridement
+    i: 3 weeks of antibiotics
+    c: 6 weeks of antibiotics
+    o: Similar remission rates; small trial
+    takeaway: Shorter courses are reasonable after adequate debridement
+- title: Treatment duration
+  short: Treatment duration
+  id: treatment-duration
+  lead:
+  - Short courses are non-inferior across most common infections once source control and clinical response are in place.
+  - Pneumonia duration trials are in the pneumonia section below.
+  trials:
+  - name: BALANCE
+    cite: NEJM 2025
+    uk: false
+    p: Hospitalised adults with bacteraemia (excluding S. aureus and complicated foci), mostly Gram-negative
+    i: 7 days of antibiotics
+    c: 14 days of antibiotics
+    o: 90-day mortality ~14.5% vs 16.1%; 7 days non-inferior
+    takeaway: 7 days is the default for uncomplicated bacteraemia with source controlled
+  - name: Yahav
+    cite: CID 2019
+    uk: false
+    p: Uncomplicated Gram-negative bacteraemia, afebrile and stable by day 7
+    i: 7 days
+    c: 14 days
+    o: Non-inferior for 90-day composite of mortality, relapse and complications
+    takeaway: Supports 7 days for Gram-negative bacteraemia
+  - name: STOP-IT
+    cite: NEJM 2015
+    uk: false
+    p: Complicated intra-abdominal infection with adequate source control
+    i: Fixed ~4 days of antibiotics
+    c: Treat until resolution of fever, leucocytosis and ileus (~8 days)
+    o: No difference in composite of surgical site infection, recurrence or death (~22% both)
+    takeaway: About 4 days after source control
+  - name: Drekonja
+    cite: JAMA 2021
+    uk: false
+    p: Afebrile men with symptomatic UTI
+    i: 7 days
+    c: 14 days
+    o: Symptom resolution 14 days after treatment non-inferior
+    takeaway: 7 days is enough for most male UTI
+  - name: Chastre
+    cite: JAMA 2003
+    uk: false
+    p: Ventilator-associated pneumonia
+    i: 8 days
+    c: 15 days
+    o: Mortality similar; higher recurrence with 8 days for non-fermenters (e.g. Pseudomonas)
+    takeaway: 7–8 days for VAP, with care for non-fermenters
+  - name: Hepburn
+    cite: Arch Intern Med 2004
+    uk: false
+    p: Uncomplicated cellulitis improving by day 5
+    i: 5 days of levofloxacin
+    c: 10 days
+    o: Same clinical cure
+    takeaway: 5–7 days, as in NICE NG141
+- title: Gram-negative and resistant organisms
+  short: Gram-negatives
+  id: gram-negative-and-resistant-organisms
+  lead:
+  - Carbapenems remain first choice for serious ESBL infection, and colistin combinations add nothing for carbapenem-resistant organisms.
+  trials:
+  - name: MERINO
+    cite: JAMA 2018
+    uk: false
+    p: Bloodstream infection with ceftriaxone-non-susceptible E. coli or Klebsiella (mostly ESBL)
+    i: Piperacillin-tazobactam
+    c: Meropenem
+    o: 30-day mortality ~12% vs 4%; non-inferiority not shown
+    takeaway: Use a carbapenem for ESBL bacteraemia; later reanalysis raised MIC-testing issues but practice is unchanged
+  - name: AIDA
+    cite: Lancet Infect Dis 2018
+    uk: false
+    p: Carbapenem-resistant Gram-negative infection, mostly Acinetobacter
+    i: Colistin plus meropenem
+    c: Colistin alone
+    o: No difference in clinical failure
+    takeaway: Meropenem adds nothing to colistin for carbapenem-resistant Acinetobacter
+  - name: OVERCOME
+    cite: NEJM Evidence 2023
+    uk: false
+    p: Carbapenem-resistant Gram-negative pneumonia or bacteraemia
+    i: Colistin plus meropenem
+    c: Colistin alone
+    o: No difference in 28-day mortality
+    takeaway: Confirms AIDA
+  - name: CREDIBLE-CR
+    cite: Lancet Infect Dis 2021
+    uk: false
+    p: Carbapenem-resistant Gram-negative infection
+    i: Cefiderocol
+    c: Best available therapy
+    o: Similar clinical cure; numerically higher mortality with cefiderocol, mainly in Acinetobacter
+    takeaway: Use cefiderocol cautiously for Acinetobacter; seek specialist advice
+  - name: TANGO II
+    cite: Infect Dis Ther 2018
+    uk: false
+    p: CRE infection
+    i: Meropenem-vaborbactam
+    c: Best available therapy
+    o: Higher clinical cure and less nephrotoxicity; small, stopped early
+    takeaway: Supports newer beta-lactam/beta-lactamase inhibitors over colistin-based regimens for KPC
+- title: Pneumonia and respiratory infection, including COVID-19
+  short: Respiratory & COVID-19
+  id: pneumonia-and-respiratory-infection-including-covid-19
+  lead:
+  - Short courses suit stable CAP, steroids help severe CAP and hypoxic COVID-19, and community antivirals added little in vaccinated adults.
+  trials:
+  - name: PTC
+    cite: Dinh, Lancet 2021
+    uk: false
+    p: Adults in hospital with CAP, clinically stable after 3 days of beta-lactam
+    i: Stop at 3 days
+    c: Continue to 8 days
+    o: Cure at day 15 ~77% vs 68%; 3 days non-inferior
+    takeaway: Stop at 3–5 days in stable CAP, in line with NICE NG138
+  - name: CAP-IT
+    cite: JAMA 2021
+    uk: true
+    p: Children discharged with CAP
+    i: Amoxicillin at lower dose and/or for 3 days
+    c: Higher dose and/or 7 days
+    o: No difference in retreatment; 3 days non-inferior, with slightly longer cough
+    takeaway: Supports 3 days of standard-dose amoxicillin in children
+  - name: CAPE COD
+    cite: NEJM 2023
+    uk: false
+    p: Adults in ICU with severe CAP, excluding septic shock and influenza
+    i: Hydrocortisone for 8–14 days
+    c: Placebo
+    o: 28-day mortality ~6% vs 12%
+    takeaway: Consider hydrocortisone in severe CAP; mind the exclusions and the neutral ESCAPe trial
+  - name: RECOVERY dexamethasone
+    cite: NEJM 2021
+    uk: true
+    p: Adults in hospital with COVID-19
+    i: Dexamethasone 6 mg for 10 days
+    c: Usual care
+    o: 28-day mortality ~23% vs 26%; benefit only with oxygen or ventilation
+    takeaway: Give dexamethasone only to hypoxic patients
+  - name: RECOVERY tocilizumab
+    cite: Lancet 2021
+    uk: true
+    p: Hypoxic COVID-19 with CRP 75 mg/L or more
+    i: Tocilizumab
+    c: Usual care
+    o: 28-day mortality ~31% vs 35%
+    takeaway: IL-6 blockade for hypoxic, inflamed patients
+  - name: PANORAMIC
+    cite: Lancet 2023
+    uk: true
+    p: Vaccinated community adults at higher risk with COVID-19
+    i: Molnupiravir
+    c: Usual care
+    o: No reduction in hospitalisation or death (~1% both); faster recovery
+    takeaway: Molnupiravir is not first line in UK community treatment
+- title: C. difficile infection
+  short: C. difficile infection
+  id: c-difficile-infection
+  lead:
+  - Fidaxomicin cuts recurrence compared with vancomycin, and FMT is the most effective option for recurrent disease.
+  trials:
+  - name: Louie
+    cite: NEJM 2011
+    uk: false
+    p: Adults with CDI
+    i: Fidaxomicin 200 mg twice daily for 10 days
+    c: Vancomycin 125 mg four times daily for 10 days
+    o: Clinical cure non-inferior; recurrence ~15% vs 25%
+    takeaway: Basis for fidaxomicin in NICE NG199, first line after a first recurrence and an option earlier
+  - name: EXTEND
+    cite: Lancet Infect Dis 2018
+    uk: false
+    p: Adults aged 60 or over with CDI
+    i: Extended-pulsed fidaxomicin
+    c: Standard vancomycin
+    o: Sustained cure ~70% vs 59%
+    takeaway: Option for older patients at high recurrence risk
+  - name: Johnson
+    cite: CID 2014
+    uk: false
+    p: Adults with CDI, pooled from two trials
+    i: Vancomycin
+    c: Metronidazole
+    o: Clinical success higher with vancomycin (~81% vs 73%)
+    takeaway: Metronidazole is no longer first line
+  - name: van Nood
+    cite: NEJM 2013
+    uk: false
+    p: Recurrent CDI
+    i: Vancomycin then duodenal FMT
+    c: Vancomycin alone, or with bowel lavage
+    o: Cure ~81% vs 31%; stopped early
+    takeaway: FMT for multiple recurrences, as in NICE
+  - name: MODIFY I/II
+    cite: NEJM 2017
+    uk: false
+    p: Adults on standard CDI treatment
+    i: Bezlotoxumab infusion
+    c: Placebo
+    o: Recurrence ~17% vs 28%
+    takeaway: Now withdrawn by the manufacturer; of historical interest
+- title: CNS infection
+  short: CNS infection
+  id: cns-infection
+  lead:
+  - Dexamethasone helps bacterial and TB meningitis in HIV-negative adults; cryptococcal meningitis now uses single high-dose liposomal amphotericin and delayed ART.
+  trials:
+  - name: de Gans
+    cite: NEJM 2002
+    uk: false
+    p: Adults with suspected bacterial meningitis
+    i: Dexamethasone 10 mg six-hourly for 4 days, with or before the first antibiotic
+    c: Placebo
+    o: Unfavourable outcome ~15% vs 25%; mortality ~7% vs 15%, mainly pneumococcal
+    takeaway: Give dexamethasone with the first antibiotic dose (NICE NG240)
+  - name: Thwaites
+    cite: NEJM 2004
+    uk: false
+    p: Adults with TB meningitis, Vietnam
+    i: Dexamethasone
+    c: Placebo
+    o: Lower 9-month mortality (RR ~0.69)
+    takeaway: Steroids for TB meningitis
+  - name: ACT HIV
+    cite: NEJM 2023
+    uk: false
+    p: HIV-positive adults with TB meningitis
+    i: Dexamethasone
+    c: Placebo
+    o: No survival benefit
+    takeaway: Steroid benefit in HIV-associated TBM is not established
+  - name: AMBITION-cm
+    cite: NEJM 2022
+    uk: false
+    p: HIV-associated cryptococcal meningitis
+    i: Single 10 mg/kg liposomal amphotericin plus 14 days flucytosine and fluconazole
+    c: 7 days amphotericin deoxycholate plus flucytosine
+    o: 10-week mortality ~25% vs 29%; non-inferior with fewer adverse events
+    takeaway: Now the WHO-preferred induction; BHIVA guidance follows it
+  - name: COAT
+    cite: NEJM 2014
+    uk: false
+    p: HIV-associated cryptococcal meningitis
+    i: ART started 1–2 weeks after diagnosis
+    c: ART deferred to 5 weeks
+    o: 6-month mortality ~45% vs 30%
+    takeaway: Delay ART for about 4–6 weeks in cryptococcal meningitis
+- title: Fungal infection
+  short: Fungal infection
+  id: fungal-infection
+  lead:
+  - Triazoles are first line for aspergillosis, echinocandins for candidaemia, and posaconazole prophylaxis saves lives in high-risk haematology patients.
+  trials:
+  - name: Herbrecht
+    cite: NEJM 2002
+    uk: false
+    p: Invasive aspergillosis
+    i: Voriconazole
+    c: Amphotericin B deoxycholate
+    o: Response at 12 weeks ~53% vs 32%; survival ~71% vs 58%
+    takeaway: Established a triazole as first line
+  - name: SECURE
+    cite: Lancet 2016
+    uk: false
+    p: Invasive mould disease, mainly aspergillosis
+    i: Isavuconazole
+    c: Voriconazole
+    o: All-cause mortality non-inferior; fewer hepatic, skin and eye adverse events
+    takeaway: Isavuconazole is an equal first-line option with fewer interactions
+  - name: Maertens
+    cite: Lancet 2021
+    uk: false
+    p: Invasive aspergillosis
+    i: Posaconazole
+    c: Voriconazole
+    o: Day-42 mortality non-inferior; fewer adverse events
+    takeaway: Posaconazole is a further first-line option
+  - name: Reboli
+    cite: NEJM 2007
+    uk: false
+    p: Candidaemia and invasive candidiasis
+    i: Anidulafungin
+    c: Fluconazole
+    o: Global success ~76% vs 60%
+    takeaway: Echinocandin first line, then step down to fluconazole when susceptible and stable
+  - name: ReSTORE
+    cite: Lancet 2023
+    uk: false
+    p: Candidaemia and invasive candidiasis
+    i: Once-weekly rezafungin
+    c: Daily caspofungin
+    o: Non-inferior for mortality and global cure
+    takeaway: Option to avoid daily IV access
+  - name: Cornely
+    cite: NEJM 2007
+    uk: false
+    p: Neutropenic patients with AML or MDS on chemotherapy
+    i: Posaconazole prophylaxis
+    c: Fluconazole or itraconazole
+    o: Fewer invasive fungal infections and lower all-cause mortality
+    takeaway: Basis for posaconazole prophylaxis in high-risk haematology
+- title: HIV, TB, malaria and sexual health
+  short: HIV, TB, malaria & STI
+  id: hiv-tb-malaria-and-sexual-health
+  lead:
+  - Immediate ART and PrEP transformed HIV care, TB regimens are getting shorter, and IV artesunate is standard for severe malaria.
+  trials:
+  - name: START
+    cite: NEJM 2015
+    uk: false
+    p: ART-naive adults with CD4 over 500
+    i: Immediate ART
+    c: ART deferred to CD4 350
+    o: Serious AIDS and non-AIDS events reduced by ~57%
+    takeaway: Start ART at diagnosis, whatever the CD4
+  - name: PARTNER 1 and 2
+    cite: JAMA 2016, Lancet 2019
+    uk: false
+    p: Serodifferent couples, partner with HIV virally suppressed
+    i: Condomless sex on suppressive ART (observational)
+    c: None
+    o: Zero linked transmissions
+    takeaway: Undetectable = untransmittable (U=U)
+  - name: PROUD
+    cite: Lancet 2016
+    uk: true
+    p: Higher-risk MSM in England
+    i: Immediate daily oral PrEP
+    c: PrEP deferred by 1 year
+    o: HIV incidence reduced by ~86%
+    takeaway: Basis for NHS PrEP provision
+  - name: PURPOSE 1 and 2
+    cite: NEJM 2024
+    uk: false
+    p: Cisgender women in Africa; diverse populations including MSM
+    i: Twice-yearly lenacapavir injection
+    c: Daily oral PrEP
+    o: No infections in PURPOSE 1; ~96% fewer than background in PURPOSE 2
+    takeaway: Long-acting PrEP option; check current UK commissioning
+  - name: REPRIEVE
+    cite: NEJM 2023
+    uk: false
+    p: People with HIV at low to moderate cardiovascular risk
+    i: Pitavastatin
+    c: Placebo
+    o: Major cardiovascular events reduced by ~35%
+    takeaway: Offer a statin to most people with HIV over 40
+  - name: Study 31/A5349
+    cite: NEJM 2021
+    uk: false
+    p: Drug-susceptible pulmonary TB
+    i: 4-month rifapentine-moxifloxacin regimen
+    c: Standard 6-month regimen
+    o: Non-inferior
+    takeaway: Shorter option; UK still largely uses 6 months, see NICE NG33
+  - name: TB-PRACTECAL
+    cite: NEJM 2022
+    uk: false
+    p: Rifampicin-resistant pulmonary TB
+    i: 6 months of BPaLM
+    c: Standard long regimens
+    o: Unfavourable outcome ~11% vs 48%
+    takeaway: All-oral 6-month regimens are now standard for RR-TB
+  - name: TBTC Study 26
+    cite: NEJM 2011
+    uk: false
+    p: Latent TB infection
+    i: 3 months of weekly rifapentine and isoniazid
+    c: 9 months of isoniazid
+    o: Non-inferior; better completion
+    takeaway: Supports short LTBI regimens; UK commonly uses 3 months of rifampicin and isoniazid
+  - name: SEAQUAMAT
+    cite: Lancet 2005
+    uk: false
+    p: Adults with severe falciparum malaria, Asia
+    i: IV artesunate
+    c: IV quinine
+    o: Mortality ~15% vs 22%
+    takeaway: IV artesunate first line in UK guidelines
+  - name: AQUAMAT
+    cite: Lancet 2010
+    uk: false
+    p: Children with severe falciparum malaria, Africa
+    i: IV artesunate
+    c: IV quinine
+    o: Mortality ~8.5% vs 10.9%
+    takeaway: Confirms artesunate in children
+  - name: DoxyPEP
+    cite: NEJM 2023
+    uk: false
+    p: MSM and trans women with a recent bacterial STI
+    i: Doxycycline 200 mg within 72 hours of sex
+    c: Standard care
+    o: Bacterial STI incidence reduced by about two-thirds
+    takeaway: Offered selectively in the UK; check current BASHH position, given resistance concerns
+- title: Stewardship, diagnostics and infection prevention
+  short: Stewardship & IPC
+  id: stewardship-diagnostics-and-infection-prevention
+  lead:
+  - Procalcitonin can safely shorten courses in sepsis, low-risk penicillin allergy can be removed by direct oral challenge, and decolonisation reduces MRSA infection.
+  trials:
+  - name: ADAPT-Sepsis
+    cite: JAMA 2025
+    uk: true
+    p: Adults in ICU with suspected sepsis on antibiotics
+    i: Daily procalcitonin-guided stopping
+    c: Standard care (a CRP-guided arm was also tested)
+    o: Procalcitonin shortened antibiotic duration with non-inferior 28-day mortality; CRP did not
+    takeaway: Supports procalcitonin-guided stopping in ICU sepsis
+  - name: SAPS
+    cite: Lancet Infect Dis 2016
+    uk: false
+    p: Adults in ICU on antibiotics, Netherlands
+    i: Procalcitonin-guided stopping
+    c: Standard care
+    o: Shorter antibiotic duration and lower mortality
+    takeaway: Consistent with ADAPT-Sepsis
+  - name: ProACT
+    cite: NEJM 2018
+    uk: false
+    p: Adults in the emergency department with suspected lower respiratory infection, US
+    i: Procalcitonin result plus guidance
+    c: Usual care
+    o: No reduction in antibiotic days
+    takeaway: Procalcitonin does little at the front door without a stewardship process
+  - name: PALACE
+    cite: JAMA Intern Med 2023
+    uk: false
+    p: Adults with low-risk penicillin allergy (PEN-FAST under 3)
+    i: Direct oral amoxicillin challenge
+    c: Skin testing then oral challenge
+    o: Direct challenge non-inferior for immune-mediated reactions
+    takeaway: Supports direct oral challenge delabelling pathways
+  - name: REDUCE MRSA
+    cite: NEJM 2013
+    uk: false
+    p: Adult ICU patients, US
+    i: Universal decolonisation with chlorhexidine bathing and nasal mupirocin
+    c: Targeted MRSA screening and isolation
+    o: Fewer MRSA clinical isolates and fewer bloodstream infections from any pathogen
+    takeaway: Evidence for universal ICU decolonisation
+  - name: CLEAR
+    cite: NEJM 2019
+    uk: false
+    p: MRSA carriers at hospital discharge, US
+    i: Decolonisation plus education
+    c: Education alone
+    o: MRSA infection within 1 year ~6% vs 9%
+    takeaway: Supports decolonisation of carriers after discharge

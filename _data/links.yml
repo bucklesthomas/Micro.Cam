@@ -11,14 +11,6 @@
       url: "https://app.eolasmedical.com/organisation/Cambridge%20University%20Hospitals%20NHS%20Foundation%20Trust"
       note: Cambridge University Hospitals, via Eolas Medical
       tags: local trust cuh addenbrookes cambridge empirical antibiotics microguide eolas
-    - name: Lab results system
-      url: "https://example.org/replace-me"
-      note: Replace with your trust's results viewer
-      tags: local lab pathology
-    - name: On-call rota
-      url: "https://example.org/replace-me"
-      note: Replace with your rota link
-      tags: local rota
 
 - category: Prescribing & interactions
   links:
@@ -38,13 +30,28 @@
       url: "https://renaldrugdatabase.com/"
       note: Subscription
       tags: renal dosing ckd
-    - name: Johns Hopkins ABX Guide
-      url: "https://www.hopkinsguides.com/hopkins/index/Johns_Hopkins_ABX_Guide/"
-      note: Subscription
-      tags: antibiotics reference
 
 - category: Guidelines
   links:
+    - name: Endocarditis (ESC 2023)
+      url: "https://doi.org/10.1093/eurheartj/ehad193"
+      note: European Heart Journal
+      tags: ie infective endocarditis esc cardiology duke
+    - name: Malaria (UK 2016)
+      url: "https://www.journalofinfection.com/action/showPdf?pii=S0163-4453%2816%2900047-5"
+      note: Journal of Infection (PDF)
+      tags: malaria falciparum artesunate imported fever bia
+    - name: Lyme disease (NICE NG95)
+      url: "https://www.nice.org.uk/guidance/ng95"
+      tags: lyme borrelia tick erythema migrans
+    - name: Meningitis (UK 2016)
+      url: "https://www.journalofinfection.com/action/showPdf?pii=S0163-4453%2816%2900024-4"
+      note: Journal of Infection (PDF)
+      tags: meningitis meningococcal sepsis cns lp csf
+    - name: Encephalitis (UK 2026)
+      url: "https://www.encephalitis.info/wp-content/uploads/2026/11/Management-of-suspected-infectious-and-autoimmune-encephalitis-in-adults_United-Kingdom_2026.pdf"
+      note: Infectious and autoimmune encephalitis in adults (PDF)
+      tags: encephalitis hsv aciclovir autoimmune cns
     - name: NICE antimicrobial guidance
       url: "https://www.nice.org.uk/guidance/health-protection/communicable-diseases/antimicrobial-stewardship"
       tags: nice prescribing stewardship
@@ -70,16 +77,13 @@
 - category: Microbiology & lab
   links:
     - name: EUCAST clinical breakpoints
-      url: "https://www.eucast.org/clinical_breakpoints"
+      url: "https://www.eucast.org/fileadmin/eucast/pdf/breakpoints/v_16.1_Breakpoint_Tables.pdf"
+      note: Breakpoint tables v16.1 (PDF)
       tags: mic susceptibility ast
     - name: UK SMIs (Standards for Microbiology Investigations)
       url: "https://www.rcpath.org/profession/publications/standards-for-microbiology-investigations.html"
       note: Royal College of Pathologists
       tags: smi lab methods rcpath ukhsa
-    - name: UKHSA specialist lab services
-      url: "https://www.gov.uk/government/collections/specialist-microbiology-services"
-      note: Reference labs, RIPL, user manuals
-      tags: reference lab ripl send away
     - name: BSAC
       url: "https://bsac.org.uk/"
       tags: antimicrobial chemotherapy
@@ -92,9 +96,6 @@
     - name: Find your local health protection team
       url: "https://www.gov.uk/health-protection-team"
       tags: hpt phe ukhsa
-    - name: UKHSA infectious diseases A–Z
-      url: "https://www.gov.uk/topic/health-protection/infectious-diseases"
-      tags: ukhsa guidance
     - name: WHO Disease Outbreak News
       url: "https://www.who.int/emergencies/disease-outbreak-news"
       tags: outbreak global
@@ -126,6 +127,10 @@
     - name: MDCalc
       url: "https://www.mdcalc.com/"
       tags: scores calculators
+    - name: Key ID & micro trials (this site)
+      url: "/trials/"
+      note: 60 trials in PICO format with UK takeaways
+      tags: trials evidence pico rct landmark frcpath
     - name: Bedside scores (this site)
       url: "/scores/"
       note: CURB-65, qSOFA, LRINEC, modified Duke criteria

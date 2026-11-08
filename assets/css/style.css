@@ -161,3 +161,99 @@ a:hover { text-decoration: underline; }
 @media (max-width: 480px) {
   .result:has(.total.word) { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
+
+/* ── Trials page ───────────────────────────────────────── */
+:root {
+  --p: #6d4fc2; --p-bg: #f1edfb;   /* Population: violet */
+  --i: #1f6aa5; --i-bg: #e4f1fb;   /* Intervention: blue */
+  --c: #9a6200; --c-bg: #fbf1dc;   /* Comparison: amber */
+  --o: #b8432f; --o-bg: #fbe9e5;   /* Outcome: coral */
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --p: #b9a4f5; --p-bg: #241d3d;
+    --i: #8fd0fa; --i-bg: #15324a;
+    --c: #f2c066; --c-bg: #352a12;
+    --o: #ff9f8c; --o-bg: #3a1d17;
+  }
+}
+:root[data-theme="dark"] {
+  --p: #b9a4f5; --p-bg: #241d3d;
+  --i: #8fd0fa; --i-bg: #15324a;
+  --c: #f2c066; --c-bg: #352a12;
+  --o: #ff9f8c; --o-bg: #3a1d17;
+}
+
+.pico-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 14px; }
+.pico-key {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 13px; padding: 4px 10px 4px 4px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line);
+}
+.pico-key b {
+  display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 5px;
+  border-radius: 999px; font-size: 12px; color: var(--surface);
+}
+.pico-key.p b { background: var(--p); } .pico-key.i b { background: var(--i); }
+.pico-key.c b { background: var(--c); } .pico-key.o b { background: var(--o); }
+.pico-key.uk b { background: transparent; color: var(--ink); border: 1px solid var(--muted); font-size: 10px; letter-spacing: 0.04em; }
+
+.caveats {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 10px 16px; font-size: 13.5px; color: var(--muted);
+}
+.caveats summary { cursor: pointer; color: var(--ink); font-weight: 700; }
+.caveats ul { margin: 8px 0 2px; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.caveats strong { color: var(--ink); }
+.jump .n { color: var(--muted); font-size: 11px; margin-left: 2px; font-variant-numeric: tabular-nums; }
+
+.topic { margin-top: 30px; }
+.topic-head { max-width: 72ch; margin-bottom: 12px; }
+.topic-head h2 {
+  margin: 0 0 6px; font-size: 21px; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance;
+  padding-bottom: 6px; border-bottom: 1px solid var(--line);
+}
+.topic-head p { margin: 0 0 4px; color: var(--muted); font-size: 14px; }
+
+.trials { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 430px), 1fr)); gap: 14px; align-items: start; }
+.trial {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0;
+}
+.trial h3 { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 8px; font-weight: 700; }
+.tname { font-size: 19px; letter-spacing: 0.01em; }
+.cite { margin-left: auto; font-size: 12.5px; font-style: italic; color: var(--muted); font-weight: 400; }
+.uk-tag {
+  align-self: center; font-size: 10px; letter-spacing: 0.06em; font-weight: 700;
+  padding: 2px 6px; border: 1px solid var(--muted); border-radius: 4px; color: var(--ink);
+}
+
+.pico { margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.pico > div {
+  display: grid; grid-template-columns: max-content 1fr; gap: 12px; align-items: start;
+  padding: 8px 10px; border-radius: 7px; min-width: 0;
+}
+.pico dt { display: flex; align-items: center; gap: 7px; margin: 0; width: 140px; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; white-space: nowrap; }
+.pico dt b {
+  display: inline-grid; place-items: center; width: 22px; height: 22px; flex: none;
+  border-radius: 999px; color: var(--surface); font-size: 12px; letter-spacing: 0;
+}
+.pico dd { margin: 0; font-size: 14px; line-height: 1.55; min-width: 0; overflow-wrap: anywhere; }
+.pico .p { background: var(--p-bg); } .pico .p dt { color: var(--p); } .pico .p dt b { background: var(--p); }
+.pico .i { background: var(--i-bg); } .pico .i dt { color: var(--i); } .pico .i dt b { background: var(--i); }
+.pico .c { background: var(--c-bg); } .pico .c dt { color: var(--c); } .pico .c dt b { background: var(--c); }
+.pico .o { background: var(--o-bg); } .pico .o dt { color: var(--o); } .pico .o dt b { background: var(--o); }
+
+.takeaway {
+  margin: 0; padding-top: 10px; border-top: 1px dashed var(--line);
+  font-size: 14.5px; font-weight: 700; line-height: 1.5;
+}
+.takeaway span {
+  display: block; margin-bottom: 2px; font-size: 11px; font-weight: 700; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+
+@media (max-width: 520px) {
+  .pico > div { grid-template-columns: 1fr; gap: 4px; }
+  .cite { margin-left: 0; width: 100%; }
+}
