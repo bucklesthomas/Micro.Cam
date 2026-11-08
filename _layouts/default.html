@@ -7,7 +7,7 @@
   <meta name="description" content="{{ site.description }}">
   <meta name="robots" content="noindex">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦠</text></svg>">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
   <header class="topbar">
@@ -26,6 +26,6 @@
     For use by qualified clinicians as a convenience only. Scores are aids, not substitutes for clinical judgement — always check local and national guidance.
   </footer>
 
-  {% for s in page.scripts %}<script src="{{ s | relative_url }}"></script>{% endfor %}
+  {% for s in page.scripts %}<script src="{{ s | relative_url }}?v={{ site.time | date: '%s' }}"></script>{% endfor %}
 </body>
 </html>
