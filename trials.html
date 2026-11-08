@@ -36,7 +36,7 @@ scripts:
   <div class="trials">
   {% for tr in s.trials %}
     <article class="trial" id="trial-{{ tr.name | slugify }}" data-search="{{ tr.name | downcase }} {{ tr.cite | downcase }} {{ s.title | downcase }} {{ tr.p | strip_html | downcase }} {{ tr.i | strip_html | downcase }} {{ tr.c | strip_html | downcase }} {{ tr.o | strip_html | downcase }} {{ tr.takeaway | strip_html | downcase }}{% if tr.uk %} uk{% endif %}">
-      <h3><span class="tname">{{ tr.name }}</span>{% if tr.uk %} <span class="uk-tag" title="UK-led trial">UK</span>{% endif %}<span class="cite">{{ tr.cite }}</span></h3>
+      <h3><span class="tname">{{ tr.name }}</span>{% if tr.uk %} <span class="uk-tag" title="UK-led trial">UK</span>{% endif %}{% if tr.pubmed %}<a class="cite" href="https://pubmed.ncbi.nlm.nih.gov/?term={{ tr.pubmed | url_encode }}" target="_blank" rel="noopener" title="Find this paper on PubMed">{{ tr.cite }} <span class="ext" aria-hidden="true">↗</span></a>{% else %}<span class="cite">{{ tr.cite }}</span>{% endif %}</h3>
       <dl class="pico">
         <div class="p"><dt><b>P</b><span>Population</span></dt><dd>{{ tr.p }}</dd></div>
         <div class="i"><dt><b>I</b><span>Intervention</span></dt><dd>{{ tr.i }}</dd></div>
