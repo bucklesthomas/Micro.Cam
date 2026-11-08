@@ -7,10 +7,10 @@
 
 - category: Local & on-call
   links:
-    - name: Trust antimicrobial guidelines
-      url: "https://example.org/replace-me"
-      note: Replace with your trust's MicroGuide / intranet link
-      tags: local empirical antibiotics
+    - name: CUH antimicrobial guidelines
+      url: "https://app.eolasmedical.com/organisation/Cambridge%20University%20Hospitals%20NHS%20Foundation%20Trust"
+      note: Cambridge University Hospitals, via Eolas Medical
+      tags: local trust cuh addenbrookes cambridge empirical antibiotics microguide eolas
     - name: Lab results system
       url: "https://example.org/replace-me"
       note: Replace with your trust's results viewer
