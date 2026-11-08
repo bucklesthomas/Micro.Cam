@@ -428,3 +428,5 @@ fieldset.row.choice:first-child { border-top: 0; }
   .topbar nav::-webkit-scrollbar { display: none; }
   .topbar nav a { padding: 6px 9px; font-size: 14px; white-space: nowrap; flex: none; }
 }
+.ie-rname { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 10px; }
+.ie-cls { font-size: 10.5px; letter-spacing: 0.04em; text-transform: none; font-weight: 700; color: var(--accent-ink); background: var(--accent-soft); padding: 2px 8px; border-radius: 999px; }
