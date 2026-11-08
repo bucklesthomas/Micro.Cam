@@ -6,12 +6,15 @@
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
   <meta name="robots" content="noindex">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦠</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234da3e0'/><text x='50' y='72' font-family='Baskerville,Georgia,serif' font-size='68' font-weight='700' text-anchor='middle' fill='white'>M</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="{{ '/' | relative_url }}"><span aria-hidden="true">🦠</span> {{ site.title }}</a>
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav>
       <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Links</a>
       <a href="{{ '/scores/' | relative_url }}" {% if page.url == '/scores/' %}aria-current="page"{% endif %}>Scores</a>

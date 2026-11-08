@@ -1,12 +1,11 @@
 # ─────────────────────────────────────────────────────────────
 # Edit this file to add, remove or reorder links.
-# Each category has a name, an optional icon (any emoji), and a list of links.
+# Each category has a name and a list of links.
 # Each link: name (required), url (required), note (optional, shown small).
 # Add a "tags" line to help the search box find it, e.g. tags: hiv prep pep
 # ─────────────────────────────────────────────────────────────
 
 - category: Local & on-call
-  icon: "🏥"
   links:
     - name: Trust antimicrobial guidelines
       url: "https://example.org/replace-me"
@@ -22,7 +21,6 @@
       tags: local rota
 
 - category: Prescribing & interactions
-  icon: "💊"
   links:
     - name: BNF
       url: "https://bnf.nice.org.uk/"
@@ -46,7 +44,6 @@
       tags: antibiotics reference
 
 - category: Guidelines
-  icon: "📘"
   links:
     - name: NICE antimicrobial guidance
       url: "https://www.nice.org.uk/guidance/health-protection/communicable-diseases/antimicrobial-stewardship"
@@ -71,7 +68,6 @@
       tags: vaccines immunisation ukhsa
 
 - category: Microbiology & lab
-  icon: "🧫"
   links:
     - name: EUCAST clinical breakpoints
       url: "https://www.eucast.org/clinical_breakpoints"
@@ -88,7 +84,6 @@
       tags: antimicrobial chemotherapy
 
 - category: Public health & notification
-  icon: "📣"
   links:
     - name: Notifiable diseases (UKHSA)
       url: "https://www.gov.uk/guidance/notifiable-diseases-and-causative-organisms-how-to-report"
@@ -107,7 +102,6 @@
       tags: outbreak alerts
 
 - category: Travel & imported infection
-  icon: "✈️"
   links:
     - name: TravelHealthPro (NaTHNaC)
       url: "https://travelhealthpro.org.uk/"
@@ -123,7 +117,6 @@
       tags: vhf ebola lassa mpox
 
 - category: Calculators & tools
-  icon: "🧮"
   links:
     - name: MDCalc
       url: "https://www.mdcalc.com/"

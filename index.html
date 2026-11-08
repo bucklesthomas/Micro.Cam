@@ -9,13 +9,13 @@ scripts:
 </div>
 
 <nav class="jump" aria-label="Categories">
-  {% for cat in site.data.links %}<a href="#{{ cat.category | slugify }}">{{ cat.icon }} {{ cat.category }}</a>{% endfor %}
+  {% for cat in site.data.links %}<a href="#{{ cat.category | slugify }}">{{ cat.category }}</a>{% endfor %}
 </nav>
 
 <div class="grid">
 {% for cat in site.data.links %}
   <section class="card cat" id="{{ cat.category | slugify }}">
-    <h2><span aria-hidden="true">{{ cat.icon }}</span> {{ cat.category }}</h2>
+    <h2>{{ cat.category }}</h2>
     <ul>
     {% for l in cat.links %}
       {% assign first = l.url | slice: 0 %}
