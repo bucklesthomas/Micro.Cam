@@ -68,6 +68,7 @@ var SCORES = [
   {
     id: 'duke',
     name: 'Modified Duke criteria',
+    wide: true,
     use: 'Diagnosis of infective endocarditis',
     items: [
       { heading: 'Pathological criteria' },
@@ -107,14 +108,16 @@ var SCORES = [
 
   SCORES.forEach(function (s) {
     var card = document.createElement('section');
-    card.className = 'card score';
+    card.className = 'card score' + (s.wide ? ' wide' : '');
     card.id = s.id;
 
     var html = '<h2>' + s.name + '</h2><p class="use">' + s.use + '</p><form>';
+    var opened = false;
     s.items.forEach(function (it, i) {
       var fid = s.id + '-' + i;
       if (it.heading) {
-        html += '<p class="subhead">' + it.heading + '</p>';
+        html += (opened ? '</div>' : '') + '<div class="group"><p class="subhead">' + it.heading + '</p>';
+        opened = true;
       } else if (it.options) {
         html += '<label class="row sel" for="' + fid + '"><span>' + it.label + '</span><select id="' + fid + '">';
         it.options.forEach(function (o) { html += '<option value="' + o[1] + '">' + o[0] + ' (+' + o[1] + ')</option>'; });
@@ -127,7 +130,7 @@ var SCORES = [
                 '<span>' + it.label + '</span><b>+' + it.pts + '</b></label>';
       }
     });
-    html += '</form><div class="result" aria-live="polite"><span class="total">0</span><span class="interp"></span></div>' +
+    html += (opened ? '</div>' : '') + '</form><div class="result" aria-live="polite"><span class="total">0</span><span class="interp"></span></div>' +
             (s.note ? '<p class="note">' + s.note + '</p>' : '') +
             '<div class="foot"><button type="button" class="reset">Reset</button><small>' + s.ref + '</small></div>';
     card.innerHTML = html;
