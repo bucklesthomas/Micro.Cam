@@ -112,6 +112,10 @@
     - name: CDC Yellow Book
       url: "https://www.cdc.gov/yellow-book/"
       tags: travel
+    - name: VHF risk assessment algorithm
+      url: "https://assets.publishing.service.gov.uk/media/6aa2833e92e72b8ac437f0b8/viral-haemorrhagic-fevers-risk-assessment-algorithm-september-2026.pdf"
+      note: UKHSA / ACDP, September 2026 (PDF)
+      tags: vhf ebola lassa marburg cchf returning traveller fever algorithm decision hcid
     - name: HCID (high consequence infectious diseases)
       url: "https://www.gov.uk/guidance/high-consequence-infectious-diseases-hcid"
       tags: vhf ebola lassa mpox
