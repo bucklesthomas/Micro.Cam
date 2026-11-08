@@ -1,0 +1,134 @@
+# ─────────────────────────────────────────────────────────────
+# Edit this file to add, remove or reorder links.
+# Each category has a name, an optional icon (any emoji), and a list of links.
+# Each link: name (required), url (required), note (optional, shown small).
+# Add a "tags" line to help the search box find it, e.g. tags: hiv prep pep
+# ─────────────────────────────────────────────────────────────
+
+- category: Local & on-call
+  icon: "🏥"
+  links:
+    - name: Trust antimicrobial guidelines
+      url: "https://example.org/replace-me"
+      note: Replace with your trust's MicroGuide / intranet link
+      tags: local empirical antibiotics
+    - name: Lab results system
+      url: "https://example.org/replace-me"
+      note: Replace with your trust's results viewer
+      tags: local lab pathology
+    - name: On-call rota
+      url: "https://example.org/replace-me"
+      note: Replace with your rota link
+      tags: local rota
+
+- category: Prescribing & interactions
+  icon: "💊"
+  links:
+    - name: BNF
+      url: "https://bnf.nice.org.uk/"
+      tags: drugs dosing formulary
+    - name: BNF for Children
+      url: "https://bnfc.nice.org.uk/"
+      tags: paediatric drugs dosing
+    - name: Liverpool HIV drug interactions
+      url: "https://www.hiv-druginteractions.org/checker"
+      tags: hiv arv interactions
+    - name: Liverpool hepatitis drug interactions
+      url: "https://www.hep-druginteractions.org/checker"
+      tags: hcv hbv daa interactions
+    - name: Renal Drug Database
+      url: "https://renaldrugdatabase.com/"
+      note: Subscription
+      tags: renal dosing ckd
+    - name: Johns Hopkins ABX Guide
+      url: "https://www.hopkinsguides.com/hopkins/index/Johns_Hopkins_ABX_Guide/"
+      note: Subscription
+      tags: antibiotics reference
+
+- category: Guidelines
+  icon: "📘"
+  links:
+    - name: NICE antimicrobial guidance
+      url: "https://www.nice.org.uk/guidance/health-protection/communicable-diseases/antimicrobial-stewardship"
+      tags: nice prescribing stewardship
+    - name: BHIVA guidelines
+      url: "https://www.bhiva.org/guidelines"
+      tags: hiv
+    - name: BASHH guidelines
+      url: "https://www.bashh.org/resources/guidelines"
+      tags: sti sexual health
+    - name: BIA (British Infection Association)
+      url: "https://www.britishinfection.org/"
+      tags: guidelines uk
+    - name: IDSA practice guidelines
+      url: "https://www.idsociety.org/practice-guideline/practice-guidelines/"
+      tags: us guidelines
+    - name: ESCMID guidelines
+      url: "https://www.escmid.org/science-research/guidelines/"
+      tags: european guidelines
+    - name: Green Book (immunisation)
+      url: "https://www.gov.uk/government/collections/immunisation-against-infectious-disease-the-green-book"
+      tags: vaccines immunisation ukhsa
+
+- category: Microbiology & lab
+  icon: "🧫"
+  links:
+    - name: EUCAST clinical breakpoints
+      url: "https://www.eucast.org/clinical_breakpoints"
+      tags: mic susceptibility ast
+    - name: UK SMIs (Standards for Microbiology Investigations)
+      url: "https://www.gov.uk/government/collections/standards-for-microbiology-investigations-smi"
+      tags: lab methods ukhsa
+    - name: UKHSA specialist lab services
+      url: "https://www.gov.uk/government/collections/specialist-microbiology-services"
+      note: Reference labs, RIPL, user manuals
+      tags: reference lab ripl send away
+    - name: BSAC
+      url: "https://bsac.org.uk/"
+      tags: antimicrobial chemotherapy
+
+- category: Public health & notification
+  icon: "📣"
+  links:
+    - name: Notifiable diseases (UKHSA)
+      url: "https://www.gov.uk/guidance/notifiable-diseases-and-causative-organisms-how-to-report"
+      tags: notify report hpt
+    - name: Find your local health protection team
+      url: "https://www.gov.uk/health-protection-team"
+      tags: hpt phe ukhsa
+    - name: UKHSA infectious diseases A–Z
+      url: "https://www.gov.uk/topic/health-protection/infectious-diseases"
+      tags: ukhsa guidance
+    - name: WHO Disease Outbreak News
+      url: "https://www.who.int/emergencies/disease-outbreak-news"
+      tags: outbreak global
+    - name: ProMED
+      url: "https://promedmail.org/"
+      tags: outbreak alerts
+
+- category: Travel & imported infection
+  icon: "✈️"
+  links:
+    - name: TravelHealthPro (NaTHNaC)
+      url: "https://travelhealthpro.org.uk/"
+      tags: travel country malaria
+    - name: Fit for Travel
+      url: "https://www.fitfortravel.nhs.uk/"
+      tags: travel vaccines
+    - name: CDC Yellow Book
+      url: "https://www.cdc.gov/yellow-book/"
+      tags: travel
+    - name: HCID (high consequence infectious diseases)
+      url: "https://www.gov.uk/guidance/high-consequence-infectious-diseases-hcid"
+      tags: vhf ebola lassa mpox
+
+- category: Calculators & tools
+  icon: "🧮"
+  links:
+    - name: MDCalc
+      url: "https://www.mdcalc.com/"
+      tags: scores calculators
+    - name: Bedside scores (this site)
+      url: "/scores/"
+      note: CURB-65, qSOFA, Pitt, ALT-70, FeverPAIN, Centor
+      tags: curb qsofa pitt alt70 feverpain centor

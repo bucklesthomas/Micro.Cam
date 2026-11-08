@@ -1,0 +1,35 @@
+---
+layout: default
+scripts:
+  - /assets/js/search.js
+---
+<div class="search">
+  <input id="q" type="search" placeholder="Filter links… (press / to focus)" autocomplete="off" aria-label="Filter links">
+  <span id="count" class="count" aria-live="polite"></span>
+</div>
+
+<nav class="jump" aria-label="Categories">
+  {% for cat in site.data.links %}<a href="#{{ cat.category | slugify }}">{{ cat.icon }} {{ cat.category }}</a>{% endfor %}
+</nav>
+
+<div class="grid">
+{% for cat in site.data.links %}
+  <section class="card cat" id="{{ cat.category | slugify }}">
+    <h2><span aria-hidden="true">{{ cat.icon }}</span> {{ cat.category }}</h2>
+    <ul>
+    {% for l in cat.links %}
+      {% assign first = l.url | slice: 0 %}
+      <li data-search="{{ l.name | downcase }} {{ l.note | downcase }} {{ l.tags | downcase }} {{ cat.category | downcase }}">
+        {% if first == "/" %}
+        <a href="{{ l.url | relative_url }}">{{ l.name }}</a>
+        {% else %}
+        <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }} <span class="ext" aria-hidden="true">↗</span></a>
+        {% endif %}
+        {% if l.note %}<small>{{ l.note }}</small>{% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+{% endfor %}
+</div>
+<p id="empty" class="empty" hidden>No links match that filter.</p>

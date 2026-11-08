@@ -1,0 +1,15 @@
+title: ID & Micro Quick Links
+description: Fast links, guidelines and scoring tools for infectious diseases and microbiology.
+author: Tom Buckley
+
+# If hosting at https://username.github.io/repo-name, set baseurl to "/repo-name".
+# If using a custom domain or username.github.io directly, leave it as "".
+baseurl: ""
+url: ""
+
+markdown: kramdown
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
