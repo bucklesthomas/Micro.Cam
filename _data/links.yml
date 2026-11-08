@@ -130,5 +130,5 @@
       tags: scores calculators
     - name: Bedside scores (this site)
       url: "/scores/"
-      note: CURB-65, qSOFA, Pitt, ALT-70, FeverPAIN, Centor
-      tags: curb qsofa pitt alt70 feverpain centor
+      note: CURB-65, qSOFA, LRINEC, modified Duke criteria
+      tags: curb qsofa lrinec duke endocarditis necrotising fasciitis

@@ -1,9 +1,15 @@
 /*
- * Score definitions. To add a score, copy one of the blocks below.
- * items: { label, pts } renders a checkbox;
- *        { label, options: [[text, pts], ...] } renders a dropdown.
- * bands: checked in order; the first with total <= max is shown.
- *        level: "low" | "mid" | "high" sets the colour.
+ * Score definitions. To add a points-based score, copy the CURB-65 block.
+ *
+ * items:
+ *   { label, pts }                         → checkbox worth pts
+ *   { label, options: [[text, pts], ...] } → dropdown
+ *   { heading: 'text' }                    → small subheading inside the card
+ *   { label, group: 'major' }              → checkbox counted by group (used by Duke)
+ *
+ * Points scores use `bands`: the first band with total <= max is shown.
+ * Classification tools (like Duke) use `evaluate(counts)` instead, returning
+ * { badge, text, level }. level: "low" | "mid" | "high" sets the colour.
  */
 var SCORES = [
   {
@@ -40,72 +46,58 @@ var SCORES = [
     ref: 'Seymour CW et al. JAMA 2016 (Sepsis-3)'
   },
   {
-    id: 'pitt',
-    name: 'Pitt bacteraemia score',
-    use: 'Severity of illness in bloodstream infection',
+    id: 'lrinec',
+    name: 'LRINEC',
+    use: 'Laboratory risk indicator for necrotising fasciitis',
     items: [
-      { label: 'Temperature', options: [['36.1–38.9 °C', 0], ['35.1–36.0 or 39.0–39.9 °C', 1], ['≤ 35.0 or ≥ 40.0 °C', 2]] },
-      { label: 'Hypotension (SBP < 90, acute drop SBP > 30 / DBP > 20, or vasopressors)', pts: 2 },
-      { label: 'Mechanical ventilation', pts: 2 },
-      { label: 'Cardiac arrest', pts: 4 },
-      { label: 'Mental status', options: [['Alert', 0], ['Disoriented', 1], ['Stuporous', 2], ['Comatose', 4]] }
+      { label: 'CRP (mg/L)', options: [['< 150', 0], ['≥ 150', 4]] },
+      { label: 'White cell count (× 10⁹/L)', options: [['< 15', 0], ['15–25', 1], ['> 25', 2]] },
+      { label: 'Haemoglobin (g/L)', options: [['> 135', 0], ['110–135', 1], ['< 110', 2]] },
+      { label: 'Sodium (mmol/L)', options: [['≥ 135', 0], ['< 135', 2]] },
+      { label: 'Creatinine (µmol/L)', options: [['≤ 141', 0], ['> 141', 2]] },
+      { label: 'Glucose (mmol/L)', options: [['≤ 10', 0], ['> 10', 1]] }
     ],
     bands: [
-      { max: 3, level: 'low', text: 'Score < 4 — lower predicted mortality' },
-      { max: 99, level: 'high', text: 'Score ≥ 4 — critically ill; associated with higher mortality' }
+      { max: 5, level: 'low', text: '≤ 5: low risk — but a low score does NOT exclude necrotising fasciitis' },
+      { max: 7, level: 'mid', text: '6–7: intermediate risk' },
+      { max: 13, level: 'high', text: '≥ 8: high risk — urgent surgical review' }
     ],
-    ref: 'Use worst values around the time of the first positive culture. Paterson DL et al. Ann Intern Med 2004'
+    note: 'Sensitivity is poor. Clinical suspicion should prompt surgical exploration regardless of score.',
+    ref: 'Wong CH et al. Crit Care Med 2004'
   },
   {
-    id: 'alt70',
-    name: 'ALT-70',
-    use: 'Cellulitis vs pseudocellulitis of the lower limb',
+    id: 'duke',
+    name: 'Modified Duke criteria',
+    use: 'Diagnosis of infective endocarditis',
     items: [
-      { label: 'Asymmetry (unilateral leg involvement)', pts: 3 },
-      { label: 'Leukocytosis (WCC ≥ 10 × 10⁹/L)', pts: 1 },
-      { label: 'Tachycardia (HR ≥ 90)', pts: 1 },
-      { label: 'Age ≥ 70', pts: 2 }
+      { heading: 'Pathological criteria' },
+      { label: 'Microorganisms on culture or histology of a vegetation, embolised vegetation or intracardiac abscess', group: 'path' },
+      { label: 'Vegetation or intracardiac abscess confirmed by histology showing active endocarditis', group: 'path' },
+      { heading: 'Major criteria' },
+      { label: 'Typical organism in 2 separate blood cultures (viridans strep, S. gallolyticus, HACEK, S. aureus, or community-acquired enterococci without a primary focus)', group: 'major', key: 'bc' },
+      { label: 'Persistently positive blood cultures (≥ 2 drawn > 12 h apart, or all 3 / most of ≥ 4 with first and last ≥ 1 h apart)', group: 'major', key: 'bc' },
+      { label: 'Single positive blood culture for Coxiella burnetii, or phase I IgG titre > 1:800', group: 'major', key: 'bc' },
+      { label: 'Echo evidence: vegetation, abscess, or new partial dehiscence of a prosthetic valve', group: 'major', key: 'endo' },
+      { label: 'New valvular regurgitation', group: 'major', key: 'endo' },
+      { heading: 'Minor criteria' },
+      { label: 'Predisposition: predisposing heart condition or injection drug use', group: 'minor' },
+      { label: 'Fever ≥ 38.0 °C', group: 'minor' },
+      { label: 'Vascular phenomena: major arterial emboli, septic pulmonary infarcts, mycotic aneurysm, intracranial haemorrhage, conjunctival haemorrhages, Janeway lesions', group: 'minor' },
+      { label: 'Immunological phenomena: glomerulonephritis, Osler nodes, Roth spots, rheumatoid factor', group: 'minor' },
+      { label: 'Microbiology: positive blood culture not meeting a major criterion, or serology of active infection with an organism consistent with IE', group: 'minor' }
     ],
-    bands: [
-      { max: 2, level: 'low', text: '0–2: cellulitis unlikely — consider alternative diagnosis' },
-      { max: 4, level: 'mid', text: '3–4: indeterminate — clinical review advised' },
-      { max: 7, level: 'high', text: '5–7: cellulitis likely' }
-    ],
-    ref: 'Raff AB et al. J Am Acad Dermatol 2017'
-  },
-  {
-    id: 'feverpain',
-    name: 'FeverPAIN',
-    use: 'Streptococcal sore throat (NICE NG84)',
-    items: [
-      { label: 'Fever in past 24 hours', pts: 1 },
-      { label: 'Purulence (pharyngeal / tonsillar exudate)', pts: 1 },
-      { label: 'Attended rapidly (≤ 3 days of symptoms)', pts: 1 },
-      { label: 'Inflamed tonsils (severely)', pts: 1 },
-      { label: 'No cough or coryza', pts: 1 }
-    ],
-    bands: [
-      { max: 1, level: 'low', text: '0–1: no antibiotic' },
-      { max: 3, level: 'mid', text: '2–3: consider no antibiotic or back-up prescription' },
-      { max: 5, level: 'high', text: '4–5: consider immediate or back-up antibiotic' }
-    ],
-    ref: 'Little P et al. BMJ 2013; NICE NG84'
-  },
-  {
-    id: 'centor',
-    name: 'Centor',
-    use: 'Streptococcal sore throat (NICE NG84)',
-    items: [
-      { label: 'Tonsillar exudate', pts: 1 },
-      { label: 'Tender anterior cervical lymphadenopathy / lymphadenitis', pts: 1 },
-      { label: 'History of fever (> 38 °C)', pts: 1 },
-      { label: 'Absence of cough', pts: 1 }
-    ],
-    bands: [
-      { max: 2, level: 'low', text: '0–2: no antibiotic' },
-      { max: 4, level: 'high', text: '3–4: consider immediate or back-up antibiotic' }
-    ],
-    ref: 'Centor RM et al. Med Decis Making 1981; NICE NG84'
+    evaluate: function (c) {
+      var summary = c.major + ' major · ' + c.minor + ' minor';
+      if (c.path > 0) return { badge: 'Definite', level: 'high', text: 'Definite IE (pathological criteria met)' };
+      if (c.major >= 2 || (c.major === 1 && c.minor >= 3) || c.minor >= 5)
+        return { badge: 'Definite', level: 'high', text: 'Definite IE — ' + summary };
+      if ((c.major === 1 && c.minor >= 1) || c.minor >= 3)
+        return { badge: 'Possible', level: 'mid', text: 'Possible IE — ' + summary };
+      return { badge: 'Not met', level: 'low', text: 'Criteria for possible IE not met — ' + summary +
+               '. "Rejected" also needs a firm alternative diagnosis, resolution with ≤ 4 days of antibiotics, or no IE at surgery/autopsy.' };
+    },
+    note: 'Blood culture major criteria count once in total; echo/regurgitation major criteria count once in total. Single positive cultures for coagulase-negative staphylococci and organisms that do not cause IE are excluded from the minor microbiology criterion.',
+    ref: 'Li JS et al. Clin Infect Dis 2000. See also the 2023 Duke-ISCVID criteria (Fowler VG et al. Clin Infect Dis 2023)'
   }
 ];
 
@@ -121,16 +113,22 @@ var SCORES = [
     var html = '<h2>' + s.name + '</h2><p class="use">' + s.use + '</p><form>';
     s.items.forEach(function (it, i) {
       var fid = s.id + '-' + i;
-      if (it.options) {
+      if (it.heading) {
+        html += '<p class="subhead">' + it.heading + '</p>';
+      } else if (it.options) {
         html += '<label class="row sel" for="' + fid + '"><span>' + it.label + '</span><select id="' + fid + '">';
         it.options.forEach(function (o) { html += '<option value="' + o[1] + '">' + o[0] + ' (+' + o[1] + ')</option>'; });
         html += '</select></label>';
+      } else if (it.group) {
+        html += '<label class="row" for="' + fid + '"><input type="checkbox" id="' + fid + '" data-group="' + it.group + '"' +
+                (it.key ? ' data-key="' + it.key + '"' : '') + '><span>' + it.label + '</span></label>';
       } else {
         html += '<label class="row" for="' + fid + '"><input type="checkbox" id="' + fid + '" value="' + it.pts + '">' +
                 '<span>' + it.label + '</span><b>+' + it.pts + '</b></label>';
       }
     });
     html += '</form><div class="result" aria-live="polite"><span class="total">0</span><span class="interp"></span></div>' +
+            (s.note ? '<p class="note">' + s.note + '</p>' : '') +
             '<div class="foot"><button type="button" class="reset">Reset</button><small>' + s.ref + '</small></div>';
     card.innerHTML = html;
     host.appendChild(card);
@@ -142,13 +140,30 @@ var SCORES = [
 
     var form = card.querySelector('form');
     var result = card.querySelector('.result');
+    var totalEl = result.querySelector('.total');
+
     function update() {
-      var total = 0;
-      form.querySelectorAll('input:checked, select').forEach(function (el) { total += Number(el.value); });
-      var band = s.bands.find(function (b) { return total <= b.max; }) || s.bands[s.bands.length - 1];
-      result.querySelector('.total').textContent = total;
-      result.querySelector('.interp').textContent = band.text;
-      result.setAttribute('data-level', band.level);
+      var out;
+      if (s.evaluate) {
+        // Count by group; boxes sharing a key count once (e.g. both blood-culture majors = 1 major)
+        var counts = { path: 0, major: 0, minor: 0 }, seen = {};
+        form.querySelectorAll('input[data-group]:checked').forEach(function (el) {
+          var g = el.getAttribute('data-group'), k = el.getAttribute('data-key');
+          if (k) { if (seen[k]) return; seen[k] = true; }
+          counts[g]++;
+        });
+        out = s.evaluate(counts);
+        totalEl.textContent = out.badge;
+        totalEl.classList.add('word');
+      } else {
+        var total = 0;
+        form.querySelectorAll('input:checked, select').forEach(function (el) { total += Number(el.value); });
+        var band = s.bands.find(function (b) { return total <= b.max; }) || s.bands[s.bands.length - 1];
+        out = { text: band.text, level: band.level };
+        totalEl.textContent = total;
+      }
+      result.querySelector('.interp').textContent = out.text;
+      result.setAttribute('data-level', out.level);
     }
     form.addEventListener('change', update);
     card.querySelector('.reset').addEventListener('click', function () { form.reset(); update(); });

@@ -130,3 +130,13 @@ a:hover { text-decoration: underline; }
   .grid, .scores { grid-template-columns: 1fr; }
   .brand { font-size: 14px; }
 }
+
+/* Section headings inside a score (e.g. Duke major / minor) */
+.subhead {
+  margin: 14px 0 2px; font-size: 11.5px; font-weight: 650;
+  text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+}
+.subhead:first-child { margin-top: 0; }
+.subhead + .row { border-top: 0; }
+.total.word { font-size: 17px; min-width: 0; white-space: nowrap; }
+.note { margin: 10px 0 0; font-size: 12.5px; color: var(--muted); }
