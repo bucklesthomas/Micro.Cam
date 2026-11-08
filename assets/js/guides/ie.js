@@ -8,6 +8,7 @@
  *            cls = ESC class and level of evidence, e.g. 'I B'
  */
 (function () {
+  window.GUIDES = window.GUIDES || {};
   var D = {
     penS:    'Benzylpenicillin 12–18 million units/day IV (7.2–10.8 g/day) in 4–6 doses or continuously',
     penR:    'Benzylpenicillin 24 million units/day IV (14.4 g/day) in 4–6 doses or continuously',
@@ -407,90 +408,5 @@
     }
   };
 
-  /* ── Rendering ───────────────────────────── */
-  var host = document.getElementById('ie');
-  if (!host) return;
-  var path = []; // [{ id, choice }]
-
-  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
-
-  function render(focusLast) {
-    var html = '';
-    var id = 'start';
-    path.forEach(function (step, i) {
-      var q = Q[step.id], o = q.options[step.choice];
-      html += '<div class="ie-done"><span class="ie-q">' + esc(q.q) + '</span>' +
-              '<button type="button" class="ie-ans" data-back="' + i + '" aria-label="Change answer: ' + esc(o.label) + '">' +
-              esc(o.label) + '<span class="ie-change">Change</span></button></div>';
-      id = o.next;
-    });
-
-    if (Q[id]) {
-      var q = Q[id];
-      html += '<fieldset class="ie-step"><legend>' + esc(q.q) + '</legend><div class="ie-opts">';
-      q.options.forEach(function (o, j) {
-        html += '<button type="button" class="opt ie-opt" data-pick="' + j + '"><span class="opt-text">' + esc(o.label) + '</span>' +
-                (o.sub ? '<span class="ie-sub">' + esc(o.sub) + '</span>' : '') + '</button>';
-      });
-      html += '</div></fieldset>';
-    } else if (R[id]) {
-      html += renderResult(R[id]);
-    }
-
-    if (path.length) html += '<div class="ie-actions"><button type="button" class="reset" data-restart>Start again</button></div>';
-    host.innerHTML = html;
-    host.setAttribute('data-node', id);
-
-    if (focusLast) {
-      var target = host.querySelector('.ie-result, .ie-step');
-      if (target) {
-        var first = target.querySelector('.ie-opt') || target;
-        if (first === target) target.setAttribute('tabindex', '-1');
-        first.focus({ preventScroll: true });
-        var r = target.getBoundingClientRect();
-        if (r.top < 80 || r.bottom > window.innerHeight) target.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-      }
-    }
-  }
-
-  function renderResult(r) {
-    var h = '<section class="ie-result" aria-live="polite"><p class="ie-eyebrow">Suggested therapy</p><h2>' + esc(r.title) + '</h2>';
-    if (r.verify) h += '<p class="ie-verify">' + esc(r.verify) + '</p>';
-    r.regimens.forEach(function (g, gi) {
-      if (gi > 0) h += '<p class="ie-or">or</p>';
-      var head = (g.name ? '<span>' + esc(g.name) + '</span>' : '<span>Regimen</span>') +
-                 (g.cls ? '<span class="ie-cls" title="ESC class of recommendation and level of evidence">ESC class ' + esc(g.cls.split(' ')[0]) + ', level ' + esc(g.cls.split(' ')[1]) + '</span>' : '');
-      h += '<div class="ie-regimen"><p class="ie-rname">' + head + '</p><ul>';
-      g.items.forEach(function (it) {
-        h += '<li><span class="ie-drug">' + esc(it.drug) + '</span><span class="ie-dose">' + esc(it.dose) + '</span>' +
-             '<span class="ie-dur">' + esc(it.dur) + '</span></li>';
-      });
-      h += '</ul></div>';
-    });
-    if (r.notes && r.notes.length) {
-      h += '<ul class="ie-notes">' + r.notes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>';
-    }
-    h += '<p class="ie-ref">From the 2023 ESC Guidelines for the management of endocarditis. ' + esc(N.renal) + '</p></section>';
-    return h;
-  }
-
-  host.addEventListener('click', function (e) {
-    var pick = e.target.closest('[data-pick]');
-    var back = e.target.closest('[data-back]');
-    if (pick) {
-      var id = path.length ? Q[path[path.length - 1].id].options[path[path.length - 1].choice].next : 'start';
-      path.push({ id: id, choice: Number(pick.getAttribute('data-pick')) });
-      render(true);
-    } else if (back) {
-      path = path.slice(0, Number(back.getAttribute('data-back')));
-      render(true);
-    } else if (e.target.closest('[data-restart]')) {
-      path = [];
-      render(true);
-    }
-  });
-
-  // Expose for testing
-  window.IE_TREE = { Q: Q, R: R };
-  render(false);
+  window.GUIDES.ie = { Q: Q, R: R, eyebrow: 'Suggested therapy', ref: 'From the 2023 ESC Guidelines for the management of endocarditis. ' + N.renal };
 })();

@@ -66,6 +66,24 @@ var SCORES = [
     ref: 'Wong CH et al. Crit Care Med 2004'
   },
   {
+    id: 'penfast',
+    name: 'PEN-FAST',
+    use: 'Penicillin allergy risk, in a patient with a reported penicillin allergy',
+    items: [
+      { label: 'Five years or less since the reaction', pts: 2 },
+      { label: 'Anaphylaxis or angioedema, or a severe cutaneous adverse reaction (SCAR)', pts: 2 },
+      { label: 'Treatment was required for the reaction', pts: 1 }
+    ],
+    bands: [
+      { max: 0, level: 'low', text: 'Very low risk of true penicillin allergy: suitable for direct oral challenge if no SCAR' },
+      { max: 2, level: 'low', text: 'Low risk (score < 3): suitable for direct oral penicillin challenge if no SCAR' },
+      { max: 3, level: 'mid', text: 'Moderate risk: refer for allergy assessment and testing' },
+      { max: 5, level: 'high', text: 'High risk: refer for allergy assessment; avoid penicillins meanwhile' }
+    ],
+    note: 'A score < 3 had a negative predictive value of 96% for a positive allergy test. Never challenge after a severe cutaneous reaction (SJS/TEN, DRESS, AGEP) or other severe delayed reaction, whatever the score. Direct oral challenge is supported by the PALACE trial.',
+    ref: 'Trubiano JA et al. JAMA Intern Med 2020; Copaescu AM et al. (PALACE) JAMA Intern Med 2023'
+  },
+  {
     id: 'duke',
     name: 'Modified Duke criteria',
     wide: true,

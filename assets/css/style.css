@@ -430,3 +430,18 @@ fieldset.row.choice:first-child { border-top: 0; }
 }
 .ie-rname { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 10px; }
 .ie-cls { font-size: 10.5px; letter-spacing: 0.04em; text-transform: none; font-weight: 700; color: var(--accent-ink); background: var(--accent-soft); padding: 2px 8px; border-radius: 999px; }
+
+/* Guide results: traffic-light tone (rabies, needlestick) and extras */
+.ie-help { clear: both; margin: -4px 0 12px; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+.ie-summary { margin: -4px 0 12px; font-size: 14.5px; line-height: 1.5; }
+.ie-result[data-tone="green"] { border-color: var(--low); box-shadow: 0 0 0 3px var(--low-bg); }
+.ie-result[data-tone="green"] .ie-eyebrow { color: var(--low); }
+.ie-result[data-tone="amber"] { border-color: var(--mid); box-shadow: 0 0 0 3px var(--mid-bg); }
+.ie-result[data-tone="amber"] .ie-eyebrow { color: var(--mid); }
+.ie-result[data-tone="red"] { border-color: var(--high); box-shadow: 0 0 0 3px var(--high-bg); }
+.ie-result[data-tone="red"] .ie-eyebrow { color: var(--high); }
+.ie-contact {
+  margin: 0 0 18px; padding: 10px 14px; font-size: 13.5px; line-height: 1.5;
+  background: var(--accent-soft); border: 1px solid var(--accent); border-radius: var(--radius);
+}
+.ie-contact strong { font-variant-numeric: tabular-nums; }

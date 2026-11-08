@@ -122,20 +122,39 @@
       url: "https://www.gov.uk/guidance/high-consequence-infectious-diseases-hcid"
       tags: vhf ebola lassa mpox
 
+- category: Click-through guides
+  links:
+    - name: Endocarditis therapy (this site)
+      url: "/endocarditis/"
+      note: Antibiotic choice by organism, based on ESC 2023
+      tags: ie infective endocarditis antibiotics regimen treatment staphylococcus streptococcus enterococcus hacek empirical esc guide
+    - name: C. difficile treatment (this site)
+      url: "/cdiff/"
+      note: First episode, relapse, recurrence, life-threatening (NICE NG199)
+      tags: cdiff c diff clostridioides difficile clostridium vancomycin fidaxomicin fmt diarrhoea guide
+    - name: Malaria treatment (this site)
+      url: "/malaria/"
+      note: Severe and uncomplicated, by species (UK guidelines)
+      tags: malaria falciparum vivax ovale malariae knowlesi artesunate riamet primaquine returning traveller guide
+    - name: Needlestick and BBV exposure (this site)
+      url: "/needlestick/"
+      note: HIV PEP, hepatitis B prophylaxis and follow-up
+      tags: needlestick sharps injury pep hiv hepatitis b hbig hepatitis c bbv occupational splash bite guide
+    - name: Rabies post-exposure advice (this site)
+      url: "/rabies/"
+      note: UKHSA composite risk, vaccine and HRIG
+      tags: rabies bat dog bite scratch hrig rigs post-exposure pet vaccine animal guide
+
 - category: Calculators & tools
   links:
     - name: MDCalc
       url: "https://www.mdcalc.com/"
       tags: scores calculators
-    - name: Endocarditis therapy guide (this site)
-      url: "/endocarditis/"
-      note: Step-by-step antibiotic choice, based on ESC 2023
-      tags: ie infective endocarditis antibiotics regimen treatment staphylococcus streptococcus enterococcus hacek empirical esc
     - name: Key ID & micro trials (this site)
       url: "/trials/"
       note: 60 trials in PICO format with UK takeaways
       tags: trials evidence pico rct landmark frcpath
     - name: Bedside scores (this site)
       url: "/scores/"
-      note: CURB-65, qSOFA, LRINEC, modified Duke criteria
+      note: CURB-65, qSOFA, LRINEC, PEN-FAST, modified Duke criteria
       tags: curb qsofa lrinec duke endocarditis necrotising fasciitis

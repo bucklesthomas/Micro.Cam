@@ -11,6 +11,10 @@
   name: LRINEC
   sub: Laboratory risk indicator for necrotising fasciitis
   keywords: necrotising fasciitis nec fasc soft tissue crp sodium creatinine glucose haemoglobin wcc
+- id: penfast
+  name: PEN-FAST
+  sub: Penicillin allergy risk
+  keywords: penicillin allergy delabel de-label amoxicillin challenge anaphylaxis pen fast palace
 - id: duke
   name: Modified Duke criteria
   sub: Diagnosis of infective endocarditis
