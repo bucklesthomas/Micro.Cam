@@ -73,8 +73,9 @@
       url: "https://www.eucast.org/clinical_breakpoints"
       tags: mic susceptibility ast
     - name: UK SMIs (Standards for Microbiology Investigations)
-      url: "https://www.gov.uk/government/collections/standards-for-microbiology-investigations-smi"
-      tags: lab methods ukhsa
+      url: "https://www.rcpath.org/profession/publications/standards-for-microbiology-investigations.html"
+      note: Royal College of Pathologists
+      tags: smi lab methods rcpath ukhsa
     - name: UKHSA specialist lab services
       url: "https://www.gov.uk/government/collections/specialist-microbiology-services"
       note: Reference labs, RIPL, user manuals
