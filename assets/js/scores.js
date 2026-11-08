@@ -3,7 +3,7 @@
  *
  * items:
  *   { label, pts }                         → checkbox worth pts
- *   { label, options: [[text, pts], ...] } → dropdown
+ *   { label, options: [[text, pts], ...] } → a row of selectable boxes, one per option
  *   { heading: 'text' }                    → small subheading inside the card
  *   { label, group: 'major' }              → checkbox counted by group (used by Duke)
  *
@@ -118,9 +118,14 @@ var SCORES = [
         html += (opened ? '</div>' : '') + '<div class="group"><p class="subhead">' + it.heading + '</p>';
         opened = true;
       } else if (it.options) {
-        html += '<label class="row sel" for="' + fid + '"><span>' + it.label + '</span><select id="' + fid + '">';
-        it.options.forEach(function (o) { html += '<option value="' + o[1] + '">' + o[0] + ' (+' + o[1] + ')</option>'; });
-        html += '</select></label>';
+        // One tappable box per option (radio group); the first is selected by default
+        html += '<fieldset class="row choice"><legend>' + it.label + '</legend><div class="opts">';
+        it.options.forEach(function (o, j) {
+          html += '<label class="opt" for="' + fid + '-' + j + '"><input type="radio" name="' + fid + '" id="' + fid + '-' + j +
+                  '" value="' + o[1] + '"' + (j === 0 ? ' checked' : '') + '><span class="opt-text">' + o[0] +
+                  '</span><span class="opt-pts">+' + o[1] + '</span></label>';
+        });
+        html += '</div></fieldset>';
       } else if (it.group) {
         html += '<label class="row" for="' + fid + '"><input type="checkbox" id="' + fid + '" data-group="' + it.group + '"' +
                 (it.key ? ' data-key="' + it.key + '"' : '') + '><span>' + it.label + '</span></label>';
@@ -159,7 +164,7 @@ var SCORES = [
         totalEl.classList.add('word');
       } else {
         var total = 0;
-        form.querySelectorAll('input:checked, select').forEach(function (el) { total += Number(el.value); });
+        form.querySelectorAll('input:checked').forEach(function (el) { total += Number(el.value); });
         var band = s.bands.find(function (b) { return total <= b.max; }) || s.bands[s.bands.length - 1];
         out = { text: band.text, level: band.level };
         totalEl.textContent = total;

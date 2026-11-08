@@ -31,9 +31,4 @@
     }
     if (e.key === 'Escape') { q.value = ''; filter(); }
   });
-
-  // "/" focuses the search box from anywhere
-  document.addEventListener('keydown', function (e) {
-    if (e.key === '/' && document.activeElement !== q) { e.preventDefault(); q.focus(); }
-  });
 })();

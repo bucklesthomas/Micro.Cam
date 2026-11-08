@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{%- assign first = true -%}
+{%- for cat in site.data.links -%}
+  {%- for l in cat.links -%}
+    {%- assign c0 = l.url | slice: 0 -%}
+    {%- if l.note %}{% assign sub = cat.category | append: " · " | append: l.note %}{% else %}{% assign sub = cat.category %}{% endif -%}
+    {%- unless first %},{% endunless -%}{%- assign first = false %}
+  {"t":"link","title":{{ l.name | jsonify }},"sub":{{ sub | jsonify }},"url":{{ l.url | jsonify }},"ext":{% if c0 == "/" %}false{% else %}true{% endif %},"k":{{ l.tags | default: "" | jsonify }}}
+  {%- endfor -%}
+{%- endfor -%}
+{%- for s in site.data.search_scores %},
+  {"t":"score","title":{{ s.name | jsonify }},"sub":{{ s.sub | jsonify }},"url":{{ "/scores/#" | append: s.id | jsonify }},"ext":false,"k":{{ s.keywords | jsonify }}}
+{%- endfor -%}
+{%- for sec in site.data.trials.sections -%}
+  {%- for tr in sec.trials -%}
+    {%- assign tslug = tr.name | slugify -%}
+    {%- capture k %}{{ tr.p | strip_html }} {{ tr.i | strip_html }} {{ tr.c | strip_html }} {{ tr.o | strip_html }} {{ tr.takeaway | strip_html }} {{ sec.title }}{% if tr.uk %} uk{% endif %}{% endcapture %},
+  {"t":"trial","title":{{ tr.name | jsonify }},"sub":{{ tr.cite | append: " · " | append: sec.short | jsonify }},"url":{{ "/trials/#trial-" | append: tslug | jsonify }},"ext":false,"k":{{ k | jsonify }}}
+  {%- endfor -%}
+{%- endfor %}
+]

@@ -21,8 +21,9 @@
   }
 
   q.addEventListener('input', filter);
-  q.addEventListener('keydown', function (e) { if (e.key === 'Escape') { q.value = ''; filter(); } });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === '/' && document.activeElement !== q) { e.preventDefault(); q.focus(); }
+  window.addEventListener('hashchange', function () {
+    var el = document.getElementById(location.hash.slice(1));
+    if (el && (el.hidden || (el.closest('.topic') || {}).hidden)) { q.value = ''; filter(); el.scrollIntoView(); }
   });
+  q.addEventListener('keydown', function (e) { if (e.key === 'Escape') { q.value = ''; filter(); } });
 })();

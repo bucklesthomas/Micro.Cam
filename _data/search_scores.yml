@@ -1,0 +1,17 @@
+# Scores listed in the site search. id must match the score's id in assets/js/scores.js.
+- id: curb65
+  name: CURB-65
+  sub: Severity of community-acquired pneumonia
+  keywords: pneumonia cap severity urea confusion respiratory rate blood pressure
+- id: qsofa
+  name: qSOFA
+  sub: Risk of poor outcome in suspected infection
+  keywords: sepsis sofa mentation gcs respiratory rate blood pressure
+- id: lrinec
+  name: LRINEC
+  sub: Laboratory risk indicator for necrotising fasciitis
+  keywords: necrotising fasciitis nec fasc soft tissue crp sodium creatinine glucose haemoglobin wcc
+- id: duke
+  name: Modified Duke criteria
+  sub: Diagnosis of infective endocarditis
+  keywords: endocarditis ie blood cultures echo vegetation major minor

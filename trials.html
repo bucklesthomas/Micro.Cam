@@ -17,13 +17,9 @@ scripts:
   <span class="pico-key uk"><b>UK</b> UK-led trial</span>
 </div>
 
-<details class="caveats">
-  <summary>Before you quote a number</summary>
-  <ul>{% for c in t.caveats %}<li>{{ c }}</li>{% endfor %}</ul>
-</details>
 
 <div class="search">
-  <input id="tq" type="search" placeholder="Filter trials… e.g. SAB, oral, CAP, fungal (press / to focus)" autocomplete="off" aria-label="Filter trials">
+  <input id="tq" type="search" placeholder="Filter trials… e.g. SAB, oral, CAP, fungal" autocomplete="off" aria-label="Filter trials">
   <span id="tcount" class="count" aria-live="polite"></span>
 </div>
 
@@ -39,7 +35,7 @@ scripts:
   </header>
   <div class="trials">
   {% for tr in s.trials %}
-    <article class="trial" data-search="{{ tr.name | downcase }} {{ tr.cite | downcase }} {{ s.title | downcase }} {{ tr.p | strip_html | downcase }} {{ tr.i | strip_html | downcase }} {{ tr.c | strip_html | downcase }} {{ tr.o | strip_html | downcase }} {{ tr.takeaway | strip_html | downcase }}{% if tr.uk %} uk{% endif %}">
+    <article class="trial" id="trial-{{ tr.name | slugify }}" data-search="{{ tr.name | downcase }} {{ tr.cite | downcase }} {{ s.title | downcase }} {{ tr.p | strip_html | downcase }} {{ tr.i | strip_html | downcase }} {{ tr.c | strip_html | downcase }} {{ tr.o | strip_html | downcase }} {{ tr.takeaway | strip_html | downcase }}{% if tr.uk %} uk{% endif %}">
       <h3><span class="tname">{{ tr.name }}</span>{% if tr.uk %} <span class="uk-tag" title="UK-led trial">UK</span>{% endif %}<span class="cite">{{ tr.cite }}</span></h3>
       <dl class="pico">
         <div class="p"><dt><b>P</b><span>Population</span></dt><dd>{{ tr.p }}</dd></div>
