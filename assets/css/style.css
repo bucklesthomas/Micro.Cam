@@ -540,3 +540,36 @@ tr.sp-note td { text-align: left; padding: 8px 12px 10px; font-size: 13px; color
 .sp-notecells { display: flex; flex-wrap: wrap; gap: 4px 14px; }
 .sp-notecells .sp-cell { color: var(--ink); }
 .sp-notecells .sp-cell.R { color: var(--muted); }
+
+/* ── Intrinsic resistance ─────────────────────────────── */
+.ir-modes { display: flex; gap: 6px; margin-bottom: 12px; }
+.ir-layout { display: grid; grid-template-columns: minmax(220px, 300px) minmax(0, 1fr); gap: 18px; align-items: start; }
+.ir-list { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.ir-list input {
+  width: 100%; padding: 8px 10px; font: inherit; font-size: 14px; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+}
+.ir-list input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.ir-items { display: flex; flex-direction: column; max-height: 560px; overflow-y: auto; border: 1px solid var(--line); border-radius: 8px; padding: 4px; }
+.ir-grp { margin: 8px 8px 2px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.ir-grp:first-child { margin-top: 4px; }
+.ir-item { font: inherit; font-size: 14px; text-align: left; cursor: pointer; padding: 6px 10px; border: 0; border-radius: 6px; background: none; color: var(--ink); }
+.ir-item:hover { background: var(--bg); }
+.ir-item.on { background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; }
+.ir-detail { min-width: 0; }
+.ir-eyebrow { margin: 0; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-ink); }
+.ir-detail h3 { margin: 2px 0 6px; font-size: 20px; }
+.ir-lead { margin: 0 0 10px; font-size: 14px; color: var(--muted); }
+.ir-row { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 6px 12px; padding: 8px 0; border-top: 1px solid var(--line); }
+.ir-cls { font-size: 12.5px; color: var(--muted); padding-top: 3px; }
+.ir-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.ir-pill { font: inherit; font-size: 13.5px; padding: 3px 10px; border-radius: 999px; background: var(--high-bg); color: var(--high); border: 1px solid transparent; }
+.ir-pill.link { cursor: pointer; }
+.ir-pill.link:hover { border-color: var(--high); }
+.ir-note { margin: 12px 0 0; padding: 10px 12px; font-size: 13.5px; line-height: 1.5; background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 8px; }
+.ir-empty { color: var(--muted); }
+@media (max-width: 760px) {
+  .ir-layout { grid-template-columns: 1fr; }
+  .ir-items { max-height: 260px; }
+  .ir-row { grid-template-columns: 1fr; }
+}

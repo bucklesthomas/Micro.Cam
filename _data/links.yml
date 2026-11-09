@@ -80,6 +80,10 @@
       url: "https://www.eucast.org/fileadmin/eucast/pdf/breakpoints/v_16.1_Breakpoint_Tables.pdf"
       note: Breakpoint tables v16.1 (PDF)
       tags: mic susceptibility ast
+    - name: Intrinsic resistance table
+      url: "/intrinsic-resistance/"
+      note: Expected resistance by organism or antibiotic (EUCAST)
+      tags: intrinsic resistance expected resistant phenotypes eucast ampc stenotrophomonas enterococcus proteus serratia listeria colistin nitrofurantoin
     - name: UK SMIs (Standards for Microbiology Investigations)
       url: "https://www.rcpath.org/profession/publications/standards-for-microbiology-investigations.html"
       note: Royal College of Pathologists
@@ -140,6 +144,10 @@
       url: "/needlestick/"
       note: HIV PEP, hepatitis B prophylaxis and follow-up
       tags: needlestick sharps injury pep hiv hepatitis b hbig hepatitis c bbv occupational splash bite guide
+    - name: Neutropenic sepsis
+      url: "/neutropenic-sepsis/"
+      note: Initial antibiotics and when to add antifungals
+      tags: neutropenic sepsis febrile neutropenia fn chemotherapy haematology piperacillin tazobactam antifungal empirical pre-emptive caspofungin guide
     - name: Rabies post-exposure advice
       url: "/rabies/"
       note: UKHSA composite risk, vaccine and HRIG
