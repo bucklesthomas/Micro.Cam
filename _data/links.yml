@@ -145,6 +145,41 @@
       note: UKHSA composite risk, vaccine and HRIG
       tags: rabies bat dog bite scratch hrig rigs post-exposure pet vaccine animal guide
 
+- category: Mycology
+  links:
+    - name: Candidaemia treatment
+      url: "/candidaemia/"
+      note: By species, with step-down, line, eye and echo advice
+      tags: candida candidaemia candidemia fungaemia echinocandin fluconazole glabrata krusei auris parapsilosis yeast blood culture guide
+    - name: Invasive aspergillosis treatment
+      url: "/aspergillosis/"
+      note: First-line therapy and azole resistance (ESCMID 2017)
+      tags: aspergillus aspergillosis ipa mould voriconazole isavuconazole posaconazole amphotericin galactomannan guide
+    - name: Cryptococcal disease treatment
+      url: "/cryptococcus/"
+      note: Meningitis, CrAg, pulmonary (ECMM/ISHAM/ASM 2024)
+      tags: cryptococcus cryptococcal meningitis crag ambition amphotericin flucytosine fluconazole hiv guide
+    - name: Antifungal spectrum and TDM
+      url: "/antifungals/"
+      note: Drug-by-fungus coverage chart and levels helper
+      tags: antifungal spectrum coverage tdm levels voriconazole posaconazole itraconazole isavuconazole flucytosine trough mucorales
+    - name: Antifungal drug interactions
+      url: "https://antifungalinteractions.org/"
+      note: Fungal Infection Trust interaction database
+      tags: interactions azole voriconazole posaconazole tacrolimus antifungal
+    - name: UKHSA Mycology Reference Laboratory
+      url: "https://www.gov.uk/guidance/mycology-reference-laboratory-mrl-reference-and-diagnostic-services"
+      note: "Bristol: identification, susceptibility and antifungal assays"
+      tags: mrl bristol reference lab mycology send away assay levels susceptibility
+    - name: Candida auris (UKHSA)
+      url: "https://www.gov.uk/government/publications/candida-auris-laboratory-investigation-management-and-infection-prevention-and-control"
+      note: Laboratory, management and infection control guidance
+      tags: candida auris candidozyma ipc screening isolation outbreak
+    - name: Aspergillus website (NAC)
+      url: "https://www.aspergillus.org.uk/"
+      note: National Aspergillosis Centre resources
+      tags: aspergillus aspergillosis nac manchester cpa abpa
+
 - category: Calculators & tools
   links:
     - name: MDCalc
@@ -156,5 +191,5 @@
       tags: trials evidence pico rct landmark frcpath
     - name: Bedside scores (this site)
       url: "/scores/"
-      note: CURB-65, qSOFA, LRINEC, PEN-FAST, modified Duke criteria
+      note: CURB-65, qSOFA, LRINEC, PEN-FAST, Duke criteria, EORTC/MSGERC aspergillosis
       tags: curb qsofa lrinec duke endocarditis necrotising fasciitis

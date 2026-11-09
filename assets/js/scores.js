@@ -116,6 +116,49 @@ var SCORES = [
     },
     note: 'IE is only "rejected" with a firm alternative diagnosis, resolution with ≤ 4 days of antibiotics, or no IE at surgery/autopsy after ≤ 4 days of antibiotics. Blood culture major criteria count once in total; echo/regurgitation major criteria count once in total. Single positive cultures for coagulase-negative staphylococci and organisms that do not cause IE are excluded from the minor microbiology criterion.',
     ref: 'Li JS et al. Clin Infect Dis 2000. See also the 2023 Duke-ISCVID criteria (Fowler VG et al. Clin Infect Dis 2023)'
+  },
+  {
+    id: 'ipa',
+    name: 'Invasive aspergillosis (EORTC/MSGERC)',
+    use: 'Proven, probable or possible invasive pulmonary aspergillosis or mould disease',
+    wide: true,
+    items: [
+      { heading: 'Proven' },
+      { label: 'Hyphae on histopathology or cytopathology of a needle aspirate or biopsy, with tissue damage', group: 'proven' },
+      { label: 'Mould grown from a normally sterile, clinically affected site (not BAL, sinus or urine)', group: 'proven' },
+      { label: 'Fungal DNA amplified by PCR and sequenced from fixed tissue in which hyphae are seen', group: 'proven' },
+      { heading: 'Host factors' },
+      { label: 'Recent neutropenia (< 0.5 × 10⁹/L for > 10 days), temporally related to onset', group: 'host' },
+      { label: 'Haematological malignancy (active or in remission)', group: 'host' },
+      { label: 'Allogeneic stem cell transplant', group: 'host' },
+      { label: 'Solid organ transplant', group: 'host' },
+      { label: 'Corticosteroids ≥ 0.3 mg/kg/day prednisolone-equivalent for ≥ 3 weeks in the past 60 days', group: 'host' },
+      { label: 'T-cell immunosuppressant in the past 90 days, or B-cell immunosuppressant', group: 'host' },
+      { label: 'Inherited severe immunodeficiency', group: 'host' },
+      { label: 'Acute GVHD grade III–IV of gut, lung or liver, refractory to first-line steroids', group: 'host' },
+      { heading: 'Clinical features (CT)' },
+      { label: 'Dense, well-circumscribed lesion(s), with or without a halo sign', group: 'clinical', key: 'ct' },
+      { label: 'Air crescent sign', group: 'clinical', key: 'ct' },
+      { label: 'Cavity', group: 'clinical', key: 'ct' },
+      { label: 'Wedge-shaped, segmental or lobar consolidation', group: 'clinical', key: 'ct' },
+      { label: 'Tracheobronchitis: ulceration, nodule, pseudomembrane, plaque or eschar at bronchoscopy', group: 'clinical', key: 'ct' },
+      { heading: 'Mycological evidence' },
+      { label: 'Mould on microscopy or culture of sputum, BAL, bronchial brush or aspirate', group: 'myco', key: 'my' },
+      { label: 'Galactomannan ≥ 1.0 in serum/plasma, or ≥ 1.0 in BAL', group: 'myco', key: 'my' },
+      { label: 'Galactomannan ≥ 0.7 in serum/plasma and ≥ 0.8 in BAL', group: 'myco', key: 'my' },
+      { label: 'Aspergillus PCR: ≥ 2 consecutive positives in blood, ≥ 2 duplicate positives in BAL, or ≥ 1 in blood plus ≥ 1 in BAL', group: 'myco', key: 'my' }
+    ],
+    evaluate: function (c) {
+      if (c.proven > 0) return { badge: 'Proven', level: 'high', text: 'Proven invasive mould disease' };
+      if (c.host > 0 && c.clinical > 0 && c.myco > 0) return { badge: 'Probable', level: 'high', text: 'Probable invasive pulmonary aspergillosis: host factor, clinical feature and mycological evidence' };
+      if (c.host > 0 && c.clinical > 0) return { badge: 'Possible', level: 'mid', text: 'Possible invasive mould disease: host factor and clinical feature, no mycological evidence yet' };
+      var missing = [];
+      if (!c.host) missing.push('a host factor');
+      if (!c.clinical) missing.push('a clinical feature');
+      return { badge: 'Not met', level: 'low', text: 'Criteria not met: needs ' + missing.join(' and ') };
+    },
+    note: 'Probable needs at least one host factor, one clinical feature and one mycological criterion; possible needs a host factor and a clinical feature. Beta-D-glucan does not count as mycological evidence for moulds. These definitions are for immunocompromised (haematology, oncology, transplant) patients; ICU patients need different criteria (e.g. AspICU, IAPA, CAPA).',
+    ref: 'Donnelly JP et al. Clin Infect Dis 2020;71:1367 (EORTC/MSGERC revised definitions)'
   }
 ];
 
@@ -173,7 +216,7 @@ var SCORES = [
       var out;
       if (s.evaluate) {
         // Count by group; boxes sharing a key count once (e.g. both blood-culture majors = 1 major)
-        var counts = { path: 0, major: 0, minor: 0 }, seen = {};
+        var counts = { path: 0, major: 0, minor: 0, proven: 0, host: 0, clinical: 0, myco: 0 }, seen = {};
         form.querySelectorAll('input[data-group]:checked').forEach(function (el) {
           var g = el.getAttribute('data-group'), k = el.getAttribute('data-key');
           if (k) { if (seen[k]) return; seen[k] = true; }

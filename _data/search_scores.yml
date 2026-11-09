@@ -19,3 +19,7 @@
   name: Modified Duke criteria
   sub: Diagnosis of infective endocarditis
   keywords: endocarditis ie blood cultures echo vegetation major minor
+- id: ipa
+  name: Invasive aspergillosis (EORTC/MSGERC)
+  sub: Proven, probable or possible invasive mould disease
+  keywords: aspergillosis aspergillus ipa mould mold eortc msgerc galactomannan halo fungal neutropenia proven probable possible
