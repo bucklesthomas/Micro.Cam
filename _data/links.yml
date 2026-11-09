@@ -124,23 +124,23 @@
 
 - category: Click-through guides
   links:
-    - name: Endocarditis therapy (this site)
+    - name: Endocarditis therapy
       url: "/endocarditis/"
       note: Antibiotic choice by organism, based on ESC 2023
       tags: ie infective endocarditis antibiotics regimen treatment staphylococcus streptococcus enterococcus hacek empirical esc guide
-    - name: C. difficile treatment (this site)
+    - name: C. difficile treatment
       url: "/cdiff/"
       note: First episode, relapse, recurrence, life-threatening (NICE NG199)
       tags: cdiff c diff clostridioides difficile clostridium vancomycin fidaxomicin fmt diarrhoea guide
-    - name: Malaria treatment (this site)
+    - name: Malaria treatment
       url: "/malaria/"
       note: Severe and uncomplicated, by species (UK guidelines)
       tags: malaria falciparum vivax ovale malariae knowlesi artesunate riamet primaquine returning traveller guide
-    - name: Needlestick and BBV exposure (this site)
+    - name: Needlestick and BBV exposure
       url: "/needlestick/"
       note: HIV PEP, hepatitis B prophylaxis and follow-up
       tags: needlestick sharps injury pep hiv hepatitis b hbig hepatitis c bbv occupational splash bite guide
-    - name: Rabies post-exposure advice (this site)
+    - name: Rabies post-exposure advice
       url: "/rabies/"
       note: UKHSA composite risk, vaccine and HRIG
       tags: rabies bat dog bite scratch hrig rigs post-exposure pet vaccine animal guide
