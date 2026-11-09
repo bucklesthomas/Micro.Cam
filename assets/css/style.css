@@ -320,6 +320,8 @@ fieldset.row.choice:first-child { border-top: 0; }
 .ss-type.link { color: var(--accent-ink); }
 .ss-type.score { color: var(--c); }
 .ss-type.trial { color: var(--p); }
+.ss-type.bug { color: var(--low); }
+.ss-type.abx { color: var(--high); }
 .ss-main { display: flex; flex-direction: column; min-width: 0; }
 .ss-main b { font-weight: 700; font-size: 14.5px; }
 .ss-main small { color: var(--muted); font-size: 12.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

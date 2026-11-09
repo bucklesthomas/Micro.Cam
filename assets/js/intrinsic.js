@@ -80,5 +80,21 @@
     draw();
     var inp = host.querySelector('#ir-q'); inp.focus(); inp.setSelectionRange(pos, pos);
   });
+  function slug(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  // Deep links from site search: #org-<slug> or #abx-<slug>
+  function fromHash() {
+    var m = /^#(org|abx)-(.+)$/.exec(location.hash);
+    if (!m) return false;
+    var list = m[1] === 'org' ? ORGS : DRUGS;
+    var hit = list.filter(function (x) { return slug(x.name) === m[2]; })[0];
+    if (!hit) return false;
+    st.mode = m[1] === 'org' ? 'org' : 'drug'; st.q = ''; st.pick = hit.name;
+    return true;
+  }
+  window.addEventListener('hashchange', function () {
+    if (fromHash()) { draw(); host.scrollIntoView({ block: 'start' }); var on = host.querySelector('.ir-item.on'); if (on) on.scrollIntoView({ block: 'nearest' }); }
+  });
+  fromHash();
   draw();
+  var on0 = host.querySelector('.ir-item.on'); if (on0 && location.hash) { on0.scrollIntoView({ block: 'nearest' }); host.scrollIntoView({ block: 'start' }); }
 })();

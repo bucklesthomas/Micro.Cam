@@ -20,12 +20,12 @@
     - name: BNF for Children
       url: "https://bnfc.nice.org.uk/"
       tags: paediatric drugs dosing
-    - name: Liverpool HIV drug interactions
-      url: "https://www.hiv-druginteractions.org/checker"
-      tags: hiv arv interactions
     - name: Liverpool hepatitis drug interactions
       url: "https://www.hep-druginteractions.org/checker"
       tags: hcv hbv daa interactions
+    - name: Liverpool HIV drug interactions
+      url: "https://www.hiv-druginteractions.org/checker"
+      tags: hiv arv interactions
     - name: Renal Drug Database
       url: "https://renaldrugdatabase.com/"
       note: Subscription
@@ -33,49 +33,52 @@
 
 - category: Guidelines
   links:
-    - name: Endocarditis (ESC 2023)
-      url: "https://doi.org/10.1093/eurheartj/ehad193"
-      note: European Heart Journal
-      tags: ie infective endocarditis esc cardiology duke
-    - name: Malaria (UK 2016)
-      url: "https://www.journalofinfection.com/action/showPdf?pii=S0163-4453%2816%2900047-5"
-      note: Journal of Infection (PDF)
-      tags: malaria falciparum artesunate imported fever bia
-    - name: Lyme disease (NICE NG95)
-      url: "https://www.nice.org.uk/guidance/ng95"
-      tags: lyme borrelia tick erythema migrans
-    - name: Meningitis (UK 2016)
-      url: "https://www.journalofinfection.com/action/showPdf?pii=S0163-4453%2816%2900024-4"
-      note: Journal of Infection (PDF)
-      tags: meningitis meningococcal sepsis cns lp csf
+    - name: BASHH guidelines
+      url: "https://www.bashh.org/resources/guidelines"
+      tags: sti sexual health
+    - name: BHIVA guidelines
+      url: "https://www.bhiva.org/guidelines"
+      tags: hiv
+    - name: BIA (British Infection Association)
+      url: "https://www.britishinfection.org/"
+      tags: guidelines uk
     - name: Encephalitis (UK 2026)
       url: "https://www.encephalitis.info/wp-content/uploads/2026/11/Management-of-suspected-infectious-and-autoimmune-encephalitis-in-adults_United-Kingdom_2026.pdf"
       note: Infectious and autoimmune encephalitis in adults (PDF)
       tags: encephalitis hsv aciclovir autoimmune cns
-    - name: NICE antimicrobial guidance
-      url: "https://www.nice.org.uk/guidance/health-protection/communicable-diseases/antimicrobial-stewardship"
-      tags: nice prescribing stewardship
-    - name: BHIVA guidelines
-      url: "https://www.bhiva.org/guidelines"
-      tags: hiv
-    - name: BASHH guidelines
-      url: "https://www.bashh.org/resources/guidelines"
-      tags: sti sexual health
-    - name: BIA (British Infection Association)
-      url: "https://www.britishinfection.org/"
-      tags: guidelines uk
-    - name: IDSA practice guidelines
-      url: "https://www.idsociety.org/practice-guideline/practice-guidelines/"
-      tags: us guidelines
+    - name: Endocarditis (ESC 2023)
+      url: "https://doi.org/10.1093/eurheartj/ehad193"
+      note: European Heart Journal
+      tags: ie infective endocarditis esc cardiology duke
     - name: ESCMID guidelines
       url: "https://www.escmid.org/science-research/guidelines/"
       tags: european guidelines
     - name: Green Book (immunisation)
       url: "https://www.gov.uk/government/collections/immunisation-against-infectious-disease-the-green-book"
       tags: vaccines immunisation ukhsa
+    - name: IDSA practice guidelines
+      url: "https://www.idsociety.org/practice-guideline/practice-guidelines/"
+      tags: us guidelines
+    - name: Lyme disease (NICE NG95)
+      url: "https://www.nice.org.uk/guidance/ng95"
+      tags: lyme borrelia tick erythema migrans
+    - name: Malaria (UK 2016)
+      url: "https://www.journalofinfection.com/action/showPdf?pii=S0163-4453%2816%2900047-5"
+      note: Journal of Infection (PDF)
+      tags: malaria falciparum artesunate imported fever bia
+    - name: Meningitis (UK 2016)
+      url: "https://www.journalofinfection.com/action/showPdf?pii=S0163-4453%2816%2900024-4"
+      note: Journal of Infection (PDF)
+      tags: meningitis meningococcal sepsis cns lp csf
+    - name: NICE antimicrobial guidance
+      url: "https://www.nice.org.uk/guidance/health-protection/communicable-diseases/antimicrobial-stewardship"
+      tags: nice prescribing stewardship
 
 - category: Microbiology & lab
   links:
+    - name: BSAC
+      url: "https://bsac.org.uk/"
+      tags: antimicrobial chemotherapy
     - name: EUCAST clinical breakpoints
       url: "https://www.eucast.org/fileadmin/eucast/pdf/breakpoints/v_16.1_Breakpoint_Tables.pdf"
       note: Breakpoint tables v16.1 (PDF)
@@ -88,54 +91,51 @@
       url: "https://www.rcpath.org/profession/publications/standards-for-microbiology-investigations.html"
       note: Royal College of Pathologists
       tags: smi lab methods rcpath ukhsa
-    - name: BSAC
-      url: "https://bsac.org.uk/"
-      tags: antimicrobial chemotherapy
 
 - category: Public health & notification
   links:
-    - name: Notifiable diseases (UKHSA)
-      url: "https://www.gov.uk/guidance/notifiable-diseases-and-causative-organisms-how-to-report"
-      tags: notify report hpt
     - name: Find your local health protection team
       url: "https://www.gov.uk/health-protection-team"
       tags: hpt phe ukhsa
-    - name: WHO Disease Outbreak News
-      url: "https://www.who.int/emergencies/disease-outbreak-news"
-      tags: outbreak global
+    - name: Notifiable diseases (UKHSA)
+      url: "https://www.gov.uk/guidance/notifiable-diseases-and-causative-organisms-how-to-report"
+      tags: notify report hpt
     - name: ProMED
       url: "https://promedmail.org/"
       tags: outbreak alerts
+    - name: WHO Disease Outbreak News
+      url: "https://www.who.int/emergencies/disease-outbreak-news"
+      tags: outbreak global
 
 - category: Travel & imported infection
   links:
-    - name: TravelHealthPro (NaTHNaC)
-      url: "https://travelhealthpro.org.uk/"
-      tags: travel country malaria
-    - name: Fit for Travel
-      url: "https://www.fitfortravel.nhs.uk/"
-      tags: travel vaccines
     - name: CDC Yellow Book
       url: "https://www.cdc.gov/yellow-book/"
       tags: travel
+    - name: Fit for Travel
+      url: "https://www.fitfortravel.nhs.uk/"
+      tags: travel vaccines
+    - name: HCID (high consequence infectious diseases)
+      url: "https://www.gov.uk/guidance/high-consequence-infectious-diseases-hcid"
+      tags: vhf ebola lassa mpox
+    - name: TravelHealthPro (NaTHNaC)
+      url: "https://travelhealthpro.org.uk/"
+      tags: travel country malaria
     - name: VHF risk assessment algorithm
       url: "https://assets.publishing.service.gov.uk/media/6aa2833e92e72b8ac437f0b8/viral-haemorrhagic-fevers-risk-assessment-algorithm-september-2026.pdf"
       note: UKHSA / ACDP, September 2026 (PDF)
       tags: vhf ebola lassa marburg cchf returning traveller fever algorithm decision hcid
-    - name: HCID (high consequence infectious diseases)
-      url: "https://www.gov.uk/guidance/high-consequence-infectious-diseases-hcid"
-      tags: vhf ebola lassa mpox
 
 - category: Click-through guides
   links:
-    - name: Endocarditis therapy
-      url: "/endocarditis/"
-      note: Antibiotic choice by organism, based on ESC 2023
-      tags: ie infective endocarditis antibiotics regimen treatment staphylococcus streptococcus enterococcus hacek empirical esc guide
     - name: C. difficile treatment
       url: "/cdiff/"
       note: First episode, relapse, recurrence, life-threatening (NICE NG199)
       tags: cdiff c diff clostridioides difficile clostridium vancomycin fidaxomicin fmt diarrhoea guide
+    - name: Endocarditis therapy
+      url: "/endocarditis/"
+      note: Antibiotic choice by organism, based on ESC 2023
+      tags: ie infective endocarditis antibiotics regimen treatment staphylococcus streptococcus enterococcus hacek empirical esc guide
     - name: Malaria treatment
       url: "/malaria/"
       note: Severe and uncomplicated, by species (UK guidelines)
@@ -155,49 +155,49 @@
 
 - category: Mycology
   links:
-    - name: Candidaemia treatment
-      url: "/candidaemia/"
-      note: By species, with step-down, line, eye and echo advice
-      tags: candida candidaemia candidemia fungaemia echinocandin fluconazole glabrata krusei auris parapsilosis yeast blood culture guide
-    - name: Invasive aspergillosis treatment
-      url: "/aspergillosis/"
-      note: First-line therapy and azole resistance (ESCMID 2017)
-      tags: aspergillus aspergillosis ipa mould voriconazole isavuconazole posaconazole amphotericin galactomannan guide
-    - name: Cryptococcal disease treatment
-      url: "/cryptococcus/"
-      note: Meningitis, CrAg, pulmonary (ECMM/ISHAM/ASM 2024)
-      tags: cryptococcus cryptococcal meningitis crag ambition amphotericin flucytosine fluconazole hiv guide
-    - name: Antifungal spectrum and TDM
-      url: "/antifungals/"
-      note: Drug-by-fungus coverage chart and levels helper
-      tags: antifungal spectrum coverage tdm levels voriconazole posaconazole itraconazole isavuconazole flucytosine trough mucorales
     - name: Antifungal drug interactions
       url: "https://antifungalinteractions.org/"
       note: Fungal Infection Trust interaction database
       tags: interactions azole voriconazole posaconazole tacrolimus antifungal
-    - name: UKHSA Mycology Reference Laboratory
-      url: "https://www.gov.uk/guidance/mycology-reference-laboratory-mrl-reference-and-diagnostic-services"
-      note: "Bristol: identification, susceptibility and antifungal assays"
-      tags: mrl bristol reference lab mycology send away assay levels susceptibility
-    - name: Candida auris (UKHSA)
-      url: "https://www.gov.uk/government/publications/candida-auris-laboratory-investigation-management-and-infection-prevention-and-control"
-      note: Laboratory, management and infection control guidance
-      tags: candida auris candidozyma ipc screening isolation outbreak
+    - name: Antifungal spectrum and TDM
+      url: "/antifungals/"
+      note: Drug-by-fungus coverage chart and levels helper
+      tags: antifungal spectrum coverage tdm levels voriconazole posaconazole itraconazole isavuconazole flucytosine trough mucorales
     - name: Aspergillus website (NAC)
       url: "https://www.aspergillus.org.uk/"
       note: National Aspergillosis Centre resources
       tags: aspergillus aspergillosis nac manchester cpa abpa
+    - name: Candida auris (UKHSA)
+      url: "https://www.gov.uk/government/publications/candida-auris-laboratory-investigation-management-and-infection-prevention-and-control"
+      note: Laboratory, management and infection control guidance
+      tags: candida auris candidozyma ipc screening isolation outbreak
+    - name: Candidaemia treatment
+      url: "/candidaemia/"
+      note: By species, with step-down, line, eye and echo advice
+      tags: candida candidaemia candidemia fungaemia echinocandin fluconazole glabrata krusei auris parapsilosis yeast blood culture guide
+    - name: Cryptococcal disease treatment
+      url: "/cryptococcus/"
+      note: Meningitis, CrAg, pulmonary (ECMM/ISHAM/ASM 2024)
+      tags: cryptococcus cryptococcal meningitis crag ambition amphotericin flucytosine fluconazole hiv guide
+    - name: Invasive aspergillosis treatment
+      url: "/aspergillosis/"
+      note: First-line therapy and azole resistance (ESCMID 2017)
+      tags: aspergillus aspergillosis ipa mould voriconazole isavuconazole posaconazole amphotericin galactomannan guide
+    - name: UKHSA Mycology Reference Laboratory
+      url: "https://www.gov.uk/guidance/mycology-reference-laboratory-mrl-reference-and-diagnostic-services"
+      note: "Bristol: identification, susceptibility and antifungal assays"
+      tags: mrl bristol reference lab mycology send away assay levels susceptibility
 
 - category: Calculators & tools
   links:
-    - name: MDCalc
-      url: "https://www.mdcalc.com/"
-      tags: scores calculators
-    - name: Key ID & micro trials (this site)
-      url: "/trials/"
-      note: 60 trials in PICO format with UK takeaways
-      tags: trials evidence pico rct landmark frcpath
     - name: Bedside scores (this site)
       url: "/scores/"
       note: CURB-65, qSOFA, LRINEC, PEN-FAST, Duke criteria, EORTC/MSGERC aspergillosis
       tags: curb qsofa lrinec duke endocarditis necrotising fasciitis
+    - name: Key ID & micro trials (this site)
+      url: "/trials/"
+      note: 60 trials in PICO format with UK takeaways
+      tags: trials evidence pico rct landmark frcpath
+    - name: MDCalc
+      url: "https://www.mdcalc.com/"
+      tags: scores calculators

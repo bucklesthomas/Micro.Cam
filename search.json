@@ -21,5 +21,19 @@ permalink: /search.json
     {%- capture k %}{{ tr.p | strip_html }} {{ tr.i | strip_html }} {{ tr.c | strip_html }} {{ tr.o | strip_html }} {{ tr.takeaway | strip_html }} {{ sec.title }}{% if tr.uk %} uk{% endif %}{% endcapture %},
   {"t":"trial","title":{{ tr.name | jsonify }},"sub":{{ tr.cite | append: " · " | append: sec.short | jsonify }},"url":{{ "/trials/#trial-" | append: tslug | jsonify }},"ext":false,"k":{{ k | jsonify }}}
   {%- endfor -%}
+{%- endfor -%}
+{%- for g in site.data.intrinsic.groups -%}
+  {%- for o in g[1] -%}
+    {%- assign oslug = o[0] | slugify -%}
+    {%- assign syn = site.data.intrinsic.syn[o[0]] | default: "" -%}
+    {%- if site.data.intrinsic.ampc[o[0]] %}{% assign am = " ampc" %}{% else %}{% assign am = "" %}{% endif -%},
+  {"t":"bug","title":{{ o[0] | jsonify }},"sub":{{ "Intrinsic resistance · " | append: g[0] | jsonify }},"url":{{ "/intrinsic-resistance/#org-" | append: oslug | jsonify }},"ext":false,"k":{{ syn | append: am | append: " intrinsic resistance" | jsonify }}}
+  {%- endfor -%}
+{%- endfor -%}
+{%- for c in site.data.intrinsic.classes -%}
+  {%- for n in c[1] -%}
+    {%- assign dslug = n | slugify -%},
+  {"t":"abx","title":{{ n | jsonify }},"sub":{{ "Intrinsic resistance · organisms it will not cover" | jsonify }},"url":{{ "/intrinsic-resistance/#abx-" | append: dslug | jsonify }},"ext":false,"k":{{ c[0] | append: " intrinsic resistance" | jsonify }}}
+  {%- endfor -%}
 {%- endfor %}
 ]

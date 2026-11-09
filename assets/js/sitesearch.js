@@ -11,7 +11,7 @@
   var loading = null;
   var results = [];
   var active = -1;
-  var LABEL = { link: 'Link', score: 'Score', trial: 'Trial' };
+  var LABEL = { link: 'Link', score: 'Score', trial: 'Trial', bug: 'Organism', abx: 'Antibiotic' };
 
   function load() {
     if (index) return Promise.resolve();
@@ -45,14 +45,16 @@
     index.forEach(function (it) {
       var title = it.title.toLowerCase();
       var sub = (it.sub || '').toLowerCase();
-      var hay = title + ' ' + sub + ' ' + (it.k || '').toLowerCase();
+      var k = (it.k || '').toLowerCase();
       var score = 0;
       for (var i = 0; i < terms.length; i++) {
-        var t = terms[i];
-        if (hay.indexOf(t) === -1) return;
-        score += title.indexOf(t) === 0 ? 8 : title.indexOf(t) !== -1 ? 5 : sub.indexOf(t) !== -1 ? 2 : 1;
+        // match at the start of a word, so "e coli" finds E. coli rather than every word containing an "e"
+        var re = new RegExp('(^|[^a-z0-9])' + terms[i].replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+        var inT = re.test(title), inK = re.test(k), inS = re.test(sub);
+        if (!inT && !inK && !inS) return;
+        score += inT ? (title.indexOf(terms[i]) === 0 ? 8 : 5) : inK ? 3 : 1;
       }
-      if (it.t === 'score') score += 1;
+      if (it.t === 'score' || it.t === 'bug') score += 1;
       list.push({ it: it, s: score });
     });
     list.sort(function (a, b) { return b.s - a.s || a.it.title.localeCompare(b.it.title); });
