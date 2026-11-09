@@ -573,3 +573,11 @@ tr.sp-note td { text-align: left; padding: 8px 12px 10px; font-size: 13px; color
   .ir-items { max-height: 260px; }
   .ir-row { grid-template-columns: 1fr; }
 }
+.ir-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.ir-ampc { flex: none; font-style: normal; font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; padding: 1px 7px; border-radius: 999px; }
+.ir-ampc.high { background: var(--high-bg); color: var(--high); }
+.ir-ampc.low { background: var(--mid-bg); color: var(--mid); }
+.ir-flag { margin: 0 0 12px; padding: 10px 12px; font-size: 13.5px; line-height: 1.5; border-radius: 8px; border: 1px solid; }
+.ir-flag.high { background: var(--high-bg); border-color: var(--high); }
+.ir-flag.low { background: var(--mid-bg); border-color: var(--mid); }
+.ir-flag b { display: block; margin-bottom: 2px; }

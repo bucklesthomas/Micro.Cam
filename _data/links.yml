@@ -83,7 +83,7 @@
     - name: Intrinsic resistance table
       url: "/intrinsic-resistance/"
       note: Expected resistance by organism or antibiotic (EUCAST)
-      tags: intrinsic resistance expected resistant phenotypes eucast ampc stenotrophomonas enterococcus proteus serratia listeria colistin nitrofurantoin
+      tags: intrinsic resistance ampc derepression hecks eschpm expected resistant phenotypes eucast ampc stenotrophomonas enterococcus proteus serratia listeria colistin nitrofurantoin
     - name: UK SMIs (Standards for Microbiology Investigations)
       url: "https://www.rcpath.org/profession/publications/standards-for-microbiology-investigations.html"
       note: Royal College of Pathologists

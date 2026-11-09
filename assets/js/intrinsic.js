@@ -23,7 +23,7 @@
         var items = g[1].filter(function (o) { return !q || o[0].toLowerCase().indexOf(q) !== -1; });
         if (!items.length) return;
         h += '<p class="ir-grp">' + esc(g[0]) + '</p>';
-        items.forEach(function (o) { h += '<button type="button" class="ir-item' + (st.pick === o[0] ? ' on' : '') + '" data-pick="' + esc(o[0]) + '"><i>' + esc(o[0]) + '</i></button>'; });
+        items.forEach(function (o) { var a = (D.ampc || {})[o[0]]; h += '<button type="button" class="ir-item' + (st.pick === o[0] ? ' on' : '') + '" data-pick="' + esc(o[0]) + '"><i>' + esc(o[0]) + '</i>' + (a ? '<span class="ir-ampc ' + a[0] + '">AmpC</span>' : '') + '</button>'; });
       });
     } else {
       D.classes.forEach(function (c) {
@@ -42,7 +42,10 @@
     if (st.mode === 'org') {
       var o = ORGS.filter(function (x) { return x.name === st.pick; })[0];
       if (!o) return '<p class="ir-empty">Pick an organism.</p>';
-      h += '<p class="ir-eyebrow">' + esc(o.group) + '</p><h3><i>' + esc(o.name) + '</i></h3><p class="ir-lead">Expected to be resistant to:</p>';
+      h += '<p class="ir-eyebrow">' + esc(o.group) + '</p><h3><i>' + esc(o.name) + '</i></h3>';
+      var am = (D.ampc || {})[o.name];
+      if (am) h += '<div class="ir-flag ' + am[0] + '"><b>' + (am[0] === 'high' ? 'AmpC: high risk' : 'AmpC: low risk') + '</b> ' + esc(am[1]) + '</div>';
+      h += '<p class="ir-lead">Expected to be resistant to:</p>';
       D.classes.forEach(function (c) {
         var hits = c[1].filter(function (n) { return o.res.indexOf(n) !== -1; });
         if (!hits.length) return;
