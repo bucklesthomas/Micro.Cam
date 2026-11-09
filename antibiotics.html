@@ -1,0 +1,18 @@
+---
+layout: default
+title: Antibiotics
+permalink: /antibiotics/
+scripts:
+  - /assets/js/abx-data.js
+  - /assets/js/intrinsic-data.js
+  - /assets/js/antibiotics.js
+---
+<h1 class="page-title">Antibiotics</h1>
+<p class="lede">Common UK antibiotics with their UK-AWaRe category, usual adult doses, PK/PD targets and spectrum. Tap an antibiotic for details.</p>
+<p class="ie-disclaimer">Usual adult doses for normal renal function, as a quick reference. Check the BNF, your local antimicrobial guidelines and the patient’s renal function, weight and interactions before prescribing.</p>
+
+<section class="card af-card">
+  <div id="abx" data-coverage="{{ '/coverage/' | relative_url }}" data-intrinsic="{{ '/intrinsic-resistance/' | relative_url }}"><noscript>This page needs JavaScript turned on.</noscript></div>
+</section>
+
+<p class="ie-source">UK-AWaRe categories: <a href="https://www.gov.uk/government/publications/uk-aware-antibiotic-classification/uk-access-watch-reserve-and-other-classification-for-antibiotics-uk-aware-antibiotic-classification" target="_blank" rel="noopener">UKHSA UK-AWaRe antibiotic classification 2024</a> (rifampicin is not classified). Doses: usual adult doses from the <a href="https://bnf.nice.org.uk/" target="_blank" rel="noopener">BNF</a> and UK product information. PK/PD targets and parameters from product information and standard pharmacology references; spectrum is a general guide to typical UK isolates, so always use local susceptibility data. Intrinsic resistance: <a href="{{ '/intrinsic-resistance/' | relative_url }}">EUCAST expected phenotypes</a>.</p>

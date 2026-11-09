@@ -1,0 +1,2213 @@
+{
+ "orgs": [
+  [
+   "mssa",
+   "MSSA",
+   "Gram-positive"
+  ],
+  [
+   "mrsa",
+   "MRSA",
+   "Gram-positive"
+  ],
+  [
+   "cons",
+   "Coagulase-negative staphylococci",
+   "Gram-positive"
+  ],
+  [
+   "bhs",
+   "β-haemolytic streptococci (A, B, C, G)",
+   "Gram-positive"
+  ],
+  [
+   "pnc",
+   "Streptococcus pneumoniae",
+   "Gram-positive"
+  ],
+  [
+   "vgs",
+   "Viridans streptococci",
+   "Gram-positive"
+  ],
+  [
+   "efs",
+   "Enterococcus faecalis",
+   "Gram-positive"
+  ],
+  [
+   "efm",
+   "Enterococcus faecium",
+   "Gram-positive"
+  ],
+  [
+   "vre",
+   "VRE (vancomycin-resistant enterococci)",
+   "Gram-positive"
+  ],
+  [
+   "lis",
+   "Listeria monocytogenes",
+   "Gram-positive"
+  ],
+  [
+   "ecoli",
+   "E. coli and Klebsiella (no ESBL)",
+   "Gram-negative"
+  ],
+  [
+   "esbl",
+   "ESBL-producing Enterobacterales",
+   "Gram-negative"
+  ],
+  [
+   "ampc",
+   "AmpC producers (Enterobacter, C. freundii, K. aerogenes, Serratia)",
+   "Gram-negative"
+  ],
+  [
+   "cpe",
+   "Carbapenemase-producing Enterobacterales (CPE)",
+   "Gram-negative"
+  ],
+  [
+   "psa",
+   "Pseudomonas aeruginosa",
+   "Gram-negative"
+  ],
+  [
+   "acb",
+   "Acinetobacter baumannii",
+   "Gram-negative"
+  ],
+  [
+   "steno",
+   "Stenotrophomonas maltophilia",
+   "Gram-negative"
+  ],
+  [
+   "hflu",
+   "Haemophilus influenzae",
+   "Gram-negative"
+  ],
+  [
+   "mcat",
+   "Moraxella catarrhalis",
+   "Gram-negative"
+  ],
+  [
+   "nmen",
+   "Neisseria meningitidis",
+   "Gram-negative"
+  ],
+  [
+   "ngon",
+   "Neisseria gonorrhoeae",
+   "Gram-negative"
+  ],
+  [
+   "bfrag",
+   "Bacteroides fragilis group",
+   "Anaerobes"
+  ],
+  [
+   "oralan",
+   "Oral and upper-airway anaerobes",
+   "Anaerobes"
+  ],
+  [
+   "cperf",
+   "Clostridium perfringens and other clostridia",
+   "Anaerobes"
+  ],
+  [
+   "cdiff",
+   "Clostridioides difficile (gut)",
+   "Anaerobes"
+  ],
+  [
+   "myco",
+   "Mycoplasma pneumoniae",
+   "Atypicals"
+  ],
+  [
+   "chlam",
+   "Chlamydia / Chlamydophila",
+   "Atypicals"
+  ],
+  [
+   "legio",
+   "Legionella",
+   "Atypicals"
+  ]
+ ],
+ "classes": {
+  "Penicillins": "Bind penicillin-binding proteins and block cell-wall synthesis (bactericidal). Time-dependent killing: aim for the free drug to stay above the MIC for ≥ 50% of the dosing interval (≥ 100% in critical illness); frequent dosing or prolonged infusions help.",
+  "Cephalosporins": "β-lactams that block cell-wall synthesis. Time-dependent: target fT>MIC ≥ 60–70% of the interval (100% in critical illness). No activity against enterococci or Listeria.",
+  "Carbapenems and monobactams": "β-lactams that block cell-wall synthesis, stable to most ESBL and AmpC enzymes (carbapenems). Time-dependent: carbapenems need fT>MIC ≥ 40%; extended infusions help in critical illness.",
+  "Aminoglycosides": "Bind the 30S ribosome (bactericidal) with a post-antibiotic effect. Concentration-dependent: Cmax/MIC ≥ 8–10 and AUC/MIC 80–100, hence once-daily dosing. Inactive in anaerobic and acidic environments (abscess).",
+  "Glycopeptides and lipopeptides": "Glycopeptides bind D-Ala-D-Ala and block cell-wall synthesis; daptomycin depolarises the cell membrane. Gram-positive only.",
+  "Oxazolidinones": "Bind the 50S ribosome (mostly bacteriostatic). Gram-positive only, including MRSA and VRE.",
+  "Macrolides and lincosamides": "Bind the 50S ribosome (bacteriostatic). Macrolides cover atypicals; clindamycin covers anaerobes and suppresses toxin production.",
+  "Tetracyclines": "Bind the 30S ribosome (bacteriostatic). Broad spectrum including atypicals and many intracellular organisms.",
+  "Quinolones": "Inhibit DNA gyrase and topoisomerase IV (bactericidal). Concentration-dependent: fAUC/MIC ≥ 100–125 for Gram-negatives, ≥ 30–50 for pneumococcus. Excellent oral bioavailability.",
+  "Folate antagonists": "Block folate synthesis (trimethoprim: dihydrofolate reductase; sulfamethoxazole: dihydropteroate synthase).",
+  "Urinary agents": "Concentrated in urine with little or no useful level in blood or tissue: lower urinary tract infection only.",
+  "Nitroimidazoles": "Reduced inside anaerobes to radicals that damage DNA (bactericidal). Concentration-dependent.",
+  "Polymyxins": "Cationic peptides that disrupt the outer membrane of Gram-negatives (bactericidal). Narrow therapeutic window.",
+  "Other agents": "Assorted mechanisms (see each drug)."
+ },
+ "drugs": [
+  {
+   "name": "Benzylpenicillin",
+   "cls": "Penicillins",
+   "aware": "Access",
+   "routes": "IV",
+   "brands": "penicillin G, crystapen",
+   "dose": [
+    [
+     "IV",
+     "1.2 g every 4 hours (600 mg–2.4 g every 6 hours); up to 2.4 g every 4 hours for meningitis or endocarditis"
+    ]
+   ],
+   "uses": [
+    "Streptococcal infection, including endocarditis and cellulitis (with or without flucloxacillin)",
+    "Meningococcal disease",
+    "Clostridial infection, syphilis (neurosyphilis), leptospirosis"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 50% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 0.5 hours",
+    "pb": "≈ 60%",
+    "f": "Not given orally (acid-labile)",
+    "elim": "Renal (tubular secretion)",
+    "pen": "CSF adequate only with inflamed meninges and high doses"
+   },
+   "renal": "Reduce dose in severe renal impairment (seizure risk at high doses).",
+   "cautions": [
+    "Penicillin allergy",
+    "High doses can cause seizures, especially in renal impairment",
+    "Sodium and potassium load at high doses"
+   ],
+   "ir": [
+    "Benzylpenicillin"
+   ],
+   "cov": "0002211001000000000200120000",
+   "id": "benzylpenicillin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Phenoxymethylpenicillin",
+   "cls": "Penicillins",
+   "aware": "Access",
+   "routes": "Oral",
+   "brands": "penicillin V, pen V",
+   "dose": [
+    [
+     "Oral",
+     "500 mg every 6 hours; up to 1 g every 6 hours in severe infection"
+    ]
+   ],
+   "uses": [
+    "Streptococcal pharyngitis",
+    "Mild cellulitis or erysipelas (with streptococcal cause)",
+    "Prophylaxis after splenectomy or rheumatic fever"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 50% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 0.5–1 hour",
+    "pb": "≈ 80%",
+    "f": "≈ 60% (take on an empty stomach)",
+    "elim": "Renal",
+    "pen": "Not suitable for CNS or serious invasive infection"
+   },
+   "renal": "Usually no adjustment; consider reducing in severe impairment.",
+   "cautions": [
+    "Penicillin allergy",
+    "Take 1 hour before food"
+   ],
+   "ir": [
+    "Benzylpenicillin"
+   ],
+   "cov": "0002110000000000000000110000",
+   "id": "phenoxymethylpenicillin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Amoxicillin",
+   "cls": "Penicillins",
+   "aware": "Access",
+   "routes": "Oral, IV",
+   "brands": "amoxil, ampicillin",
+   "dose": [
+    [
+     "Oral",
+     "500 mg every 8 hours; 1 g every 8 hours in severe infection or pneumonia"
+    ],
+    [
+     "IV",
+     "500 mg–1 g every 8 hours; up to 2 g every 4 hours for meningitis, listeriosis or enterococcal endocarditis"
+    ]
+   ],
+   "uses": [
+    "Community-acquired pneumonia (low severity)",
+    "Enterococcal infection, including endocarditis",
+    "Listeria meningitis",
+    "Susceptible urinary tract infection"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 40–50% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 1–1.5 hours",
+    "pb": "≈ 20%",
+    "f": "≈ 70–90%",
+    "elim": "Renal",
+    "pen": "CSF with inflamed meninges at high IV doses; high urinary levels"
+   },
+   "renal": "Reduce dose or frequency when eGFR < 30 ml/min.",
+   "cautions": [
+    "Penicillin allergy",
+    "Rash with EBV infection (glandular fever)",
+    "About half of UK E. coli are resistant"
+   ],
+   "ir": [
+    "Amoxicillin"
+   ],
+   "cov": "0002212002100000010200120000",
+   "id": "amoxicillin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Flucloxacillin",
+   "cls": "Penicillins",
+   "aware": "Access",
+   "routes": "Oral, IV",
+   "brands": "floxapen",
+   "dose": [
+    [
+     "Oral",
+     "500 mg–1 g every 6 hours"
+    ],
+    [
+     "IV",
+     "1–2 g every 6 hours; 2 g every 4 hours for endocarditis, osteomyelitis or S. aureus bacteraemia"
+    ]
+   ],
+   "uses": [
+    "MSSA infection, including bacteraemia, endocarditis, bone and joint infection",
+    "Cellulitis and other skin and soft tissue infection"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 50% fT>MIC (highly protein bound, so free levels matter)"
+   },
+   "pk": {
+    "t12": "≈ 1 hour",
+    "pb": "≈ 95%",
+    "f": "≈ 50–70% (take on an empty stomach)",
+    "elim": "Renal and hepatic",
+    "pen": "Good bone and soft tissue; poor CSF"
+   },
+   "renal": "Reduce dose in severe renal impairment (eGFR < 10).",
+   "cautions": [
+    "Cholestatic jaundice and hepatitis, which can appear up to 2 months after stopping (higher risk over 50 and after 2 weeks of treatment)",
+    "High anion gap metabolic acidosis (5-oxoproline) with paracetamol in sick patients",
+    "Penicillin allergy"
+   ],
+   "ir": [
+    "Benzylpenicillin"
+   ],
+   "cov": "2012110000000000000000000000",
+   "id": "flucloxacillin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Co-amoxiclav",
+   "cls": "Penicillins",
+   "aware": "Watch",
+   "routes": "Oral, IV",
+   "brands": "augmentin, amoxicillin-clavulanate, amoxicillin–clavulanic acid",
+   "dose": [
+    [
+     "Oral",
+     "500/125 mg every 8 hours"
+    ],
+    [
+     "IV",
+     "1.2 g every 8 hours"
+    ]
+   ],
+   "uses": [
+    "Aspiration pneumonia, bites, diabetic foot infection",
+    "Intra-abdominal and mixed infections (local policy)",
+    "Upper respiratory tract infection when first-line fails"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 40–50% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 1 hour (both components)",
+    "pb": "Amoxicillin ≈ 20%, clavulanate ≈ 25%",
+    "f": "≈ 70–90%",
+    "elim": "Renal (clavulanate partly hepatic)",
+    "pen": "Poor CSF"
+   },
+   "renal": "Reduce dose or frequency when eGFR < 30 ml/min.",
+   "cautions": [
+    "Strongly associated with C. difficile infection",
+    "Cholestatic jaundice (more common than with amoxicillin, especially over 65 and after 14 days)",
+    "UK E. coli resistance is about 20–40%"
+   ],
+   "ir": [
+    "Co-amoxiclav"
+   ],
+   "cov": "2012212002100000022202220000",
+   "id": "co-amoxiclav",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Piperacillin–tazobactam",
+   "cls": "Penicillins",
+   "aware": "Watch",
+   "routes": "IV",
+   "brands": "tazocin, pip-taz, piptaz",
+   "dose": [
+    [
+     "IV",
+     "4.5 g every 8 hours; every 6 hours in severe infection or neutropenia. Extended (4-hour) infusions improve target attainment."
+    ]
+   ],
+   "uses": [
+    "Hospital-acquired pneumonia",
+    "Neutropenic sepsis",
+    "Intra-abdominal and complicated infections",
+    "Sepsis of unknown source (local policy)"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 50% fT>MIC; 100% fT>MIC in critical illness (use extended or continuous infusion)"
+   },
+   "pk": {
+    "t12": "≈ 1 hour",
+    "pb": "≈ 30%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Moderate tissue penetration; poor CSF"
+   },
+   "renal": "Reduce dose when eGFR < 40 ml/min (e.g. 4.5 g every 8–12 hours).",
+   "cautions": [
+    "Not reliable for serious ESBL infection (MERINO trial): use a carbapenem",
+    "Avoid for serious infection with high-risk AmpC producers",
+    "Increased acute kidney injury when combined with vancomycin",
+    "Hypokalaemia; thrombocytopenia with prolonged use"
+   ],
+   "ir": [
+    "Piperacillin–tazobactam"
+   ],
+   "cov": "2012222001211020022202220000",
+   "id": "piperacillin-tazobactam",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Temocillin",
+   "cls": "Penicillins",
+   "aware": "Watch",
+   "routes": "IV",
+   "brands": "negaban",
+   "dose": [
+    [
+     "IV",
+     "2 g every 12 hours; 2 g every 8 hours in severe infection"
+    ]
+   ],
+   "uses": [
+    "Urinary tract infection and bacteraemia due to ESBL or AmpC Enterobacterales",
+    "Carbapenem-sparing option for Gram-negative infection"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 40–50% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 5 hours",
+    "pb": "≈ 85%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "High urinary levels; limited data elsewhere"
+   },
+   "renal": "Reduce frequency when eGFR < 30 ml/min.",
+   "cautions": [
+    "No activity against Gram-positives, anaerobes, Pseudomonas or Acinetobacter",
+    "Resistant to OXA-48 carbapenemases"
+   ],
+   "ir": [],
+   "cov": "0000000000222100022100000000",
+   "id": "temocillin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Pivmecillinam",
+   "cls": "Penicillins",
+   "aware": "Access",
+   "routes": "Oral",
+   "brands": "selexid, mecillinam",
+   "dose": [
+    [
+     "Oral",
+     "400 mg first dose, then 200 mg every 8 hours for 3 days (lower UTI in women)"
+    ]
+   ],
+   "uses": [
+    "Lower urinary tract infection, including ESBL E. coli"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 40% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 1 hour",
+    "pb": "≈ 5–10%",
+    "f": "≈ 60–70% (prodrug of mecillinam)",
+    "elim": "Renal",
+    "pen": "Urine; not for systemic infection"
+   },
+   "renal": "No adjustment usually needed.",
+   "cautions": [
+    "Take with plenty of water, sitting or standing (oesophageal irritation)",
+    "Carnitine depletion with long courses",
+    "Not for upper UTI or bacteraemia"
+   ],
+   "site": "Lower urinary tract only",
+   "ir": [],
+   "cov": "0000000000221000000000000000",
+   "id": "pivmecillinam",
+   "tdm": ""
+  },
+  {
+   "name": "Cefalexin",
+   "cls": "Cephalosporins",
+   "aware": "Access",
+   "routes": "Oral",
+   "brands": "keflex, cephalexin",
+   "dose": [
+    [
+     "Oral",
+     "500 mg every 8–12 hours; up to 1–1.5 g every 6–8 hours in severe infection"
+    ]
+   ],
+   "uses": [
+    "Urinary tract infection (including pregnancy, local policy)",
+    "Skin and soft tissue infection with mild penicillin allergy (non-severe)"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 40–60% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 1 hour",
+    "pb": "≈ 10–15%",
+    "f": "≈ 90%",
+    "elim": "Renal",
+    "pen": "High urinary levels"
+   },
+   "renal": "Reduce dose when eGFR < 40 ml/min.",
+   "cautions": [
+    "Cross-reactivity with penicillin allergy is low; avoid after severe penicillin reactions",
+    "Poor activity against H. influenzae"
+   ],
+   "ir": [
+    "Cefalexin"
+   ],
+   "cov": "2012110000100000001000000000",
+   "id": "cefalexin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Cefuroxime",
+   "cls": "Cephalosporins",
+   "aware": "Watch",
+   "routes": "Oral, IV",
+   "brands": "zinacef, zinnat",
+   "dose": [
+    [
+     "IV",
+     "750 mg–1.5 g every 8 hours"
+    ],
+    [
+     "Oral",
+     "250–500 mg every 12 hours (with food)"
+    ]
+   ],
+   "uses": [
+    "Surgical prophylaxis (local policy)",
+    "Respiratory and urinary infection"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 60% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 1–1.5 hours",
+    "pb": "≈ 33–50%",
+    "f": "≈ 40–50% (cefuroxime axetil, with food)",
+    "elim": "Renal",
+    "pen": "Not reliable for meningitis"
+   },
+   "renal": "Reduce frequency when eGFR < 20 ml/min.",
+   "cautions": [
+    "C. difficile risk",
+    "Avoid after severe penicillin allergy"
+   ],
+   "ir": [
+    "Cefuroxime"
+   ],
+   "cov": "2012210000100000022110110000",
+   "id": "cefuroxime",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Ceftriaxone",
+   "cls": "Cephalosporins",
+   "aware": "Watch",
+   "routes": "IV, IM",
+   "brands": "rocephin, third-generation cephalosporin",
+   "dose": [
+    [
+     "IV",
+     "1–2 g once daily; 2 g every 12 hours for meningitis"
+    ],
+    [
+     "IM",
+     "1 g single dose for gonorrhoea"
+    ]
+   ],
+   "uses": [
+    "Bacterial meningitis",
+    "Severe community-acquired pneumonia",
+    "Pyelonephritis and Gram-negative bacteraemia (non-ESBL)",
+    "Gonorrhoea; OPAT"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 60–70% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 6–9 hours",
+    "pb": "≈ 85–95% (saturable)",
+    "f": "Not absorbed orally",
+    "elim": "Biliary and renal (about 50:50)",
+    "pen": "Good CSF with inflamed meninges"
+   },
+   "renal": "No adjustment needed in renal impairment alone (max 2 g daily if combined renal and hepatic impairment).",
+   "cautions": [
+    "Do not give with calcium-containing IV fluids in neonates",
+    "Biliary sludge (pseudolithiasis)",
+    "C. difficile risk",
+    "Not active against ESBL, Pseudomonas, enterococci or Listeria"
+   ],
+   "ir": [
+    "Ceftriaxone / cefotaxime"
+   ],
+   "cov": "1012220000200000022220110000",
+   "id": "ceftriaxone",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Cefotaxime",
+   "cls": "Cephalosporins",
+   "aware": "Watch",
+   "routes": "IV",
+   "brands": "claforan, third-generation cephalosporin",
+   "dose": [
+    [
+     "IV",
+     "1–2 g every 8 hours; up to 2 g every 4–6 hours for meningitis"
+    ]
+   ],
+   "uses": [
+    "Meningitis and severe infection, especially in neonates and children",
+    "Alternative to ceftriaxone"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 60–70% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 1 hour (active metabolite desacetylcefotaxime ≈ 1.5 hours)",
+    "pb": "≈ 40%",
+    "f": "IV only",
+    "elim": "Renal and hepatic metabolism",
+    "pen": "Good CSF with inflamed meninges"
+   },
+   "renal": "Halve the dose when eGFR < 5 ml/min.",
+   "cautions": [
+    "C. difficile risk",
+    "Not active against ESBL, Pseudomonas, enterococci or Listeria"
+   ],
+   "ir": [
+    "Ceftriaxone / cefotaxime"
+   ],
+   "cov": "1012220000200000022220110000",
+   "id": "cefotaxime",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Ceftazidime",
+   "cls": "Cephalosporins",
+   "aware": "Watch",
+   "routes": "IV",
+   "brands": "fortum",
+   "dose": [
+    [
+     "IV",
+     "1–2 g every 8 hours; 2 g every 8 hours for Pseudomonas or neutropenic sepsis"
+    ]
+   ],
+   "uses": [
+    "Pseudomonas aeruginosa infection",
+    "Melioidosis",
+    "Neutropenic sepsis (local policy)"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 60–70% fT>MIC; continuous infusion in critical illness"
+   },
+   "pk": {
+    "t12": "≈ 2 hours",
+    "pb": "< 10%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Good CSF with inflamed meninges"
+   },
+   "renal": "Reduce dose when eGFR < 50 ml/min.",
+   "cautions": [
+    "Poor activity against S. aureus and streptococci",
+    "Selects for ESBL and AmpC producers",
+    "Neurotoxicity in renal impairment"
+   ],
+   "ir": [
+    "Ceftazidime"
+   ],
+   "cov": "0000000000200021122210000000",
+   "id": "ceftazidime",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Cefepime",
+   "cls": "Cephalosporins",
+   "aware": "Watch",
+   "routes": "IV",
+   "brands": "fourth-generation cephalosporin",
+   "dose": [
+    [
+     "IV",
+     "1–2 g every 8–12 hours; 2 g every 8 hours for severe or pseudomonal infection"
+    ]
+   ],
+   "uses": [
+    "Infection with AmpC-producing Enterobacterales (if cefepime MIC ≤ 2 mg/L)",
+    "Pseudomonas and neutropenic sepsis (where used)"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 60–70% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 2 hours",
+    "pb": "≈ 20%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Good CSF with inflamed meninges"
+   },
+   "renal": "Reduce dose when eGFR < 50 ml/min.",
+   "cautions": [
+    "Neurotoxicity (encephalopathy, myoclonus, non-convulsive status) if not reduced in renal impairment",
+    "Not reliable for ESBL"
+   ],
+   "ir": [
+    "Cefepime"
+   ],
+   "cov": "1012220000202021022210000000",
+   "id": "cefepime",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Ceftaroline",
+   "cls": "Cephalosporins",
+   "aware": "Reserve",
+   "routes": "IV",
+   "brands": "zinforo, ceftaroline fosamil, anti-MRSA cephalosporin",
+   "dose": [
+    [
+     "IV",
+     "600 mg every 12 hours; 600 mg every 8 hours for complicated skin infection with S. aureus (MIC 2–4)"
+    ]
+   ],
+   "uses": [
+    "MRSA infection (salvage or combination therapy for bacteraemia, specialist advice)",
+    "Complicated skin infection and community-acquired pneumonia"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 30–50% fT>MIC for S. aureus"
+   },
+   "pk": {
+    "t12": "≈ 2.5 hours",
+    "pb": "≈ 20%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Limited CSF data"
+   },
+   "renal": "Reduce dose when eGFR < 50 ml/min.",
+   "cautions": [
+    "Neutropenia with courses over 2 weeks",
+    "Positive direct Coombs test",
+    "No Pseudomonas, ESBL or enterococcal activity"
+   ],
+   "ir": [
+    "Ceftaroline"
+   ],
+   "cov": "2222220000200000022100110000",
+   "id": "ceftaroline",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Ceftazidime–avibactam",
+   "cls": "Cephalosporins",
+   "aware": "Reserve",
+   "routes": "IV",
+   "brands": "zavicefta, caz-avi",
+   "dose": [
+    [
+     "IV",
+     "2.5 g every 8 hours, infused over 2 hours"
+    ]
+   ],
+   "uses": [
+    "Carbapenemase producers with KPC or OXA-48 (not metallo-β-lactamases: combine with aztreonam for NDM, VIM or IMP)",
+    "Multi-resistant Pseudomonas (microbiology advice)"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "Ceftazidime ≥ 50% fT>MIC; avibactam fT > threshold concentration (1 mg/L)"
+   },
+   "pk": {
+    "t12": "≈ 2–3 hours",
+    "pb": "< 10%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Limited data"
+   },
+   "renal": "Reduce dose when eGFR ≤ 50 ml/min.",
+   "cautions": [
+    "Reserve agent: microbiology approval",
+    "Inactive against metallo-β-lactamases alone",
+    "No anaerobic cover: add metronidazole for intra-abdominal infection"
+   ],
+   "ir": [
+    "Ceftazidime–avibactam"
+   ],
+   "cov": "0000000000222120022100000000",
+   "id": "ceftazidime-avibactam",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Ceftolozane–tazobactam",
+   "cls": "Cephalosporins",
+   "aware": "Reserve",
+   "routes": "IV",
+   "brands": "zerbaxa",
+   "dose": [
+    [
+     "IV",
+     "1.5 g every 8 hours; 3 g every 8 hours for hospital-acquired or ventilator-associated pneumonia"
+    ]
+   ],
+   "uses": [
+    "Multi-resistant Pseudomonas aeruginosa (microbiology advice)"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 30–40% fT>MIC for Pseudomonas"
+   },
+   "pk": {
+    "t12": "≈ 3 hours",
+    "pb": "≈ 15–20%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Good epithelial lining fluid levels at 3 g"
+   },
+   "renal": "Reduce dose when eGFR ≤ 50 ml/min.",
+   "cautions": [
+    "Reserve agent: microbiology approval",
+    "Inactive against carbapenemases"
+   ],
+   "ir": [
+    "Ceftolozane–tazobactam"
+   ],
+   "cov": "0000000000221020022000000000",
+   "id": "ceftolozane-tazobactam",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Cefiderocol",
+   "cls": "Cephalosporins",
+   "aware": "Reserve",
+   "routes": "IV",
+   "brands": "fetcroja, siderophore cephalosporin",
+   "dose": [
+    [
+     "IV",
+     "2 g every 8 hours, infused over 3 hours (every 6 hours if augmented renal clearance)"
+    ]
+   ],
+   "uses": [
+    "Carbapenem-resistant Gram-negatives with limited options, including metallo-β-lactamase producers and Stenotrophomonas (microbiology advice)"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 75% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 2–3 hours",
+    "pb": "≈ 40–60%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Limited data"
+   },
+   "renal": "Reduce dose when eGFR < 90 ml/min (product information), increase with augmented clearance.",
+   "cautions": [
+    "Reserve agent: microbiology approval",
+    "Higher mortality than best available therapy in Acinetobacter infection (CREDIBLE-CR)",
+    "Susceptibility testing needs iron-depleted media"
+   ],
+   "ir": [
+    "Cefiderocol"
+   ],
+   "cov": "0000000000222221222000000000",
+   "id": "cefiderocol",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Meropenem",
+   "cls": "Carbapenems and monobactams",
+   "aware": "Reserve",
+   "routes": "IV",
+   "brands": "meronem, carbapenem",
+   "dose": [
+    [
+     "IV",
+     "1 g every 8 hours; 2 g every 8 hours for meningitis, cystic fibrosis or Pseudomonas. Extended (3-hour) infusions in critical illness."
+    ]
+   ],
+   "uses": [
+    "Serious ESBL infection",
+    "Severe sepsis with resistant organisms",
+    "Meningitis with resistant organisms"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 40% fT>MIC; 100% fT>MIC in critical illness"
+   },
+   "pk": {
+    "t12": "≈ 1 hour",
+    "pb": "≈ 2%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Good CSF at 2 g every 8 hours"
+   },
+   "renal": "Reduce dose when eGFR < 50 ml/min.",
+   "cautions": [
+    "Lowers sodium valproate levels sharply: avoid the combination",
+    "Lower seizure risk than imipenem",
+    "Selects for carbapenem resistance and C. difficile"
+   ],
+   "ir": [
+    "Meropenem"
+   ],
+   "cov": "2012220001222021022212220000",
+   "id": "meropenem",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Ertapenem",
+   "cls": "Carbapenems and monobactams",
+   "aware": "Reserve",
+   "routes": "IV",
+   "brands": "invanz, carbapenem",
+   "dose": [
+    [
+     "IV",
+     "1 g once daily"
+    ]
+   ],
+   "uses": [
+    "ESBL infection (once daily, suitable for OPAT)",
+    "Intra-abdominal infection"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 40% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 4 hours",
+    "pb": "≈ 85–95%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Poor CSF"
+   },
+   "renal": "Reduce to 500 mg daily when eGFR ≤ 30 ml/min.",
+   "cautions": [
+    "No Pseudomonas, Acinetobacter or enterococcal activity",
+    "Avoid with sodium valproate",
+    "Lower levels in hypoalbuminaemia (highly protein bound)"
+   ],
+   "ir": [
+    "Ertapenem"
+   ],
+   "cov": "2012220000222000022112220000",
+   "id": "ertapenem",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Aztreonam",
+   "cls": "Carbapenems and monobactams",
+   "aware": "Reserve",
+   "routes": "IV, inhaled",
+   "brands": "azactam, cayston, monobactam",
+   "dose": [
+    [
+     "IV",
+     "1–2 g every 8 hours; 2 g every 6–8 hours for Pseudomonas"
+    ]
+   ],
+   "uses": [
+    "Gram-negative infection with severe β-lactam allergy (rarely cross-reacts, except with ceftazidime)",
+    "With ceftazidime–avibactam for metallo-β-lactamase producers"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 50–60% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 1.7 hours",
+    "pb": "≈ 55%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "CSF with inflamed meninges"
+   },
+   "renal": "Reduce dose when eGFR < 30 ml/min.",
+   "cautions": [
+    "Gram-negative aerobes only",
+    "Shares a side chain with ceftazidime (possible cross-allergy)",
+    "Hydrolysed by ESBL and AmpC enzymes"
+   ],
+   "ir": [
+    "Aztreonam"
+   ],
+   "cov": "0000000000200110022210000000",
+   "id": "aztreonam",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Gentamicin",
+   "cls": "Aminoglycosides",
+   "aware": "Access",
+   "routes": "IV",
+   "brands": "aminoglycoside",
+   "dose": [
+    [
+     "IV",
+     "5–7 mg/kg once daily by ideal or adjusted body weight (local nomogram)"
+    ],
+    [
+     "IV, synergy",
+     "1 mg/kg every 12 hours (streptococcal or enterococcal endocarditis, local policy)"
+    ]
+   ],
+   "uses": [
+    "Gram-negative sepsis and pyelonephritis (often a single dose or short course)",
+    "Synergy in endocarditis",
+    "Penicillin-allergic regimens"
+   ],
+   "pkpd": {
+    "idx": "Cmax/MIC and AUC/MIC",
+    "target": "Cmax/MIC ≥ 8–10; once-daily dosing"
+   },
+   "pk": {
+    "t12": "≈ 2–3 hours (longer in renal impairment)",
+    "pb": "< 30%",
+    "f": "Not absorbed orally",
+    "elim": "Renal (unchanged)",
+    "pen": "Poor CSF, lung and abscess; Vd ≈ 0.25 L/kg (higher in sepsis and oedema)"
+   },
+   "tdm": "Once daily: level 6–14 hours post-dose on the Hartford-type nomogram, or a pre-dose trough < 1 mg/L. Synergy dosing: pre-dose < 1 mg/L, 1-hour peak 3–5 mg/L.",
+   "renal": "Dose interval extended by levels; avoid if possible in AKI.",
+   "cautions": [
+    "Nephrotoxicity and ototoxicity (vestibular, cumulative; mitochondrial m.1555A>G variant)",
+    "Avoid with myasthenia gravis",
+    "Usually limit to 3–5 days",
+    "Inactive against streptococci and anaerobes alone"
+   ],
+   "ir": [
+    "Gentamicin"
+   ],
+   "cov": "1110000000212111011010000000",
+   "id": "gentamicin",
+   "site": ""
+  },
+  {
+   "name": "Amikacin",
+   "cls": "Aminoglycosides",
+   "aware": "Watch",
+   "routes": "IV",
+   "brands": "aminoglycoside",
+   "dose": [
+    [
+     "IV",
+     "15 mg/kg once daily (max 1.5 g); 25–30 mg/kg in critical illness (local policy)"
+    ]
+   ],
+   "uses": [
+    "Gentamicin-resistant Gram-negatives (including many ESBL producers)",
+    "Non-tuberculous mycobacteria (specialist)"
+   ],
+   "pkpd": {
+    "idx": "Cmax/MIC and AUC/MIC",
+    "target": "Cmax/MIC ≥ 8–10"
+   },
+   "pk": {
+    "t12": "≈ 2–3 hours",
+    "pb": "< 10%",
+    "f": "Not absorbed orally",
+    "elim": "Renal",
+    "pen": "As gentamicin"
+   },
+   "tdm": "Pre-dose trough < 2.5–5 mg/L (local policy); peak 50–60 mg/L in critical illness.",
+   "renal": "Dose interval extended by levels.",
+   "cautions": [
+    "Ototoxicity (more cochlear than gentamicin) and nephrotoxicity",
+    "Usually limit to a short course"
+   ],
+   "ir": [
+    "Amikacin"
+   ],
+   "cov": "1110000000222121011000000000",
+   "id": "amikacin",
+   "site": ""
+  },
+  {
+   "name": "Tobramycin",
+   "cls": "Aminoglycosides",
+   "aware": "Watch",
+   "routes": "IV, inhaled",
+   "brands": "tobi, bramitob, aminoglycoside",
+   "dose": [
+    [
+     "IV",
+     "5–7 mg/kg once daily (10 mg/kg in cystic fibrosis, specialist)"
+    ],
+    [
+     "Inhaled",
+     "300 mg twice daily (cystic fibrosis, bronchiectasis)"
+    ]
+   ],
+   "uses": [
+    "Pseudomonas aeruginosa in cystic fibrosis and bronchiectasis"
+   ],
+   "pkpd": {
+    "idx": "Cmax/MIC and AUC/MIC",
+    "target": "Cmax/MIC ≥ 8–10"
+   },
+   "pk": {
+    "t12": "≈ 2–3 hours",
+    "pb": "< 10%",
+    "f": "Not absorbed orally",
+    "elim": "Renal",
+    "pen": "As gentamicin"
+   },
+   "tdm": "Pre-dose trough < 1 mg/L for once-daily dosing (local policy).",
+   "renal": "Dose interval extended by levels.",
+   "cautions": [
+    "Nephrotoxicity and ototoxicity",
+    "More active than gentamicin against Pseudomonas"
+   ],
+   "ir": [
+    "Tobramycin"
+   ],
+   "cov": "1110000000212121011000000000",
+   "id": "tobramycin",
+   "site": ""
+  },
+  {
+   "name": "Vancomycin (IV)",
+   "cls": "Glycopeptides and lipopeptides",
+   "aware": "Watch",
+   "routes": "IV",
+   "brands": "vancomycin, glycopeptide, vanc",
+   "dose": [
+    [
+     "IV",
+     "Loading dose 25–30 mg/kg (max 2 g), then maintenance by weight and renal function per local nomogram, or continuous infusion"
+    ]
+   ],
+   "uses": [
+    "MRSA infection",
+    "Serious Gram-positive infection with penicillin allergy",
+    "Line infection with coagulase-negative staphylococci",
+    "Empirical cover for MRSA in sepsis (local policy)"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "AUC24/MIC ≥ 400 (target AUC24 400–600 mg·h/L for S. aureus with MIC ≤ 1 mg/L)"
+   },
+   "pk": {
+    "t12": "≈ 4–6 hours (up to days in renal failure)",
+    "pb": "≈ 50%",
+    "f": "Not absorbed orally",
+    "elim": "Renal (unchanged)",
+    "pen": "Poor CSF unless inflamed; poor lung and bone"
+   },
+   "tdm": "AUC-guided dosing preferred (Bayesian or two levels). Trough-based: 10–20 mg/L (15–20 mg/L for serious S. aureus infection, local policy). Continuous infusion: steady state 20–25 mg/L.",
+   "renal": "Reduce maintenance dose by levels.",
+   "cautions": [
+    "Nephrotoxicity, especially with piperacillin–tazobactam or aminoglycosides",
+    "Infusion reaction (\"vancomycin flushing syndrome\"): slow the infusion",
+    "Inferior to flucloxacillin for MSSA",
+    "Not for C. difficile (IV does not reach the gut)"
+   ],
+   "ir": [
+    "Vancomycin"
+   ],
+   "cov": "2222222201000000000000120000",
+   "id": "vancomycin-iv",
+   "site": ""
+  },
+  {
+   "name": "Vancomycin (oral)",
+   "cls": "Glycopeptides and lipopeptides",
+   "aware": "Watch",
+   "routes": "Oral",
+   "brands": "vancomycin oral, c diff",
+   "dose": [
+    [
+     "Oral",
+     "125 mg every 6 hours for 10 days; 500 mg every 6 hours for life-threatening C. difficile infection"
+    ]
+   ],
+   "uses": [
+    "Clostridioides difficile infection (first line, UK)"
+   ],
+   "pkpd": {
+    "idx": "Gut concentration",
+    "target": "Faecal levels far exceed MICs"
+   },
+   "pk": {
+    "t12": "Not relevant (minimal absorption)",
+    "pb": "—",
+    "f": "< 1% (stays in the gut)",
+    "elim": "Faecal",
+    "pen": "Gut lumen only"
+   },
+   "renal": "No adjustment.",
+   "cautions": [
+    "Treats C. difficile only",
+    "Can be absorbed with severe colitis and renal failure"
+   ],
+   "site": "Gut only",
+   "ir": [
+    "Vancomycin"
+   ],
+   "cov": "0000000000000000000000002000",
+   "id": "vancomycin-oral",
+   "tdm": ""
+  },
+  {
+   "name": "Teicoplanin",
+   "cls": "Glycopeptides and lipopeptides",
+   "aware": "Watch",
+   "routes": "IV, IM",
+   "brands": "targocid, glycopeptide, teic",
+   "dose": [
+    [
+     "IV",
+     "6 mg/kg every 12 hours for 3 doses, then 6 mg/kg once daily"
+    ],
+    [
+     "IV, bone and joint or endocarditis",
+     "12 mg/kg every 12 hours for 3–5 doses, then 12 mg/kg once daily"
+    ]
+   ],
+   "uses": [
+    "MRSA and Gram-positive infection (once daily, OPAT)",
+    "Penicillin-allergic surgical prophylaxis"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "Trough-guided (see TDM)"
+   },
+   "pk": {
+    "t12": "≈ 70–100 hours",
+    "pb": "≈ 90%",
+    "f": "Not absorbed orally",
+    "elim": "Renal",
+    "pen": "Good bone; poor CSF"
+   },
+   "tdm": "Pre-dose trough ≥ 15 mg/L for most infections; 20–40 mg/L (product information) or ≥ 20 mg/L for bone and joint infection and endocarditis; check at day 3–5.",
+   "renal": "Reduce maintenance dose from day 4 when eGFR < 80 ml/min.",
+   "cautions": [
+    "Less nephrotoxic than vancomycin",
+    "The loading dose matters: under-dosing is common",
+    "VanB VRE may be teicoplanin-susceptible; VanA are resistant"
+   ],
+   "ir": [
+    "Teicoplanin"
+   ],
+   "cov": "2212222201000000000000120000",
+   "id": "teicoplanin",
+   "site": ""
+  },
+  {
+   "name": "Daptomycin",
+   "cls": "Glycopeptides and lipopeptides",
+   "aware": "Reserve",
+   "routes": "IV",
+   "brands": "cubicin, lipopeptide",
+   "dose": [
+    [
+     "IV",
+     "4 mg/kg once daily (skin); 6 mg/kg once daily (bacteraemia, endocarditis); 8–12 mg/kg used for severe infection and enterococci (specialist)"
+    ]
+   ],
+   "uses": [
+    "MRSA bacteraemia and right-sided endocarditis",
+    "VRE infection",
+    "Gram-positive infection when glycopeptides fail or are not tolerated"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC and Cmax/MIC",
+    "target": "Concentration-dependent; higher doses for higher MICs and enterococci"
+   },
+   "pk": {
+    "t12": "≈ 8–9 hours",
+    "pb": "≈ 90%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Poor CSF; inactivated by lung surfactant"
+   },
+   "tdm": "Check CK weekly (more often with statins or renal impairment). Trough > 24.3 mg/L is linked with CK rise.",
+   "renal": "Give every 48 hours when eGFR < 30 ml/min.",
+   "cautions": [
+    "Not for pneumonia (inactivated by surfactant)",
+    "Myopathy and rhabdomyolysis: stop statins",
+    "Eosinophilic pneumonia"
+   ],
+   "ir": [],
+   "cov": "2222122220000000000000120000",
+   "id": "daptomycin",
+   "site": ""
+  },
+  {
+   "name": "Linezolid",
+   "cls": "Oxazolidinones",
+   "aware": "Reserve",
+   "routes": "Oral, IV",
+   "brands": "zyvox, oxazolidinone",
+   "dose": [
+    [
+     "Oral or IV",
+     "600 mg every 12 hours"
+    ]
+   ],
+   "uses": [
+    "MRSA and VRE infection",
+    "Oral step-down for resistant Gram-positive infection",
+    "MRSA pneumonia"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "AUC24/MIC ≥ 80–120"
+   },
+   "pk": {
+    "t12": "≈ 5–7 hours",
+    "pb": "≈ 30%",
+    "f": "≈ 100%",
+    "elim": "Non-renal oxidation (metabolites renally cleared)",
+    "pen": "Good lung, CSF and bone"
+   },
+   "tdm": "Consider pre-dose trough 2–7 mg/L for courses over 2 weeks, renal impairment or toxicity.",
+   "renal": "No adjustment (metabolites accumulate in renal failure: monitor blood count).",
+   "cautions": [
+    "Thrombocytopenia and anaemia (monitor full blood count weekly, especially after 10–14 days)",
+    "Peripheral and optic neuropathy with long courses; lactic acidosis",
+    "Serotonin syndrome with SSRIs and other serotonergic drugs; avoid tyramine-rich food"
+   ],
+   "ir": [
+    "Linezolid"
+   ],
+   "cov": "2222222221000000000001120000",
+   "id": "linezolid",
+   "site": ""
+  },
+  {
+   "name": "Clarithromycin",
+   "cls": "Macrolides and lincosamides",
+   "aware": "Watch",
+   "routes": "Oral, IV",
+   "brands": "klaricid, macrolide",
+   "dose": [
+    [
+     "Oral",
+     "250–500 mg every 12 hours"
+    ],
+    [
+     "IV",
+     "500 mg every 12 hours"
+    ]
+   ],
+   "uses": [
+    "Community-acquired pneumonia (atypical cover, penicillin allergy)",
+    "Respiratory and skin infection with penicillin allergy",
+    "H. pylori eradication"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "AUC/MIC (time-dependent with persistent effects)"
+   },
+   "pk": {
+    "t12": "≈ 3–7 hours (dose-dependent)",
+    "pb": "≈ 70%",
+    "f": "≈ 50%",
+    "elim": "Hepatic (CYP3A4) and renal",
+    "pen": "Good lung and tissue"
+   },
+   "renal": "Halve the dose when eGFR < 30 ml/min.",
+   "cautions": [
+    "Strong CYP3A4 inhibitor: statins (simvastatin), tacrolimus, DOACs, colchicine and many others",
+    "QT prolongation",
+    "IV is irritant: use a large vein"
+   ],
+   "ir": [
+    "Erythromycin / macrolides"
+   ],
+   "cov": "1011110000000000012000110222",
+   "id": "clarithromycin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Azithromycin",
+   "cls": "Macrolides and lincosamides",
+   "aware": "Watch",
+   "routes": "Oral, IV",
+   "brands": "zithromax, macrolide",
+   "dose": [
+    [
+     "Oral",
+     "500 mg once daily for 3 days (respiratory); 250 mg three times a week for prophylaxis in bronchiectasis or COPD"
+    ],
+    [
+     "Oral, sexual health",
+     "1 g single dose or as per BASHH (e.g. Mycoplasma genitalium regimens)"
+    ]
+   ],
+   "uses": [
+    "Atypical pneumonia",
+    "Chlamydia and other sexually transmitted infections (BASHH)",
+    "Enteric fever, Campylobacter and Shigella (specialist)",
+    "Long-term prophylaxis in bronchiectasis and COPD"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "AUC/MIC; concentrated in tissue and phagocytes"
+   },
+   "pk": {
+    "t12": "≈ 68 hours",
+    "pb": "≈ 10–50%",
+    "f": "≈ 37%",
+    "elim": "Biliary (unchanged)",
+    "pen": "Very high tissue and intracellular levels; low serum levels"
+   },
+   "renal": "Use with caution when eGFR < 10 ml/min.",
+   "cautions": [
+    "QT prolongation",
+    "Fewer interactions than clarithromycin",
+    "Rising macrolide resistance in Mycoplasma genitalium"
+   ],
+   "ir": [
+    "Erythromycin / macrolides"
+   ],
+   "cov": "1011110000000000012010110222",
+   "id": "azithromycin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Erythromycin",
+   "cls": "Macrolides and lincosamides",
+   "aware": "Watch",
+   "routes": "Oral, IV",
+   "brands": "macrolide",
+   "dose": [
+    [
+     "Oral",
+     "250–500 mg every 6 hours, or 500 mg–1 g every 12 hours"
+    ],
+    [
+     "IV",
+     "12.5 mg/kg every 6 hours (rarely used)"
+    ]
+   ],
+   "uses": [
+    "Penicillin allergy in pregnancy (local policy)",
+    "Prokinetic (unlicensed)"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "Time-dependent"
+   },
+   "pk": {
+    "t12": "≈ 1.5–2 hours",
+    "pb": "≈ 70–90%",
+    "f": "Variable (≈ 15–45%)",
+    "elim": "Hepatic (CYP3A4)",
+    "pen": "Good tissue; poor CSF"
+   },
+   "renal": "Maximum 1.5 g daily in severe renal impairment (ototoxicity).",
+   "cautions": [
+    "Gastrointestinal upset is common",
+    "CYP3A4 inhibitor and QT prolongation"
+   ],
+   "ir": [
+    "Erythromycin / macrolides"
+   ],
+   "cov": "1011110000000000002000110222",
+   "id": "erythromycin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Clindamycin",
+   "cls": "Macrolides and lincosamides",
+   "aware": "Watch",
+   "routes": "Oral, IV",
+   "brands": "dalacin, lincosamide",
+   "dose": [
+    [
+     "Oral",
+     "150–450 mg every 6 hours"
+    ],
+    [
+     "IV",
+     "600 mg–1.2 g every 6 hours; 1.2 g every 6 hours for toxin suppression (local policy)"
+    ]
+   ],
+   "uses": [
+    "Toxin suppression in necrotising fasciitis and toxic shock (with a β-lactam)",
+    "Skin, bone and joint infection with penicillin allergy",
+    "Anaerobic infection above the diaphragm"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "AUC/MIC (bacteriostatic)"
+   },
+   "pk": {
+    "t12": "≈ 2–3 hours",
+    "pb": "≈ 90%",
+    "f": "≈ 90%",
+    "elim": "Hepatic",
+    "pen": "Excellent bone and abscess; poor CSF"
+   },
+   "renal": "No adjustment.",
+   "cautions": [
+    "Highest-risk agent for C. difficile",
+    "Inducible resistance in staphylococci and streptococci: check the D-test",
+    "Increasing resistance in Bacteroides"
+   ],
+   "ir": [
+    "Clindamycin"
+   ],
+   "cov": "2111110000000000000001210000",
+   "id": "clindamycin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Doxycycline",
+   "cls": "Tetracyclines",
+   "aware": "Access",
+   "routes": "Oral",
+   "brands": "vibramycin, tetracycline",
+   "dose": [
+    [
+     "Oral",
+     "200 mg on day 1, then 100 mg once daily; 100 mg every 12 hours (or 200 mg daily) in severe infection"
+    ]
+   ],
+   "uses": [
+    "Community-acquired pneumonia and COPD exacerbation",
+    "Cellulitis with penicillin allergy; MRSA skin infection",
+    "Lyme disease, rickettsia, Q fever, chlamydia, syphilis (alternative)"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "fAUC/MIC ≥ 25"
+   },
+   "pk": {
+    "t12": "≈ 18–22 hours",
+    "pb": "≈ 80–90%",
+    "f": "≈ 90–95%",
+    "elim": "Faecal and renal (no renal adjustment)",
+    "pen": "Good tissue and lung"
+   },
+   "renal": "No adjustment.",
+   "cautions": [
+    "Avoid in pregnancy and children under 12",
+    "Take upright with water (oesophagitis); separate from calcium, iron and antacids",
+    "Photosensitivity"
+   ],
+   "ir": [
+    "Doxycycline"
+   ],
+   "cov": "2111110001111000122000110222",
+   "id": "doxycycline",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Tigecycline",
+   "cls": "Tetracyclines",
+   "aware": "Reserve",
+   "routes": "IV",
+   "brands": "tygacil, glycylcycline",
+   "dose": [
+    [
+     "IV",
+     "100 mg loading dose, then 50 mg every 12 hours (higher doses used off-label for resistant organisms, specialist)"
+    ]
+   ],
+   "uses": [
+    "Complicated skin and intra-abdominal infection with multi-resistant organisms (specialist)"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "AUC/MIC"
+   },
+   "pk": {
+    "t12": "≈ 40 hours",
+    "pb": "≈ 70–90%",
+    "f": "IV only",
+    "elim": "Biliary",
+    "pen": "Large Vd (7–9 L/kg): high tissue but low serum and urine levels"
+   },
+   "renal": "No adjustment.",
+   "cautions": [
+    "Avoid for bacteraemia and UTI (low serum and urine levels)",
+    "Increased all-cause mortality in trials",
+    "Nausea and vomiting; pancreatitis; hypofibrinogenaemia",
+    "No Pseudomonas, Proteus, Morganella or Providencia activity"
+   ],
+   "ir": [
+    "Tigecycline"
+   ],
+   "cov": "2222222221222101122001220111",
+   "id": "tigecycline",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Ciprofloxacin",
+   "cls": "Quinolones",
+   "aware": "Watch",
+   "routes": "Oral, IV",
+   "brands": "ciproxin, fluoroquinolone, quinolone",
+   "dose": [
+    [
+     "Oral",
+     "500 mg every 12 hours; 750 mg every 12 hours for Pseudomonas, bone or severe infection"
+    ],
+    [
+     "IV",
+     "400 mg every 8–12 hours"
+    ]
+   ],
+   "uses": [
+    "Pyelonephritis and complicated UTI",
+    "Pseudomonas (oral option)",
+    "Prostatitis, bone and joint (Gram-negative)",
+    "Meningococcal contact prophylaxis (single 500 mg dose)"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC and Cmax/MIC",
+    "target": "fAUC/MIC ≥ 100–125 for Gram-negatives; Cmax/MIC ≥ 8–10"
+   },
+   "pk": {
+    "t12": "≈ 4 hours",
+    "pb": "≈ 20–40%",
+    "f": "≈ 70–80%",
+    "elim": "Renal and hepatic",
+    "pen": "Good urine, prostate and bone"
+   },
+   "renal": "Halve the dose when eGFR < 30 ml/min.",
+   "cautions": [
+    "MHRA: disabling tendon, nerve, mood and aortic adverse effects; use only when other antibiotics are unsuitable",
+    "Chelated by calcium, iron, zinc and antacids",
+    "Inhibits CYP1A2 (theophylline, clozapine); QT prolongation; lowers seizure threshold",
+    "Poor pneumococcal activity"
+   ],
+   "ir": [
+    "Ciprofloxacin"
+   ],
+   "cov": "0000000000111011122200000112",
+   "id": "ciprofloxacin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Levofloxacin",
+   "cls": "Quinolones",
+   "aware": "Watch",
+   "routes": "Oral, IV",
+   "brands": "tavanic, respiratory quinolone, fluoroquinolone",
+   "dose": [
+    [
+     "Oral or IV",
+     "500 mg every 12–24 hours; 750 mg once daily used for some indications"
+    ]
+   ],
+   "uses": [
+    "Community-acquired pneumonia with severe penicillin allergy",
+    "Stenotrophomonas (alternative to co-trimoxazole)",
+    "Gram-negative infection (oral)"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "fAUC/MIC ≥ 30–50 for pneumococcus; ≥ 100–125 for Gram-negatives"
+   },
+   "pk": {
+    "t12": "≈ 6–8 hours",
+    "pb": "≈ 30%",
+    "f": "≈ 99%",
+    "elim": "Renal (unchanged)",
+    "pen": "Good lung, urine and bone"
+   },
+   "renal": "Reduce dose when eGFR < 50 ml/min.",
+   "cautions": [
+    "MHRA fluoroquinolone warnings (tendons, nerves, mood, aorta)",
+    "QT prolongation",
+    "Chelation with polyvalent cations"
+   ],
+   "ir": [
+    "Ciprofloxacin"
+   ],
+   "cov": "1001210000111011122200000222",
+   "id": "levofloxacin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Moxifloxacin",
+   "cls": "Quinolones",
+   "aware": "Watch",
+   "routes": "Oral, IV",
+   "brands": "avelox, respiratory quinolone, fluoroquinolone",
+   "dose": [
+    [
+     "Oral or IV",
+     "400 mg once daily"
+    ]
+   ],
+   "uses": [
+    "Community-acquired pneumonia with severe penicillin allergy",
+    "Drug-resistant TB (specialist)",
+    "Mycoplasma genitalium (BASHH)"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "fAUC/MIC ≥ 30–50 for pneumococcus"
+   },
+   "pk": {
+    "t12": "≈ 12 hours",
+    "pb": "≈ 40%",
+    "f": "≈ 90%",
+    "elim": "Hepatic (glucuronidation and sulfation)",
+    "pen": "Good lung and tissue; low urine levels"
+   },
+   "renal": "No adjustment.",
+   "cautions": [
+    "Not for UTI (low urine levels)",
+    "Greatest QT effect of the quinolones",
+    "MHRA fluoroquinolone warnings; hepatotoxicity"
+   ],
+   "ir": [
+    "Ciprofloxacin"
+   ],
+   "site": "Not for urinary tract infection",
+   "cov": "1002210000111000122101110222",
+   "id": "moxifloxacin",
+   "tdm": ""
+  },
+  {
+   "name": "Trimethoprim",
+   "cls": "Folate antagonists",
+   "aware": "Access",
+   "routes": "Oral",
+   "brands": "",
+   "dose": [
+    [
+     "Oral",
+     "200 mg every 12 hours (3 days for lower UTI in women, 7 days in men); 100 mg at night for prophylaxis"
+    ]
+   ],
+   "uses": [
+    "Lower urinary tract infection (if low resistance risk)",
+    "UTI prophylaxis"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "AUC/MIC"
+   },
+   "pk": {
+    "t12": "≈ 8–10 hours",
+    "pb": "≈ 45%",
+    "f": "≈ 90–100%",
+    "elim": "Renal",
+    "pen": "High urine and prostate levels"
+   },
+   "renal": "Halve the dose after 3 days when eGFR 15–30 ml/min; avoid below 15 unless levels can be monitored.",
+   "cautions": [
+    "Hyperkalaemia and a rise in creatinine (blocks tubular secretion)",
+    "Avoid in first-trimester pregnancy (folate antagonist)",
+    "UK E. coli resistance is about 30%",
+    "Methotrexate interaction"
+   ],
+   "ir": [
+    "Trimethoprim"
+   ],
+   "cov": "1110100000111000010000000000",
+   "id": "trimethoprim",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Co-trimoxazole",
+   "cls": "Folate antagonists",
+   "aware": "Access",
+   "routes": "Oral, IV",
+   "brands": "septrin, sulfamethoxazole-trimethoprim, bactrim, cotrim",
+   "dose": [
+    [
+     "Oral or IV",
+     "960 mg every 12 hours"
+    ],
+    [
+     "Oral or IV, high dose",
+     "PJP treatment: 120 mg/kg daily in 2–4 divided doses; Stenotrophomonas and Nocardia: high doses (specialist)"
+    ]
+   ],
+   "uses": [
+    "Stenotrophomonas maltophilia",
+    "Pneumocystis (PJP) treatment and prophylaxis",
+    "MRSA and Gram-negative oral step-down (e.g. bone and joint, UTI)",
+    "Listeria in penicillin allergy; Nocardia; Toxoplasma"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "AUC/MIC"
+   },
+   "pk": {
+    "t12": "Sulfamethoxazole ≈ 10 hours; trimethoprim ≈ 8–10 hours",
+    "pb": "≈ 45–70%",
+    "f": "≈ 90%+",
+    "elim": "Renal",
+    "pen": "Good tissue and CSF"
+   },
+   "renal": "Halve the dose when eGFR 15–30 ml/min; avoid below 15 unless levels are monitored.",
+   "cautions": [
+    "Hyperkalaemia and a rise in creatinine",
+    "Bone marrow suppression, Stevens–Johnson syndrome, hepatitis; check full blood count",
+    "Warfarin and methotrexate interactions",
+    "Avoid in G6PD deficiency and first-trimester pregnancy"
+   ],
+   "ir": [
+    "Co-trimoxazole"
+   ],
+   "cov": "2211100002111001212000000000",
+   "id": "co-trimoxazole",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Nitrofurantoin",
+   "cls": "Urinary agents",
+   "aware": "Access",
+   "routes": "Oral",
+   "brands": "macrobid, macrodantin",
+   "dose": [
+    [
+     "Oral",
+     "100 mg modified-release every 12 hours (3 days for lower UTI in women, 7 days in men); 50–100 mg at night for prophylaxis"
+    ]
+   ],
+   "uses": [
+    "Lower urinary tract infection, including ESBL E. coli and enterococci"
+   ],
+   "pkpd": {
+    "idx": "Urine concentration",
+    "target": "Time-dependent in urine"
+   },
+   "pk": {
+    "t12": "≈ 20–60 minutes",
+    "pb": "≈ 60–90%",
+    "f": "≈ 90% (better with food)",
+    "elim": "Renal (concentrated in urine)",
+    "pen": "No useful blood or tissue levels"
+   },
+   "renal": "Avoid when eGFR < 45 ml/min; a short course can be used with caution at 30–44 if resistance leaves no alternative.",
+   "cautions": [
+    "Lower UTI only: not for pyelonephritis, bacteraemia or prostatitis",
+    "Pulmonary fibrosis, hepatitis and neuropathy with long-term use",
+    "Avoid at term in pregnancy",
+    "Proteus, Providencia, Morganella and Serratia are intrinsically resistant"
+   ],
+   "site": "Lower urinary tract only",
+   "ir": [
+    "Nitrofurantoin"
+   ],
+   "cov": "1110002110221100000000000000",
+   "id": "nitrofurantoin",
+   "tdm": ""
+  },
+  {
+   "name": "Fosfomycin",
+   "cls": "Urinary agents",
+   "aware": "Access",
+   "routes": "Oral (IV is Reserve)",
+   "brands": "monuril, fosfomycin trometamol",
+   "dose": [
+    [
+     "Oral",
+     "3 g single dose (women); men: 3 g, repeated after 72 hours (off-label)"
+    ],
+    [
+     "IV (Reserve)",
+     "12–24 g daily in 2–3 divided doses with other agents (specialist)"
+    ]
+   ],
+   "uses": [
+    "Lower urinary tract infection, including ESBL E. coli"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC and fT>MIC",
+    "target": "Urine levels stay above MICs for 24–48 hours after a dose"
+   },
+   "pk": {
+    "t12": "≈ 4–8 hours (oral)",
+    "pb": "Negligible",
+    "f": "≈ 35–40%",
+    "elim": "Renal (unchanged)",
+    "pen": "Urine (oral); good tissue and CSF penetration IV"
+   },
+   "renal": "Avoid oral dosing when eGFR < 10 ml/min.",
+   "cautions": [
+    "Oral form for lower UTI only",
+    "IV form: sodium load and hypokalaemia; resistance emerges quickly if used alone",
+    "Staphylococcus saprophyticus is intrinsically resistant"
+   ],
+   "site": "Lower urinary tract only (oral)",
+   "ir": [
+    "Fosfomycin"
+   ],
+   "cov": "1110002110221100000000000000",
+   "id": "fosfomycin",
+   "tdm": ""
+  },
+  {
+   "name": "Metronidazole",
+   "cls": "Nitroimidazoles",
+   "aware": "Access",
+   "routes": "Oral, IV, rectal",
+   "brands": "flagyl, nitroimidazole",
+   "dose": [
+    [
+     "Oral",
+     "400 mg every 8 hours (500 mg every 8 hours for brain abscess)"
+    ],
+    [
+     "IV",
+     "500 mg every 8 hours"
+    ]
+   ],
+   "uses": [
+    "Anaerobic cover for intra-abdominal, pelvic and dental infection",
+    "Bacterial vaginosis and Trichomonas",
+    "Amoebiasis and Giardia",
+    "C. difficile only if vancomycin and fidaxomicin are unavailable"
+   ],
+   "pkpd": {
+    "idx": "Cmax/MIC and AUC/MIC",
+    "target": "Concentration-dependent"
+   },
+   "pk": {
+    "t12": "≈ 8 hours",
+    "pb": "< 20%",
+    "f": "≈ 100%",
+    "elim": "Hepatic",
+    "pen": "Excellent CSF, brain abscess and tissue"
+   },
+   "renal": "No adjustment.",
+   "cautions": [
+    "Disulfiram-like reaction with alcohol (evidence is weak, but advise avoiding)",
+    "Peripheral neuropathy and encephalopathy with long courses",
+    "Increases warfarin effect; metallic taste",
+    "Does not cover Actinomyces, Cutibacterium or aerobic streptococci"
+   ],
+   "ir": [],
+   "cov": "0000000000000000000002221000",
+   "id": "metronidazole",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Colistin",
+   "cls": "Polymyxins",
+   "aware": "Reserve",
+   "routes": "IV, nebulised",
+   "brands": "colistimethate, colomycin, promixin, polymyxin E",
+   "dose": [
+    [
+     "IV",
+     "9 million units loading dose, then 4.5 million units every 12 hours (adjust to renal function)"
+    ],
+    [
+     "Nebulised",
+     "1–2 million units every 12 hours (cystic fibrosis, bronchiectasis)"
+    ]
+   ],
+   "uses": [
+    "Carbapenem-resistant Acinetobacter, Pseudomonas and Enterobacterales with no other option (usually in combination)"
+   ],
+   "pkpd": {
+    "idx": "fAUC/MIC",
+    "target": "Average steady-state plasma colistin ≈ 2 mg/L"
+   },
+   "pk": {
+    "t12": "Formed colistin ≈ 14 hours (longer in renal failure)",
+    "pb": "≈ 50%",
+    "f": "Not absorbed orally",
+    "elim": "Colistimethate renal; colistin non-renal",
+    "pen": "Poor lung, CSF and urine levels"
+   },
+   "renal": "Reduce maintenance dose when eGFR < 50 ml/min.",
+   "cautions": [
+    "Nephrotoxicity (common) and neurotoxicity",
+    "Narrow therapeutic window",
+    "Proteus, Providencia, Morganella, Serratia, Burkholderia, Neisseria and all Gram-positives and anaerobes are intrinsically resistant"
+   ],
+   "ir": [
+    "Colistin"
+   ],
+   "cov": "0000000000221122120000000000",
+   "id": "colistin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Rifampicin",
+   "cls": "Other agents",
+   "aware": "Not listed",
+   "routes": "Oral, IV",
+   "brands": "rifadin, rifampin",
+   "dose": [
+    [
+     "Oral or IV",
+     "Staphylococcal infection: 450–600 mg once daily or 300–450 mg every 12 hours, always with another agent"
+    ],
+    [
+     "Oral",
+     "Meningococcal prophylaxis: 600 mg every 12 hours for 2 days"
+    ]
+   ],
+   "uses": [
+    "Prosthetic material infection with staphylococci (with another active agent)",
+    "Tuberculosis (standard regimens)",
+    "Meningococcal contact prophylaxis"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "AUC/MIC and Cmax/MIC"
+   },
+   "pk": {
+    "t12": "≈ 2–5 hours (shortens with auto-induction)",
+    "pb": "≈ 80%",
+    "f": "≈ 90%+ (empty stomach)",
+    "elim": "Hepatic and biliary",
+    "pen": "Excellent tissue, biofilm, bone and CSF"
+   },
+   "renal": "No adjustment.",
+   "cautions": [
+    "Never use alone: resistance emerges rapidly",
+    "Potent enzyme inducer: reduces levels of DOACs, warfarin, tacrolimus, azoles, HIV drugs and hormonal contraception",
+    "Hepatotoxicity; orange body fluids and stained contact lenses"
+   ],
+   "ir": [
+    "Rifampicin"
+   ],
+   "cov": "2221110001000000010200000001",
+   "id": "rifampicin",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Fusidic acid",
+   "cls": "Other agents",
+   "aware": "Watch",
+   "routes": "Oral",
+   "brands": "fucidin, sodium fusidate",
+   "dose": [
+    [
+     "Oral",
+     "Sodium fusidate 500 mg every 8 hours, with another agent for systemic infection"
+    ]
+   ],
+   "uses": [
+    "Staphylococcal bone and joint infection with another agent (specialist)"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "AUC/MIC"
+   },
+   "pk": {
+    "t12": "≈ 10–15 hours",
+    "pb": "≈ 95–97%",
+    "f": "≈ 90%",
+    "elim": "Hepatic and biliary",
+    "pen": "Good bone and skin"
+   },
+   "renal": "No adjustment.",
+   "cautions": [
+    "Never use alone systemically (rapid resistance)",
+    "Rhabdomyolysis with statins: stop the statin",
+    "Hepatotoxicity"
+   ],
+   "ir": [
+    "Fusidic acid"
+   ],
+   "cov": "2110000000000000000000000000",
+   "id": "fusidic-acid",
+   "tdm": "",
+   "site": ""
+  },
+  {
+   "name": "Chloramphenicol",
+   "cls": "Other agents",
+   "aware": "Watch",
+   "routes": "IV, oral, topical",
+   "brands": "",
+   "dose": [
+    [
+     "IV",
+     "12.5 mg/kg every 6 hours; up to 25 mg/kg every 6 hours in severe infection (meningitis, specialist)"
+    ]
+   ],
+   "uses": [
+    "Meningitis or other severe infection with life-threatening β-lactam allergy (rare, specialist)"
+   ],
+   "pkpd": {
+    "idx": "AUC/MIC",
+    "target": "Time-dependent (bacteriostatic)"
+   },
+   "pk": {
+    "t12": "≈ 1.5–4 hours",
+    "pb": "≈ 50–60%",
+    "f": "≈ 80%",
+    "elim": "Hepatic (glucuronidation)",
+    "pen": "Excellent CSF"
+   },
+   "tdm": "Peak 10–25 mg/L, trough < 15 mg/L (where available).",
+   "renal": "No adjustment; avoid in severe hepatic impairment.",
+   "cautions": [
+    "Dose-related bone marrow suppression and rare idiosyncratic aplastic anaemia",
+    "Grey baby syndrome in neonates"
+   ],
+   "ir": [
+    "Chloramphenicol"
+   ],
+   "cov": "1112211111111000122212220111",
+   "id": "chloramphenicol",
+   "site": ""
+  },
+  {
+   "name": "Fidaxomicin",
+   "cls": "Other agents",
+   "aware": "Watch",
+   "routes": "Oral",
+   "brands": "dificlir, macrocyclic",
+   "dose": [
+    [
+     "Oral",
+     "200 mg every 12 hours for 10 days (or extended pulsed regimen)"
+    ]
+   ],
+   "uses": [
+    "C. difficile infection, especially recurrence or high recurrence risk"
+   ],
+   "pkpd": {
+    "idx": "Gut concentration",
+    "target": "Faecal levels far exceed MICs"
+   },
+   "pk": {
+    "t12": "≈ 8–10 hours (minimal absorption)",
+    "pb": "—",
+    "f": "Minimal",
+    "elim": "Faecal",
+    "pen": "Gut lumen only"
+   },
+   "renal": "No adjustment.",
+   "cautions": [
+    "Treats C. difficile only",
+    "Narrow spectrum: spares much of the gut flora"
+   ],
+   "site": "Gut only",
+   "ir": [],
+   "cov": "0000000000000000000000002000",
+   "id": "fidaxomicin",
+   "tdm": ""
+  }
+ ],
+ "groups": [
+  "Gram-positive",
+  "Gram-negative",
+  "Anaerobes",
+  "Atypicals"
+ ]
+}

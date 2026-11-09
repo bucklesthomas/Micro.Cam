@@ -1,0 +1,15 @@
+---
+layout: default
+title: Coverage checker
+permalink: /coverage/
+scripts:
+  - /assets/js/abx-data.js
+  - /assets/js/coverage.js
+---
+<h1 class="page-title">Coverage checker</h1>
+<p class="lede">Pick the antibiotics the patient is on and the organisms you are worried about, to see whether the current regimen is likely to cover them.</p>
+<p class="ie-disclaimer">Based on typical UK susceptibility, not the patient’s isolate. “Likely covered” is not a guarantee: always check culture results, the site of infection, dosing and local resistance rates.</p>
+
+<div id="cov" data-abx="{{ '/antibiotics/' | relative_url }}"><noscript>This tool needs JavaScript turned on.</noscript></div>
+
+<p class="ie-source">Uses the same spectrum data as the <a href="{{ '/antibiotics/' | relative_url }}">antibiotics page</a>, checked against the <a href="{{ '/intrinsic-resistance/' | relative_url }}">EUCAST intrinsic resistance table</a>.</p>

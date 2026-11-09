@@ -14,6 +14,14 @@
 
 - category: Prescribing & interactions
   links:
+    - name: Antibiotic coverage checker
+      url: "/coverage/"
+      note: Is the current regimen covering the bugs you are worried about?
+      tags: coverage spectrum regimen gram-positive gram-negative anaerobes atypical covering gaps empirical
+    - name: Antibiotics (UK-AWaRe, dosing, PK/PD)
+      url: "/antibiotics/"
+      note: Doses, PK/PD and AUC targets, spectrum and AWaRe category
+      tags: antibiotic aware access watch reserve dose dosing pk pd auc pharmacokinetics tdm half-life bioavailability spectrum
     - name: BNF
       url: "https://bnf.nice.org.uk/"
       tags: drugs dosing formulary
