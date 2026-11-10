@@ -540,6 +540,53 @@
    "site": ""
   },
   {
+   "name": "Cefazolin",
+   "cls": "Cephalosporins",
+   "aware": "Access",
+   "routes": "IV",
+   "brands": "cephazolin, kefzol, first-generation cephalosporin",
+   "dose": [
+    [
+     "IV",
+     "1–2 g every 8 hours; 2 g every 8 hours for MSSA bacteraemia, endocarditis or bone and joint infection"
+    ],
+    [
+     "IV, surgical prophylaxis",
+     "2 g at induction (3 g if ≥ 120 kg); repeat after 4 hours in long operations"
+    ]
+   ],
+   "uses": [
+    "MSSA bacteraemia and endocarditis (alternative to flucloxacillin)",
+    "MSSA bone and joint infection; OPAT and haemodialysis patients (dosed after dialysis)",
+    "Surgical prophylaxis (local policy)"
+   ],
+   "pkpd": {
+    "idx": "fT>MIC",
+    "target": "≥ 60% fT>MIC"
+   },
+   "pk": {
+    "t12": "≈ 1.5–2.5 hours",
+    "pb": "≈ 80–85%",
+    "f": "IV only",
+    "elim": "Renal",
+    "pen": "Good bone, soft tissue and synovial fluid; poor CSF"
+   },
+   "renal": "Reduce when CrCl < 35 ml/min (half dose every 12 hours at 11–34; half dose every 18–24 hours at ≤ 10). Haemodialysis: 2 g after each session (3 g before a 72-hour gap), per local protocol.",
+   "cautions": [
+    "Not for meningitis, brain abscess or other CNS infection (poor penetration)",
+    "Possible inoculum effect with high-burden S. aureus infection (undrained abscess, some endocarditis): discuss with microbiology",
+    "Its side chain is unlike other β-lactams, so it can often be used in non-severe penicillin allergy; avoid after severe delayed reactions",
+    "C. difficile risk is low compared with later cephalosporins"
+   ],
+   "ir": [
+    "Cefalexin"
+   ],
+   "cov": "2012110000100000001000100000",
+   "id": "cefazolin",
+   "tdm": "",
+   "site": ""
+  },
+  {
    "name": "Cefuroxime",
    "cls": "Cephalosporins",
    "aware": "Watch",
