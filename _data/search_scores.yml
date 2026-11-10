@@ -16,9 +16,9 @@
   sub: Penicillin allergy risk
   keywords: penicillin allergy delabel de-label amoxicillin challenge anaphylaxis pen fast palace
 - id: duke
-  name: Modified Duke criteria
+  name: Duke-ISCVID criteria (2023)
   sub: Diagnosis of infective endocarditis
-  keywords: endocarditis ie blood cultures echo vegetation major minor
+  keywords: endocarditis ie blood cultures echo vegetation major minor modified duke iscvid pet ct
 - id: ipa
   name: Invasive aspergillosis (EORTC/MSGERC)
   sub: Proven, probable or possible invasive mould disease

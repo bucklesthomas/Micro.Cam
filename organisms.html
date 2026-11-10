@@ -1,0 +1,19 @@
+---
+layout: default
+title: Organisms
+permalink: /organisms/
+scripts:
+  - /assets/js/org-data.js
+  - /assets/js/abx-data.js
+  - /assets/js/intrinsic-data.js
+  - /assets/js/organisms.js
+---
+<h1 class="page-title">Organisms</h1>
+<p class="lede">Key facts and first-line treatment for common organisms, with their antibiotic activity, intrinsic resistance and links to the relevant guides.</p>
+<p class="ie-disclaimer">A quick reference for adults. Treatment depends on the site, severity and the isolate’s susceptibility: follow local guidelines and discuss with microbiology.</p>
+
+<section class="card af-card">
+  <div id="org" data-base="{{ site.baseurl }}" data-abx="{{ '/antibiotics/' | relative_url }}" data-intrinsic="{{ '/intrinsic-resistance/' | relative_url }}" data-bp="{{ '/breakpoints/' | relative_url }}" data-coverage="{{ '/coverage/' | relative_url }}"><noscript>This page needs JavaScript turned on.</noscript></div>
+</section>
+
+<p class="ie-source">Treatment summaries draw on the guides on this site and their sources (IDSA 2024 AMR guidance, ESC 2023, UK meningitis 2016, UKHSA, ECMM/ISHAM), with BASHH for gonorrhoea and NICE for common infections. Intrinsic resistance: EUCAST expected phenotypes v1.2. AmpC risk groups: IDSA 2024.</p>

@@ -85,25 +85,31 @@ var SCORES = [
   },
   {
     id: 'duke',
-    name: 'Modified Duke criteria',
+    name: 'Duke-ISCVID criteria (2023)',
     wide: true,
     use: 'Diagnosis of infective endocarditis',
     items: [
       { heading: 'Pathological criteria' },
-      { label: 'Microorganisms on culture or histology of a vegetation, embolised vegetation or intracardiac abscess', group: 'path' },
-      { label: 'Vegetation or intracardiac abscess confirmed by histology showing active endocarditis', group: 'path' },
-      { heading: 'Major criteria' },
-      { label: 'Typical organism in 2 separate blood cultures (viridans strep, S. gallolyticus, HACEK, S. aureus, or community-acquired enterococci without a primary focus)', group: 'major', key: 'bc' },
-      { label: 'Persistently positive blood cultures (≥ 2 drawn > 12 h apart, or all 3 / most of ≥ 4 with first and last ≥ 1 h apart)', group: 'major', key: 'bc' },
-      { label: 'Single positive blood culture for Coxiella burnetii, or phase I IgG titre > 1:800', group: 'major', key: 'bc' },
-      { label: 'Echo evidence: vegetation, abscess, or new partial dehiscence of a prosthetic valve', group: 'major', key: 'endo' },
-      { label: 'New valvular regurgitation', group: 'major', key: 'endo' },
+      { label: 'Microorganisms identified (culture, histology, PCR or sequencing) in a vegetation, cardiac tissue, explanted prosthetic valve or sewing ring, ascending aortic graft with valve involvement, endovascular device or arterial embolus', group: 'path' },
+      { label: 'Active endocarditis on histology in any of the above', group: 'path' },
+      { heading: 'Major criteria: microbiology' },
+      { label: 'Typical organism in ≥ 2 separate blood culture sets: S. aureus, S. lugdunensis, E. faecalis, streptococci (not S. pneumoniae or S. pyogenes), Granulicatella, Abiotrophia, Gemella, HACEK', group: 'major', key: 'bc' },
+      { label: 'With intracardiac prosthetic material, also typical in ≥ 2 sets: coagulase-negative staphylococci, Corynebacterium striatum or jeikeium, Serratia marcescens, Pseudomonas aeruginosa, Cutibacterium acnes, non-tuberculous mycobacteria (especially M. chimaera), Candida', group: 'major', key: 'bc' },
+      { label: 'Non-typical organism in ≥ 3 separate blood culture sets', group: 'major', key: 'bc' },
+      { label: 'Blood PCR or sequencing positive for Coxiella burnetii, Bartonella or Tropheryma whipplei; or Coxiella phase I IgG > 1:800; or Bartonella IgG ≥ 1:800', group: 'major', key: 'bc' },
+      { heading: 'Major criteria: imaging and surgery' },
+      { label: 'Echo or cardiac CT: vegetation, leaflet perforation or aneurysm, abscess, pseudoaneurysm or intracardiac fistula', group: 'major', key: 'img' },
+      { label: 'Echo: significant new valvular regurgitation compared with previous imaging, or new partial dehiscence of a prosthetic valve', group: 'major', key: 'img' },
+      { label: 'FDG PET/CT: abnormal activity involving a native valve, device leads, or a prosthetic valve or graft more than 3 months after implantation', group: 'major', key: 'img' },
+      { label: 'Surgery: IE seen at direct inspection (when there is no imaging major criterion or later histological or microbiological confirmation)', group: 'major', key: 'img' },
       { heading: 'Minor criteria' },
-      { label: 'Predisposition: predisposing heart condition or injection drug use', group: 'minor' },
-      { label: 'Fever ≥ 38.0 °C', group: 'minor' },
-      { label: 'Vascular phenomena: major arterial emboli, septic pulmonary infarcts, mycotic aneurysm, intracranial haemorrhage, conjunctival haemorrhages, Janeway lesions', group: 'minor' },
-      { label: 'Immunological phenomena: glomerulonephritis, Osler nodes, Roth spots, rheumatoid factor', group: 'minor' },
-      { label: 'Microbiology: positive blood culture not meeting a major criterion, or serology of active infection with an organism consistent with IE', group: 'minor' }
+      { label: 'Predisposition: previous IE, prosthetic valve, previous valve repair, congenital heart disease, more than mild regurgitation or stenosis, endovascular device, hypertrophic obstructive cardiomyopathy, or injection drug use', group: 'minor' },
+      { label: 'Fever > 38.0 °C', group: 'minor' },
+      { label: 'Vascular phenomena (clinical or on imaging): arterial emboli, septic pulmonary infarcts, cerebral or splenic abscess, mycotic aneurysm, intracranial haemorrhage, conjunctival haemorrhages, Janeway lesions, purulent purpura', group: 'minor' },
+      { label: 'Immunological phenomena: positive rheumatoid factor, Osler nodes, Roth spots, immune complex glomerulonephritis', group: 'minor' },
+      { label: 'Microbiology short of a major criterion: positive blood cultures with an organism consistent with IE, or positive culture, PCR or sequencing from another sterile site', group: 'minor', key: 'mmic' },
+      { label: 'PET/CT: abnormal activity within 3 months of implanting a prosthetic valve, aortic graft, device leads or other prosthetic material', group: 'minor', key: 'mimg' },
+      { label: 'Examination: new regurgitant murmur (only if echocardiography is not available)', group: 'minor', key: 'mexam' }
     ],
     evaluate: function (c) {
       var summary = c.major + ' major · ' + c.minor + ' minor';
@@ -114,8 +120,8 @@ var SCORES = [
         return { badge: 'Possible', level: 'mid', text: 'Possible IE — ' + summary };
       return { badge: 'Not met', level: 'low', text: 'Criteria for possible IE not met — ' + summary };
     },
-    note: 'IE is only "rejected" with a firm alternative diagnosis, resolution with ≤ 4 days of antibiotics, or no IE at surgery/autopsy after ≤ 4 days of antibiotics. Blood culture major criteria count once in total; echo/regurgitation major criteria count once in total. Single positive cultures for coagulase-negative staphylococci and organisms that do not cause IE are excluded from the minor microbiology criterion.',
-    ref: 'Li JS et al. Clin Infect Dis 2000. See also the 2023 Duke-ISCVID criteria (Fowler VG et al. Clin Infect Dis 2023)'
+    note: 'Major microbiology criteria count once in total, and imaging or surgical criteria count once in total. A blood culture set is one aerobic plus one anaerobic bottle from a single venepuncture. IE is rejected with a firm alternative diagnosis, resolution with < 4 days of antibiotics, no IE at surgery or autopsy after < 4 days of antibiotics, or if criteria for possible IE are not met. Changes from the modified Duke criteria: more typical organisms (including with prosthetic material), PCR and sequencing, cardiac CT and PET/CT, surgical inspection, and new predispositions (devices, previous valve repair, HOCM).',
+    ref: 'Fowler VG et al. The 2023 Duke-ISCVID criteria for infective endocarditis. Clin Infect Dis 2023;77:518-26'
   },
   {
     id: 'ipa',

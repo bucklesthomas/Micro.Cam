@@ -28,6 +28,10 @@
     - name: BNF for Children
       url: "https://bnfc.nice.org.uk/"
       tags: paediatric drugs dosing
+    - name: IV-to-oral switch and durations
+      url: "/iv-oral-durations/"
+      note: UKHSA IVOS criteria checklist and evidence-based durations
+      tags: iv to oral switch ivos step down oral duration how long course length days short course
     - name: Liverpool hepatitis drug interactions
       url: "https://www.hep-druginteractions.org/checker"
       tags: hcv hbv daa interactions
@@ -99,6 +103,10 @@
       url: "/intrinsic-resistance/"
       note: Expected resistance by organism or antibiotic (EUCAST)
       tags: intrinsic resistance ampc derepression hecks eschpm expected resistant phenotypes eucast ampc stenotrophomonas enterococcus proteus serratia listeria colistin nitrofurantoin
+    - name: Organisms
+      url: "/organisms/"
+      note: Key facts, first-line treatment and resistance for common organisms
+      tags: organism bug pathogen bacteria species first line treatment
     - name: UK SMIs (Standards for Microbiology Investigations)
       url: "https://www.rcpath.org/profession/publications/standards-for-microbiology-investigations.html"
       note: Royal College of Pathologists
@@ -144,14 +152,26 @@
       url: "/cdiff/"
       note: First episode, relapse, recurrence, life-threatening (NICE NG199)
       tags: cdiff c diff clostridioides difficile clostridium vancomycin fidaxomicin fmt diarrhoea guide
+    - name: Contact prophylaxis
+      url: "/contact-prophylaxis/"
+      note: Meningococcal, iGAS, varicella, measles, pertussis, hepatitis A and Hib contacts
+      tags: contact prophylaxis pep post exposure chemoprophylaxis meningococcal ciprofloxacin igas group a strep varicella chickenpox shingles vzig measles hnig ivig pertussis whooping cough hepatitis a hib rifampicin
     - name: Endocarditis therapy
       url: "/endocarditis/"
       note: Antibiotic choice by organism, based on ESC 2023
       tags: ie infective endocarditis antibiotics regimen treatment staphylococcus streptococcus enterococcus hacek empirical esc guide
+    - name: Gram-negative bacteraemia
+      url: "/gram-negative-bacteraemia/"
+      note: Empirical, ESBL, AmpC, CPE, Pseudomonas; duration and oral switch
+      tags: gram negative bacteraemia bacteremia sepsis esbl ampc cpe carbapenemase kpc oxa-48 ndm pseudomonas acinetobacter stenotrophomonas typhoid balance merino
     - name: Malaria treatment
       url: "/malaria/"
       note: Severe and uncomplicated, by species (UK guidelines)
       tags: malaria falciparum vivax ovale malariae knowlesi artesunate riamet primaquine returning traveller guide
+    - name: Meningitis and encephalitis
+      url: "/meningitis-encephalitis/"
+      note: Empirical treatment, LP and CT, dexamethasone, aciclovir, targeted therapy
+      tags: meningitis encephalitis lp lumbar puncture ct dexamethasone aciclovir hsv listeria pneumococcal meningococcal autoimmune nmdar tb meningitis
     - name: Needlestick and BBV exposure
       url: "/needlestick/"
       note: HIV PEP, hepatitis B prophylaxis and follow-up
@@ -160,10 +180,18 @@
       url: "/neutropenic-sepsis/"
       note: Initial antibiotics and when to add antifungals
       tags: neutropenic sepsis febrile neutropenia fn chemotherapy haematology piperacillin tazobactam antifungal empirical pre-emptive caspofungin guide
+    - name: Positive blood culture triage
+      url: "/blood-culture-triage/"
+      note: Contaminant or real, and next steps, from the Gram stain
+      tags: blood culture positive gram stain contaminant cons coagulase negative corynebacterium bacillus cutibacterium diphtheroids sab staph aureus bacteraemia
     - name: Rabies post-exposure advice
       url: "/rabies/"
       note: UKHSA composite risk, vaccine and HRIG
       tags: rabies bat dog bite scratch hrig rigs post-exposure pet vaccine animal guide
+    - name: Returned traveller with fever
+      url: "/returned-traveller/"
+      note: HCID screen, differential by region and incubation, first-line tests
+      tags: returned traveller travel fever imported malaria dengue typhoid enteric rickettsia leptospirosis schistosomiasis vhf hcid incubation
 
 - category: Mycology
   links:

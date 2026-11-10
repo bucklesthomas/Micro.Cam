@@ -27,11 +27,14 @@ permalink: /search.json
     {%- assign oslug = o[0] | slugify -%}
     {%- assign syn = site.data.intrinsic.syn[o[0]] | default: "" -%}
     {%- if site.data.intrinsic.ampc[o[0]] %}{% assign am = " ampc" %}{% else %}{% assign am = "" %}{% endif -%},
-  {"t":"bug","title":{{ o[0] | jsonify }},"sub":{{ "Intrinsic resistance · " | append: g[0] | jsonify }},"url":{{ "/intrinsic-resistance/#org-" | append: oslug | jsonify }},"ext":false,"k":{{ syn | append: am | append: " intrinsic resistance" | jsonify }}}
+  {"t":"ir","title":{{ o[0] | jsonify }},"sub":{{ "Intrinsic resistance · " | append: g[0] | jsonify }},"url":{{ "/intrinsic-resistance/#org-" | append: oslug | jsonify }},"ext":false,"k":{{ syn | append: am | append: " intrinsic resistance" | jsonify }}}
   {%- endfor -%}
 {%- endfor -%}
 {%- for d in site.data.antibiotics.drugs -%}
     {%- assign uses = d.uses | join: " " -%},
   {"t":"abx","title":{{ d.name | jsonify }},"sub":{{ d.cls | append: " · " | append: d.aware | append: " · " | append: d.routes | jsonify }},"url":{{ "/antibiotics/#drug-" | append: d.id | jsonify }},"ext":false,"k":{{ d.brands | append: " antibiotic dose dosing pk pd " | append: d.aware | append: " " | append: uses | jsonify }}}
+{%- endfor -%}
+{%- for o in site.data.organisms.orgs -%},
+  {"t":"bug","title":{{ o.n | jsonify }},"sub":{{ "Organism · " | append: o.g | jsonify }},"url":{{ "/organisms/#bug-" | append: o.id | jsonify }},"ext":false,"k":{{ o.syn | jsonify }}}
 {%- endfor %}
 ]

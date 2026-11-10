@@ -11,7 +11,7 @@
   var loading = null;
   var results = [];
   var active = -1;
-  var LABEL = { link: 'Link', score: 'Score', trial: 'Trial', bug: 'Organism', abx: 'Antibiotic' };
+  var LABEL = { link: 'Link', score: 'Score', trial: 'Trial', bug: 'Organism', abx: 'Antibiotic', ir: 'Resistance' };
 
   function load() {
     if (index) return Promise.resolve();

@@ -321,6 +321,7 @@ fieldset.row.choice:first-child { border-top: 0; }
 .ss-type.score { color: var(--c); }
 .ss-type.trial { color: var(--p); }
 .ss-type.bug { color: var(--low); }
+.ss-type.ir { color: var(--mid); }
 .ss-type.abx { color: var(--high); }
 .ss-main { display: flex; flex-direction: column; min-width: 0; }
 .ss-main b { font-weight: 700; font-size: 14.5px; }
@@ -690,3 +691,27 @@ a.sp-chip { display: inline-block; text-decoration: none; }
 .bp-explain p + p { margin-top: 4px; }
 .bp-notes { font-size: 13px !important; color: var(--ink); }
 @media (max-width: 760px) { .bp-row { grid-template-columns: 1fr; } .bp-inputs input { width: 150px; } }
+
+/* ── IV-to-oral and durations ─────────────────────────── */
+.section-title { margin: 26px 0 10px; font-size: 19px; }
+.ivos-list { display: flex; flex-direction: column; gap: 6px; }
+.ivos-opt { width: 100%; font: inherit; text-align: left; justify-content: flex-start; cursor: pointer; color: var(--ink); }
+.ivos-ok { background: var(--low-bg); border-color: var(--low); }
+.ivos-mid { background: var(--mid-bg); border-color: var(--mid); }
+.ivos-no { background: var(--high-bg); border-color: var(--high); }
+.ivos-opt.on { background: var(--accent-soft); border-color: var(--accent); }
+.dur-tbl td { white-space: normal; }
+.dur-tbl tr.dur-h th { background: var(--bg); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-ink); }
+.dur-tbl tbody th { width: 30%; }
+.dur-tbl td:nth-child(2) { width: 22%; font-weight: 700; }
+
+/* ── Organism pages ───────────────────────────────────── */
+.org-tx { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 8px; font-size: 14px; line-height: 1.5; }
+.org-tx p { margin: 0; }
+.org-tx .org-alt { margin-top: 6px; color: var(--muted); font-size: 13.5px; }
+.org-lab { margin: 8px 0 4px; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.org-tx .org-lab { margin-top: 0; color: var(--accent-ink); }
+.org-pill { display: inline-block; font-size: 13px; padding: 3px 10px; border-radius: 999px; text-decoration: none; border: 1px solid transparent; }
+.org-pill.g { background: var(--low-bg); color: var(--low); }
+.org-pill.m { background: var(--mid-bg); color: var(--mid); }
+.org-pill:hover { border-color: currentColor; }

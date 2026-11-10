@@ -196,5 +196,17 @@
     else if (id === 'bp-mic') { st.mic = e.target.value; redrawDetail(keep); }
     else if (id === 'bp-zone') { st.zone = e.target.value; redrawDetail(keep); }
   });
+  // Deep link from organism pages: #bp-<slug of organism name>
+  (function () {
+    var m = /^#bp-(.+)$/.exec(location.hash); if (!m) return;
+    var sl = function (s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); };
+    D.orgs.forEach(function (o, i) { if (sl(o.n) === m[1]) st.org = i; });
+  })();
   draw();
+  window.addEventListener('hashchange', function () {
+    var m = /^#bp-(.+)$/.exec(location.hash); if (!m) return;
+    var sl = function (s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); };
+    D.orgs.forEach(function (o, i) { if (sl(o.n) === m[1]) { st.org = i; st.ab = null; st.oq = ''; } });
+    draw(); host.scrollIntoView({ block: 'start' });
+  });
 })();

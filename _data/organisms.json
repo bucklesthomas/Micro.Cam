@@ -1,0 +1,944 @@
+{
+ "groups": [
+  "Gram-positive",
+  "Gram-negative",
+  "Anaerobes",
+  "Atypicals",
+  "Fungi"
+ ],
+ "orgs": [
+  {
+   "n": "Staphylococcus aureus (MSSA)",
+   "g": "Gram-positive",
+   "syn": "staph aureus mssa sab",
+   "ir": "Staphylococcus aureus",
+   "cov": "mssa",
+   "bp": "Staphylococcus aureus",
+   "facts": [
+    "Never a blood culture contaminant: S. aureus bacteraemia needs echo, repeat cultures, source control and infection specialist review.",
+    "Skin and soft tissue, bone and joint, line, device and endovascular infection.",
+    "PVL-producing strains cause recurrent boils and necrotising pneumonia (send for PVL testing)."
+   ],
+   "tx": "Flucloxacillin 2 g IV every 6 hours (every 4 hours for endocarditis), or cefazolin 2 g IV every 8 hours.",
+   "alt": "Penicillin allergy: vancomycin or teicoplanin (inferior to β-lactams for MSSA). Oral options by susceptibility: doxycycline, co-trimoxazole, clindamycin, linezolid; rifampicin only in combination for prosthetic material.",
+   "links": [
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ],
+    [
+     "Endocarditis therapy",
+     "/endocarditis/"
+    ]
+   ],
+   "id": "staphylococcus-aureus-mssa"
+  },
+  {
+   "n": "MRSA",
+   "g": "Gram-positive",
+   "syn": "meticillin-resistant staphylococcus aureus methicillin mrsa",
+   "ir": "Staphylococcus aureus",
+   "cov": "mrsa",
+   "bp": "Staphylococcus aureus",
+   "facts": [
+    "Resistant to all β-lactams except ceftaroline and ceftobiprole (mecA/mecC).",
+    "Decolonisation (nasal mupirocin and skin wash) before surgery and for recurrent infection.",
+    "Contact precautions per local IPC policy."
+   ],
+   "tx": "Vancomycin (AUC-guided) or teicoplanin IV for serious infection; daptomycin for bacteraemia or endocarditis (specialist).",
+   "alt": "Oral by susceptibility: doxycycline, co-trimoxazole, linezolid, clindamycin (check D-test). Ceftaroline for salvage.",
+   "links": [
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ],
+    [
+     "Endocarditis therapy",
+     "/endocarditis/"
+    ]
+   ],
+   "id": "mrsa"
+  },
+  {
+   "n": "Coagulase-negative staphylococci",
+   "g": "Gram-positive",
+   "syn": "cons staph epidermidis coag negative staphylococcus epidermidis haemolyticus hominis capitis",
+   "ir": "Staphylococcus epidermidis",
+   "cov": "cons",
+   "bp": "Coagulase-negative Staphylococcus (CoNS)",
+   "facts": [
+    "Commonest blood culture contaminant: a single positive set without prosthetic material usually needs no treatment.",
+    "Real pathogens on lines, prosthetic valves, devices, joints and shunts (biofilm).",
+    "Most hospital isolates are methicillin resistant."
+   ],
+   "tx": "If significant: vancomycin or teicoplanin, and remove the infected line or device where possible.",
+   "alt": "Line kept: 10–14 days with antibiotic lock. Prosthetic joint or valve: specialist regimens, often with rifampicin.",
+   "links": [
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "coagulase-negative-staphylococci"
+  },
+  {
+   "n": "Staphylococcus lugdunensis",
+   "g": "Gram-positive",
+   "syn": "lugdunensis",
+   "ir": "",
+   "cov": "mssa",
+   "bp": "Staphylococcus lugdunensis",
+   "facts": [
+    "Coagulase negative, but behaves like S. aureus: aggressive native valve endocarditis and abscesses.",
+    "Typical endocarditis organism in the Duke-ISCVID criteria."
+   ],
+   "tx": "Treat as S. aureus: flucloxacillin or cefazolin if susceptible (many are also penicillin susceptible).",
+   "alt": "Echocardiography for all bacteraemias.",
+   "links": [
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ],
+    [
+     "Endocarditis therapy",
+     "/endocarditis/"
+    ]
+   ],
+   "id": "staphylococcus-lugdunensis"
+  },
+  {
+   "n": "Streptococcus pyogenes (group A)",
+   "g": "Gram-positive",
+   "syn": "gas group a strep igas scarlet fever necrotising fasciitis toxic shock",
+   "ir": "Streptococcus pyogenes",
+   "cov": "bhs",
+   "bp": "Streptococcus pyogenes (group A)",
+   "facts": [
+    "Pharyngitis, cellulitis, necrotising fasciitis, streptococcal toxic shock, puerperal sepsis.",
+    "Invasive disease is notifiable; high-risk household contacts need prophylaxis.",
+    "Always penicillin susceptible; macrolide and clindamycin resistance about 5–15%."
+   ],
+   "tx": "Benzylpenicillin 2.4 g IV every 4 hours; add clindamycin 1.2 g IV every 6 hours for necrotising infection or toxic shock.",
+   "alt": "Consider IVIG in streptococcal toxic shock. Urgent surgical review for necrotising fasciitis.",
+   "links": [
+    [
+     "Contact prophylaxis",
+     "/contact-prophylaxis/"
+    ],
+    [
+     "LRINEC score",
+     "/scores/#lrinec"
+    ],
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "streptococcus-pyogenes-group-a"
+  },
+  {
+   "n": "Streptococcus agalactiae (group B)",
+   "g": "Gram-positive",
+   "syn": "gbs group b strep",
+   "ir": "",
+   "cov": "bhs",
+   "bp": "Streptococcus agalactiae (group B)",
+   "facts": [
+    "Neonatal sepsis and meningitis; maternal colonisation guides intrapartum prophylaxis.",
+    "In adults: diabetes, malignancy, older age; skin, bone, joint and endocarditis."
+   ],
+   "tx": "Benzylpenicillin 2.4 g IV every 4 hours (or amoxicillin).",
+   "alt": "Clindamycin resistance is common (about 30%): not reliable as an alternative without susceptibility results.",
+   "links": [
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "streptococcus-agalactiae-group-b"
+  },
+  {
+   "n": "Streptococcus pneumoniae",
+   "g": "Gram-positive",
+   "syn": "pneumococcus pneumococcal",
+   "ir": "Streptococcus pneumoniae",
+   "cov": "pnc",
+   "bp": "Streptococcus pneumoniae",
+   "facts": [
+    "Pneumonia, meningitis, otitis, sinusitis and bacteraemia.",
+    "Penicillin resistance is uncommon in the UK but common in many other countries.",
+    "Urinary antigen test helps in pneumonia."
+   ],
+   "tx": "Pneumonia: amoxicillin or benzylpenicillin. Meningitis: ceftriaxone 2 g IV every 12 hours with dexamethasone (benzylpenicillin if MIC ≤ 0.06).",
+   "alt": "Doxycycline or a macrolide for non-severe pneumonia in penicillin allergy; levofloxacin for severe allergy.",
+   "links": [
+    [
+     "Meningitis and encephalitis",
+     "/meningitis-encephalitis/"
+    ],
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "streptococcus-pneumoniae"
+  },
+  {
+   "n": "Viridans group streptococci",
+   "g": "Gram-positive",
+   "syn": "vgs strep mitis oralis sanguinis salivarius mutans",
+   "ir": "",
+   "cov": "vgs",
+   "bp": "Viridans Group Streptococcus (VGS)",
+   "facts": [
+    "Oral flora; typical endocarditis organisms.",
+    "Severe sepsis in neutropenia with mucositis.",
+    "A single blood culture set may be a contaminant."
+   ],
+   "tx": "Benzylpenicillin or ceftriaxone, guided by the penicillin MIC (see the endocarditis guide for endocarditis regimens).",
+   "alt": "Penicillin allergy: vancomycin or teicoplanin.",
+   "links": [
+    [
+     "Endocarditis therapy",
+     "/endocarditis/"
+    ],
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "viridans-group-streptococci"
+  },
+  {
+   "n": "Streptococcus anginosus group",
+   "g": "Gram-positive",
+   "syn": "milleri anginosus intermedius constellatus",
+   "ir": "",
+   "cov": "vgs",
+   "bp": "Streptococcus anginosus",
+   "facts": [
+    "Abscess formers: brain, liver, lung, dental, intra-abdominal.",
+    "Bacteraemia should prompt imaging for an abscess."
+   ],
+   "tx": "Benzylpenicillin or ceftriaxone plus drainage of any collection; add metronidazole for mixed abscesses.",
+   "alt": "Brain abscess: ceftriaxone plus metronidazole, 6–8 weeks.",
+   "links": [
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "streptococcus-anginosus-group"
+  },
+  {
+   "n": "Enterococcus faecalis",
+   "g": "Gram-positive",
+   "syn": "enterococcus enterococci faecalis strep faecalis",
+   "ir": "Enterococcus faecalis",
+   "cov": "efs",
+   "bp": "Enterococcus faecalis",
+   "facts": [
+    "Urinary, biliary, intra-abdominal and line infection; typical endocarditis organism.",
+    "Intrinsically resistant to cephalosporins; low-level aminoglycoside resistance.",
+    "Usually amoxicillin susceptible."
+   ],
+   "tx": "Amoxicillin 2 g IV every 4–6 hours. Endocarditis: amoxicillin plus ceftriaxone, or amoxicillin plus gentamicin if no high-level resistance.",
+   "alt": "Penicillin allergy: vancomycin or teicoplanin. Lower UTI: nitrofurantoin or fosfomycin.",
+   "links": [
+    [
+     "Endocarditis therapy",
+     "/endocarditis/"
+    ],
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "enterococcus-faecalis"
+  },
+  {
+   "n": "Enterococcus faecium (including VRE)",
+   "g": "Gram-positive",
+   "syn": "enterococcus faecium vre vancomycin-resistant enterococci gre",
+   "ir": "Enterococcus faecium",
+   "cov": "efm",
+   "bp": "Enterococcus faecium",
+   "facts": [
+    "Mostly hospital-acquired, after broad-spectrum antibiotics; usually amoxicillin resistant.",
+    "VRE (VanA or VanB) colonises the gut; contact precautions.",
+    "Intrinsically resistant to cephalosporins."
+   ],
+   "tx": "Vancomycin or teicoplanin if susceptible. VRE: linezolid or daptomycin (high dose, specialist).",
+   "alt": "Lower UTI with VRE: nitrofurantoin or fosfomycin. VanB strains may be teicoplanin susceptible.",
+   "links": [
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "enterococcus-faecium-including-vre"
+  },
+  {
+   "n": "Listeria monocytogenes",
+   "g": "Gram-positive",
+   "syn": "listeria listeriosis",
+   "ir": "Listeria monocytogenes",
+   "cov": "lis",
+   "bp": "Listeria monocytogenes",
+   "facts": [
+    "Meningitis, rhombencephalitis and bacteraemia in pregnancy, older age, immunosuppression and alcohol excess.",
+    "Foodborne (soft cheese, pâté, deli meat).",
+    "Intrinsically resistant to all cephalosporins."
+   ],
+   "tx": "Amoxicillin 2 g IV every 4 hours, plus gentamicin for the first 7 days in CNS infection; 21 days for meningitis.",
+   "alt": "Penicillin allergy: co-trimoxazole. Add amoxicillin to empirical meningitis treatment when Listeria is possible.",
+   "links": [
+    [
+     "Meningitis and encephalitis",
+     "/meningitis-encephalitis/"
+    ],
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "listeria-monocytogenes"
+  },
+  {
+   "n": "Clostridioides difficile",
+   "g": "Gram-positive",
+   "syn": "c diff c. diff cdi clostridium difficile",
+   "ir": "Clostridioides difficile",
+   "cov": "cdiff",
+   "bp": "Clostridioides difficile",
+   "facts": [
+    "Antibiotic-associated diarrhoea and colitis; toxin testing confirms infection, PCR alone may be carriage.",
+    "Highest risk with clindamycin, cephalosporins, co-amoxiclav and quinolones.",
+    "Isolate with enteric precautions; alcohol gel does not kill spores."
+   ],
+   "tx": "Oral vancomycin 125 mg every 6 hours for 10 days, or fidaxomicin 200 mg every 12 hours for 10 days.",
+   "alt": "Recurrence: fidaxomicin; consider faecal microbiota transplant after multiple recurrences. See the C. difficile guide.",
+   "links": [
+    [
+     "C. difficile treatment",
+     "/cdiff/"
+    ]
+   ],
+   "id": "clostridioides-difficile"
+  },
+  {
+   "n": "Clostridium perfringens and other clostridia",
+   "g": "Gram-positive",
+   "syn": "gas gangrene clostridium septicum perfringens",
+   "ir": "",
+   "cov": "cperf",
+   "bp": "Clostridium perfringens",
+   "facts": [
+    "Gas gangrene, necrotising soft tissue infection, biliary and gut sepsis; massive haemolysis with C. perfringens bacteraemia.",
+    "C. septicum bacteraemia: look for colorectal or haematological malignancy."
+   ],
+   "tx": "Benzylpenicillin plus clindamycin, with urgent surgical debridement.",
+   "alt": "Metronidazole or co-amoxiclav for mixed intra-abdominal infection.",
+   "links": [
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ],
+    [
+     "LRINEC score",
+     "/scores/#lrinec"
+    ]
+   ],
+   "id": "clostridium-perfringens-and-other-clostridia"
+  },
+  {
+   "n": "Escherichia coli",
+   "g": "Gram-negative",
+   "syn": "e. coli ecoli uti",
+   "ir": "Escherichia coli",
+   "cov": "ecoli",
+   "bp": "Escherichia coli",
+   "facts": [
+    "Commonest cause of UTI and Gram-negative bacteraemia; biliary and intra-abdominal infection.",
+    "UK resistance: amoxicillin about 50–60%, trimethoprim about 30%, co-amoxiclav 20–40%; ESBL about 10–15% of bacteraemias.",
+    "STEC (O157): do not give antibiotics (risk of HUS)."
+   ],
+   "tx": "Narrow by susceptibility; bacteraemia commonly treated with ceftriaxone or co-amoxiclav, then oral step-down, 7 days total if uncomplicated.",
+   "alt": "Lower UTI: nitrofurantoin, pivmecillinam or fosfomycin. ESBL: see the Gram-negative bacteraemia guide.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ],
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "escherichia-coli"
+  },
+  {
+   "n": "Klebsiella pneumoniae",
+   "g": "Gram-negative",
+   "syn": "kleb klebsiella hypervirulent",
+   "ir": "Klebsiella pneumoniae",
+   "cov": "ecoli",
+   "bp": "Klebsiella pneumoniae",
+   "facts": [
+    "UTI, pneumonia, biliary and line infection; hypervirulent strains cause liver abscess with metastatic spread (eye, CNS).",
+    "Intrinsically resistant to amoxicillin.",
+    "A common host for ESBL and carbapenemase genes."
+   ],
+   "tx": "Ceftriaxone or a carbapenem by susceptibility (ESBL: meropenem).",
+   "alt": "Liver abscess: drain and treat 4–6 weeks; check eyes in hypervirulent infection.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ]
+   ],
+   "id": "klebsiella-pneumoniae"
+  },
+  {
+   "n": "Enterobacter cloacae complex",
+   "g": "Gram-negative",
+   "syn": "enterobacter cloacae hormaechei",
+   "ir": "Enterobacter cloacae",
+   "cov": "ampc",
+   "bp": "Enterobacter cloacae complex",
+   "facts": [
+    "High-risk chromosomal AmpC: third-generation cephalosporins and piperacillin–tazobactam can fail on treatment.",
+    "Hospital-acquired pneumonia, line, surgical site and urinary infection."
+   ],
+   "tx": "Cefepime 2 g IV every 8 hours if MIC ≤ 2 mg/L, otherwise a carbapenem.",
+   "alt": "Oral step-down by susceptibility: ciprofloxacin or co-trimoxazole.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ]
+   ],
+   "id": "enterobacter-cloacae-complex"
+  },
+  {
+   "n": "Klebsiella aerogenes",
+   "g": "Gram-negative",
+   "syn": "enterobacter aerogenes",
+   "ir": "Klebsiella aerogenes",
+   "cov": "ampc",
+   "bp": "Klebsiella aerogenes",
+   "facts": [
+    "Formerly Enterobacter aerogenes; high-risk chromosomal AmpC."
+   ],
+   "tx": "Cefepime if MIC ≤ 2 mg/L, otherwise a carbapenem.",
+   "alt": "Avoid ceftriaxone and piperacillin–tazobactam for serious infection.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ]
+   ],
+   "id": "klebsiella-aerogenes"
+  },
+  {
+   "n": "Citrobacter freundii",
+   "g": "Gram-negative",
+   "syn": "citrobacter",
+   "ir": "Citrobacter freundii",
+   "cov": "ampc",
+   "bp": "Citrobacter freundii",
+   "facts": [
+    "High-risk chromosomal AmpC. C. koseri (no inducible AmpC) causes neonatal brain abscess."
+   ],
+   "tx": "Cefepime if MIC ≤ 2 mg/L, otherwise a carbapenem.",
+   "alt": "Avoid ceftriaxone and piperacillin–tazobactam for serious infection.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ]
+   ],
+   "id": "citrobacter-freundii"
+  },
+  {
+   "n": "Serratia marcescens",
+   "g": "Gram-negative",
+   "syn": "serratia",
+   "ir": "Serratia marcescens",
+   "cov": "ampc",
+   "bp": "Serratia marcescens",
+   "facts": [
+    "Hospital outbreaks (neonatal units), line and respiratory infection; typical endocarditis organism with prosthetic material.",
+    "Low-risk chromosomal AmpC; intrinsically resistant to colistin and nitrofurantoin."
+   ],
+   "tx": "Treat by susceptibility (ceftriaxone or cefepime if susceptible).",
+   "alt": "Ciprofloxacin or co-trimoxazole orally if susceptible.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ]
+   ],
+   "id": "serratia-marcescens"
+  },
+  {
+   "n": "Proteus mirabilis",
+   "g": "Gram-negative",
+   "syn": "proteus",
+   "ir": "Proteus mirabilis",
+   "cov": "ecoli",
+   "bp": "Proteus mirabilis",
+   "facts": [
+    "UTI, catheter blockage and struvite stones (urease).",
+    "Intrinsically resistant to colistin, nitrofurantoin and tetracyclines (including tigecycline)."
+   ],
+   "tx": "Amoxicillin, co-amoxiclav or ceftriaxone by susceptibility.",
+   "alt": "Do not use nitrofurantoin.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ]
+   ],
+   "id": "proteus-mirabilis"
+  },
+  {
+   "n": "Morganella and Providencia",
+   "g": "Gram-negative",
+   "syn": "morganella morganii providencia stuartii rettgeri",
+   "ir": "Morganella morganii",
+   "cov": "ampc",
+   "bp": "Morganella morganii",
+   "facts": [
+    "Catheter-associated UTI in long-term care; low-risk chromosomal AmpC.",
+    "Intrinsically resistant to colistin, nitrofurantoin and tetracyclines."
+   ],
+   "tx": "Treat by susceptibility (ceftriaxone or cefepime if susceptible).",
+   "alt": "Change the catheter.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ]
+   ],
+   "id": "morganella-and-providencia"
+  },
+  {
+   "n": "Salmonella (non-typhoidal)",
+   "g": "Gram-negative",
+   "syn": "salmonella enteritidis typhimurium gastroenteritis",
+   "ir": "Salmonella enterica",
+   "cov": "ecoli",
+   "bp": "Salmonella Typhi and other Salmonella",
+   "facts": [
+    "Gastroenteritis: usually no antibiotics.",
+    "Treat if bacteraemic, very young or old, immunosuppressed, or with prosthetic or vascular grafts (endovascular infection risk).",
+    "Notifiable (food poisoning)."
+   ],
+   "tx": "Invasive disease: ceftriaxone 2 g IV daily, then ciprofloxacin or azithromycin by susceptibility.",
+   "alt": "Bacteraemia over 50: consider vascular imaging for endovascular infection.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ],
+    [
+     "Returned traveller with fever",
+     "/returned-traveller/"
+    ]
+   ],
+   "id": "salmonella-non-typhoidal"
+  },
+  {
+   "n": "Salmonella Typhi and Paratyphi",
+   "g": "Gram-negative",
+   "syn": "typhoid enteric fever paratyphoid",
+   "ir": "Salmonella enterica",
+   "cov": "ecoli",
+   "bp": "Salmonella Typhi and other Salmonella",
+   "facts": [
+    "Enteric fever after travel, mostly South Asia; fever, headache, abdominal pain, relative bradycardia.",
+    "Most South Asian isolates are ciprofloxacin resistant; XDR Typhi from Pakistan is resistant to ceftriaxone.",
+    "Notifiable; food handlers and children need exclusion and clearance."
+   ],
+   "tx": "Ceftriaxone 2 g IV daily then oral azithromycin; meropenem for XDR or severe disease.",
+   "alt": "Usual total 7–14 days.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ],
+    [
+     "Returned traveller with fever",
+     "/returned-traveller/"
+    ]
+   ],
+   "id": "salmonella-typhi-and-paratyphi"
+  },
+  {
+   "n": "Pseudomonas aeruginosa",
+   "g": "Gram-negative",
+   "syn": "pseudomonas psa pseudo",
+   "ir": "Pseudomonas aeruginosa",
+   "cov": "psa",
+   "bp": "Pseudomonas aeruginosa",
+   "facts": [
+    "Hospital-acquired pneumonia, ventilator, burns, cystic fibrosis and bronchiectasis, urinary catheter and line infection, otitis externa.",
+    "Intrinsically resistant to amoxicillin, co-amoxiclav, ceftriaxone, ertapenem, trimethoprim and tetracyclines.",
+    "Typical endocarditis organism with prosthetic material."
+   ],
+   "tx": "Piperacillin–tazobactam, ceftazidime, cefepime or meropenem by susceptibility (extended infusions in critical illness).",
+   "alt": "Oral: ciprofloxacin 750 mg every 12 hours. Difficult-to-treat: ceftolozane–tazobactam or ceftazidime–avibactam.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ]
+   ],
+   "id": "pseudomonas-aeruginosa"
+  },
+  {
+   "n": "Acinetobacter baumannii",
+   "g": "Gram-negative",
+   "syn": "acinetobacter acb crab",
+   "ir": "Acinetobacter baumannii",
+   "cov": "acb",
+   "bp": "Acinetobacter baumannii",
+   "facts": [
+    "ICU, ventilator, burns and wound infection; survives on surfaces (outbreaks).",
+    "Carbapenem-resistant strains (CRAB) are common in many countries.",
+    "Distinguish colonisation from infection."
+   ],
+   "tx": "Carbapenem if susceptible; carbapenem-resistant strains need microbiology advice (sulbactam-based regimens, colistin combinations).",
+   "alt": "Remove infected lines. Tigecycline is unsuitable for bacteraemia.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ]
+   ],
+   "id": "acinetobacter-baumannii"
+  },
+  {
+   "n": "Stenotrophomonas maltophilia",
+   "g": "Gram-negative",
+   "syn": "steno stenotrophomonas xanthomonas",
+   "ir": "Stenotrophomonas maltophilia",
+   "cov": "steno",
+   "bp": "Stenotrophomonas maltophilia",
+   "facts": [
+    "Opportunist after carbapenems, in ventilated, neutropenic or line-dependent patients; often colonisation in sputum.",
+    "Intrinsically resistant to carbapenems and aminoglycosides."
+   ],
+   "tx": "High-dose co-trimoxazole (trimethoprim 8–12 mg/kg/day), often initially combined with minocycline, levofloxacin or cefiderocol.",
+   "alt": "Ceftazidime–avibactam plus aztreonam. Remove infected lines.",
+   "links": [
+    [
+     "Gram-negative bacteraemia",
+     "/gram-negative-bacteraemia/"
+    ]
+   ],
+   "id": "stenotrophomonas-maltophilia"
+  },
+  {
+   "n": "Burkholderia cepacia complex",
+   "g": "Gram-negative",
+   "syn": "burkholderia cepacia bcc",
+   "ir": "Burkholderia cepacia",
+   "cov": "",
+   "bp": "",
+   "facts": [
+    "Cystic fibrosis (cepacia syndrome) and chronic granulomatous disease; contaminated products in outbreaks.",
+    "Intrinsically resistant to aminoglycosides and colistin."
+   ],
+   "tx": "Specialist advice; options include co-trimoxazole, meropenem or ceftazidime by susceptibility.",
+   "alt": "B. pseudomallei (melioidosis) is a different organism: inform the laboratory (hazard group 3).",
+   "links": [],
+   "id": "burkholderia-cepacia-complex"
+  },
+  {
+   "n": "Haemophilus influenzae",
+   "g": "Gram-negative",
+   "syn": "haemophilus hib h flu",
+   "ir": "Haemophilus influenzae",
+   "cov": "hflu",
+   "bp": "Haemophilus influenzae",
+   "facts": [
+    "COPD exacerbation, pneumonia, otitis, sinusitis; invasive non-typeable disease in adults and neonates.",
+    "Type b (Hib) is rare since vaccination; contacts may need rifampicin.",
+    "About 15–20% produce β-lactamase."
+   ],
+   "tx": "Amoxicillin if β-lactamase negative; co-amoxiclav, doxycycline or ceftriaxone otherwise.",
+   "alt": "Meningitis: ceftriaxone for 10 days.",
+   "links": [
+    [
+     "Meningitis and encephalitis",
+     "/meningitis-encephalitis/"
+    ],
+    [
+     "Contact prophylaxis",
+     "/contact-prophylaxis/"
+    ]
+   ],
+   "id": "haemophilus-influenzae"
+  },
+  {
+   "n": "Moraxella catarrhalis",
+   "g": "Gram-negative",
+   "syn": "moraxella branhamella",
+   "ir": "Moraxella catarrhalis",
+   "cov": "mcat",
+   "bp": "Moraxella catarrhalis",
+   "facts": [
+    "Otitis, sinusitis and COPD exacerbations.",
+    "Over 90% produce β-lactamase: amoxicillin is unreliable."
+   ],
+   "tx": "Co-amoxiclav, doxycycline or clarithromycin.",
+   "alt": "",
+   "links": [],
+   "id": "moraxella-catarrhalis"
+  },
+  {
+   "n": "Neisseria meningitidis",
+   "g": "Gram-negative",
+   "syn": "meningococcus meningococcal",
+   "ir": "Neisseria meningitidis",
+   "cov": "nmen",
+   "bp": "Neisseria meningitidis",
+   "facts": [
+    "Meningitis and septicaemia with a non-blanching rash; notify immediately.",
+    "Close contacts need ciprofloxacin; serogroup A, C, W or Y contacts also need MenACWY.",
+    "Recurrent disease: test for complement deficiency."
+   ],
+   "tx": "Ceftriaxone 2 g IV every 12 hours for 5 days (benzylpenicillin if susceptible).",
+   "alt": "Index case: ciprofloxacin before discharge if not treated with ceftriaxone.",
+   "links": [
+    [
+     "Meningitis and encephalitis",
+     "/meningitis-encephalitis/"
+    ],
+    [
+     "Contact prophylaxis",
+     "/contact-prophylaxis/"
+    ]
+   ],
+   "id": "neisseria-meningitidis"
+  },
+  {
+   "n": "Neisseria gonorrhoeae",
+   "g": "Gram-negative",
+   "syn": "gonorrhoea gonococcus gc",
+   "ir": "Neisseria gonorrhoeae",
+   "cov": "ngon",
+   "bp": "Neisseria gonorrhoeae",
+   "facts": [
+    "Urethritis, cervicitis, pharyngeal and rectal infection; disseminated gonococcal infection (arthritis, rash).",
+    "Ceftriaxone-resistant strains are rising: always culture before treatment and test of cure.",
+    "Refer to sexual health for partner notification."
+   ],
+   "tx": "Ceftriaxone 1 g IM single dose (BASHH).",
+   "alt": "If susceptibility known: ciprofloxacin 500 mg orally single dose. Disseminated infection: ceftriaxone 1 g IV daily.",
+   "links": [],
+   "id": "neisseria-gonorrhoeae"
+  },
+  {
+   "n": "Campylobacter",
+   "g": "Gram-negative",
+   "syn": "campylobacter jejuni coli",
+   "ir": "Campylobacter jejuni",
+   "cov": "",
+   "bp": "Campylobacter jejuni",
+   "facts": [
+    "Commonest bacterial gastroenteritis in the UK (poultry); Guillain–Barré syndrome afterwards.",
+    "Quinolone resistance is common."
+   ],
+   "tx": "Usually no antibiotics. If severe, immunosuppressed or prolonged: clarithromycin or azithromycin.",
+   "alt": "",
+   "links": [],
+   "id": "campylobacter"
+  },
+  {
+   "n": "Bacteroides fragilis group",
+   "g": "Anaerobes",
+   "syn": "bacteroides b frag anaerobe",
+   "ir": "Bacteroides fragilis group",
+   "cov": "bfrag",
+   "bp": "Bacteroides fragilis",
+   "facts": [
+    "Intra-abdominal abscess, peritonitis, diabetic foot and pelvic infection; usually mixed with gut organisms.",
+    "Clindamycin resistance is common; metronidazole and carbapenem resistance are emerging."
+   ],
+   "tx": "Metronidazole, co-amoxiclav or piperacillin–tazobactam, with drainage.",
+   "alt": "Bacteraemia: look for an abscess or perforation.",
+   "links": [
+    [
+     "Positive blood culture triage",
+     "/blood-culture-triage/"
+    ]
+   ],
+   "id": "bacteroides-fragilis-group"
+  },
+  {
+   "n": "Legionella pneumophila",
+   "g": "Atypicals",
+   "syn": "legionella legionnaires",
+   "ir": "",
+   "cov": "legio",
+   "bp": "",
+   "facts": [
+    "Severe pneumonia with confusion, diarrhoea, hyponatraemia; hotels, cruises, spas, cooling towers.",
+    "Urinary antigen detects serogroup 1 only: send respiratory PCR or culture.",
+    "Notifiable."
+   ],
+   "tx": "Clarithromycin or levofloxacin (levofloxacin preferred if severe).",
+   "alt": "Usually 7–10 days; longer if immunosuppressed.",
+   "links": [],
+   "id": "legionella-pneumophila"
+  },
+  {
+   "n": "Mycoplasma pneumoniae",
+   "g": "Atypicals",
+   "syn": "mycoplasma atypical pneumonia",
+   "ir": "",
+   "cov": "myco",
+   "bp": "",
+   "facts": [
+    "Pneumonia in young adults, epidemics every few years; cold agglutinins, rash, encephalitis.",
+    "No cell wall: β-lactams are inactive.",
+    "Macrolide resistance is rising in some regions."
+   ],
+   "tx": "Doxycycline or clarithromycin.",
+   "alt": "Levofloxacin for macrolide-resistant or severe infection.",
+   "links": [],
+   "id": "mycoplasma-pneumoniae"
+  },
+  {
+   "n": "Candida albicans",
+   "g": "Fungi",
+   "syn": "candida candidaemia yeast",
+   "ir": "",
+   "cov": "",
+   "bp": "Candida albicans",
+   "facts": [
+    "Commonest cause of candidaemia; usually fluconazole susceptible.",
+    "Remove central lines, repeat cultures daily, fundoscopy and echo as indicated."
+   ],
+   "tx": "Echinocandin first, step down to fluconazole when stable and cleared.",
+   "alt": "14 days from first negative culture if uncomplicated.",
+   "links": [
+    [
+     "Candidaemia treatment",
+     "/candidaemia/"
+    ],
+    [
+     "Antifungal spectrum and TDM",
+     "/antifungals/"
+    ]
+   ],
+   "id": "candida-albicans"
+  },
+  {
+   "n": "Nakaseomyces glabratus (Candida glabrata)",
+   "g": "Fungi",
+   "syn": "candida glabrata glabratus",
+   "ir": "",
+   "cov": "",
+   "bp": "Nakaseomyces glabratus",
+   "facts": [
+    "Reduced azole susceptibility; echinocandin resistance (FKS) in about 5–10%."
+   ],
+   "tx": "Echinocandin; step down only if fluconazole (high dose) or voriconazole susceptible.",
+   "alt": "Liposomal amphotericin B if resistant to both.",
+   "links": [
+    [
+     "Candidaemia treatment",
+     "/candidaemia/"
+    ],
+    [
+     "Antifungal spectrum and TDM",
+     "/antifungals/"
+    ]
+   ],
+   "id": "nakaseomyces-glabratus-candida-glabrata"
+  },
+  {
+   "n": "Candidozyma auris (Candida auris)",
+   "g": "Fungi",
+   "syn": "candida auris c auris",
+   "ir": "",
+   "cov": "",
+   "bp": "Candidozyma auris",
+   "facts": [
+    "Multi-resistant yeast that spreads in hospitals; contact precautions and screening of contacts.",
+    "Most isolates are fluconazole resistant."
+   ],
+   "tx": "Echinocandin; liposomal amphotericin B if resistant or failing.",
+   "alt": "Do not treat colonisation. Inform IPC and UKHSA.",
+   "links": [
+    [
+     "Candidaemia treatment",
+     "/candidaemia/"
+    ],
+    [
+     "Antifungal spectrum and TDM",
+     "/antifungals/"
+    ]
+   ],
+   "id": "candidozyma-auris-candida-auris"
+  },
+  {
+   "n": "Aspergillus fumigatus",
+   "g": "Fungi",
+   "syn": "aspergillus aspergillosis ipa mould",
+   "ir": "",
+   "cov": "",
+   "bp": "Aspergillus fumigatus",
+   "facts": [
+    "Invasive pulmonary aspergillosis in neutropenia, transplant, ICU (influenza, COVID-19) and high-dose steroids.",
+    "Azole resistance (TR34/L98H) is rising: request susceptibility testing."
+   ],
+   "tx": "Voriconazole or isavuconazole.",
+   "alt": "Liposomal amphotericin B if azole resistant or unsuitable.",
+   "links": [
+    [
+     "Invasive aspergillosis treatment",
+     "/aspergillosis/"
+    ],
+    [
+     "Antifungal spectrum and TDM",
+     "/antifungals/"
+    ],
+    [
+     "Neutropenic sepsis",
+     "/neutropenic-sepsis/"
+    ]
+   ],
+   "id": "aspergillus-fumigatus"
+  },
+  {
+   "n": "Cryptococcus neoformans",
+   "g": "Fungi",
+   "syn": "cryptococcus crypto cryptococcal",
+   "ir": "",
+   "cov": "",
+   "bp": "Cryptococcus neoformans",
+   "facts": [
+    "Meningitis in advanced HIV, transplant and other immunosuppression; raised intracranial pressure is common.",
+    "Serum and CSF cryptococcal antigen."
+   ],
+   "tx": "Liposomal amphotericin B plus flucytosine induction, then fluconazole.",
+   "alt": "Therapeutic LPs for raised pressure; delay ART 4–6 weeks.",
+   "links": [
+    [
+     "Cryptococcal disease",
+     "/cryptococcus/"
+    ],
+    [
+     "Antifungal spectrum and TDM",
+     "/antifungals/"
+    ]
+   ],
+   "id": "cryptococcus-neoformans"
+  }
+ ]
+}
