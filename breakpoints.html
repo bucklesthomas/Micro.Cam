@@ -1,0 +1,17 @@
+---
+layout: default
+title: EUCAST breakpoints
+permalink: /breakpoints/
+scripts:
+  - /assets/js/bp-data.js
+  - /assets/js/breakpoints.js
+---
+<h1 class="page-title">EUCAST breakpoint interpreter</h1>
+<p class="lede">Pick the organism and antimicrobial, then enter the MIC or disc zone diameter to see what it means under EUCAST.</p>
+<p class="ie-disclaimer">EUCAST Clinical Breakpoint Tables v16.1 (2026) and Antifungal Breakpoint Table v12.1. Your laboratory’s report is the authority: check it uses the same version, method and disc content, and look out for areas of technical uncertainty (ATU), which are not shown here.</p>
+
+<section class="card af-card">
+  <div id="bp" data-abx="{{ '/antibiotics/' | relative_url }}"><noscript>This tool needs JavaScript turned on.</noscript></div>
+</section>
+
+<p class="ie-source">Breakpoints and notes: <a href="https://www.eucast.org/clinical_breakpoints" target="_blank" rel="noopener">EUCAST Clinical Breakpoint Tables v16.1</a> and <a href="https://www.eucast.org/astoffungi/clinicalbreakpointsforantifungals" target="_blank" rel="noopener">Antifungal Clinical Breakpoints v12.1</a>, as encoded in the open-source <a href="https://github.com/msberends/AMR" target="_blank" rel="noopener">AMR package</a>. Organisms without their own EUCAST entry (e.g. <i>K. pneumoniae</i>) use the genus or group table. S, I and R follow the 2019 EUCAST definitions; see the <a href="https://www.eucast.org/clinical_breakpoints" target="_blank" rel="noopener">EUCAST dosing table</a> for the standard and high doses behind S and I.</p>

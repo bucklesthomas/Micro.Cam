@@ -87,6 +87,10 @@
     - name: BSAC
       url: "https://bsac.org.uk/"
       tags: antimicrobial chemotherapy
+    - name: EUCAST breakpoint interpreter
+      url: "/breakpoints/"
+      note: Enter an MIC or zone diameter to get S, I or R (EUCAST 2026)
+      tags: breakpoint mic zone disc disk diffusion interpret susceptible resistant increased exposure s i r eucast sir
     - name: EUCAST clinical breakpoints
       url: "https://www.eucast.org/fileadmin/eucast/pdf/breakpoints/v_16.1_Breakpoint_Tables.pdf"
       note: Breakpoint tables v16.1 (PDF)
