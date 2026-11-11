@@ -343,8 +343,9 @@ fieldset.row.choice:first-child { border-top: 0; }
 }
 .ss-item:hover, .ss-item.active { background: var(--accent-soft); text-decoration: none; }
 .ss-type {
-  flex: none; width: 46px; margin-top: 2px; padding: 2px 0; text-align: center;
-  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  flex: none; box-sizing: border-box; width: 88px; margin-top: 2px; padding: 2px 4px; text-align: center;
+  font-size: 9.5px; line-height: 1.5; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   border-radius: 4px; border: 1px solid currentColor;
 }
 .ss-type.link { color: var(--accent-ink); }
@@ -353,7 +354,8 @@ fieldset.row.choice:first-child { border-top: 0; }
 .ss-type.bug { color: var(--low); }
 .ss-type.ir { color: var(--mid); }
 .ss-type.abx { color: var(--high); }
-.ss-main { display: flex; flex-direction: column; min-width: 0; }
+.ss-main { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.ss-main b { overflow-wrap: anywhere; }
 .ss-main b { font-weight: 700; font-size: 14.5px; }
 .ss-main small { color: var(--muted); font-size: 12.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ss-main mark { background: transparent; color: var(--accent-ink); text-decoration: underline; text-underline-offset: 2px; }
@@ -365,6 +367,7 @@ fieldset.row.choice:first-child { border-top: 0; }
 @media (max-width: 640px) {
   .site-search { order: 3; flex-basis: 100%; max-width: none; }
   .ss-kbd { display: none; }
+  .ss-type { width: 76px; font-size: 9px; letter-spacing: 0.02em; }
   html { scroll-padding-top: 120px; }
 }
 
