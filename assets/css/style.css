@@ -778,3 +778,21 @@ a.sp-chip { display: inline-block; text-decoration: none; }
   .pg-tbl td:nth-of-type(1)::before { content: 'Pregnancy'; }
   .pg-tbl td:nth-of-type(2)::before { content: 'Breastfeeding'; }
 }
+
+/* ── Isolation table ──────────────────────────────────── */
+.iso-tag { display: inline-block; margin: 0 4px 3px 0; font-size: 11px; font-weight: 700; letter-spacing: 0.03em; padding: 1px 8px; border-radius: 999px; white-space: nowrap; }
+.iso-tag.c { background: var(--accent-soft); color: var(--accent-ink); }
+.iso-tag.d { background: var(--mid-bg); color: var(--mid); }
+.iso-tag.a { background: var(--high-bg); color: var(--high); }
+.iso-tag.n { background: var(--bg); color: var(--muted); border: 1px solid var(--line); }
+.iso-key p { margin: 0 0 8px; font-size: 14px; line-height: 1.5; }
+.iso-key p:last-child { margin-bottom: 0; }
+.iso-tbl tbody th { width: 24%; }
+.iso-tbl td { width: auto; font-size: 13.5px; }
+.iso-tbl td:nth-of-type(1) { width: 12%; }
+@media (max-width: 640px) {
+  .iso-tbl td:nth-of-type(1)::before { content: 'Precautions'; }
+  .iso-tbl td:nth-of-type(2)::before { content: 'Room'; }
+  .iso-tbl td:nth-of-type(3)::before { content: 'Staff RPE'; }
+  .iso-tbl td:nth-of-type(4)::before { content: 'Typical duration'; }
+}

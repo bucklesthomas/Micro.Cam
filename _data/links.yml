@@ -121,6 +121,10 @@
     - name: Find your local health protection team
       url: "https://www.gov.uk/health-protection-team"
       tags: hpt phe ukhsa
+    - name: Isolation and precautions
+      url: "/isolation/"
+      note: Room, precautions, RPE and duration by infection (NIPCM)
+      tags: isolation side room single room precautions contact droplet airborne negative pressure ffp3 frsm rpe ipc infection control cohort norovirus c diff cpe mrsa tb measles chickenpox
     - name: Notifiable diseases (UKHSA)
       url: "https://www.gov.uk/guidance/notifiable-diseases-and-causative-organisms-how-to-report"
       tags: notify report hpt
