@@ -22,6 +22,10 @@
       url: "/antibiotics/"
       note: Doses, PK/PD and AUC targets, spectrum and AWaRe category
       tags: antibiotic aware access watch reserve dose dosing pk pd auc pharmacokinetics tdm half-life bioavailability spectrum
+    - name: Antimicrobials in pregnancy and breastfeeding
+      url: "/pregnancy/"
+      note: Which antimicrobials are safe, by trimester and in breastfeeding
+      tags: pregnancy pregnant breastfeeding lactation trimester teratogen uktis antibiotics antifungals antivirals antimalarials safe
     - name: BNF
       url: "https://bnf.nice.org.uk/"
       tags: drugs dosing formulary
@@ -164,6 +168,10 @@
       url: "/gram-negative-bacteraemia/"
       note: Empirical, ESBL, AmpC, CPE, Pseudomonas; duration and oral switch
       tags: gram negative bacteraemia bacteremia sepsis esbl ampc cpe carbapenemase kpc oxa-48 ndm pseudomonas acinetobacter stenotrophomonas typhoid balance merino
+    - name: HIV opportunistic infections
+      url: "/hiv-oi/"
+      note: Prophylaxis by CD4, treatment and ART timing (BHIVA)
+      tags: hiv aids opportunistic infection cd4 pcp pneumocystis toxoplasmosis cryptococcal cmv retinitis mac tb art timing iris co-trimoxazole prophylaxis pml
     - name: Malaria treatment
       url: "/malaria/"
       note: Severe and uncomplicated, by species (UK guidelines)
@@ -180,6 +188,10 @@
       url: "/neutropenic-sepsis/"
       note: Initial antibiotics and when to add antifungals
       tags: neutropenic sepsis febrile neutropenia fn chemotherapy haematology piperacillin tazobactam antifungal empirical pre-emptive caspofungin guide
+    - name: Penicillin allergy and cross-reactivity
+      url: "/penicillin-allergy/"
+      note: Reaction type, which β-lactams are safe, side-chain checker
+      tags: penicillin allergy beta-lactam cross reactivity cross-reactivity side chain cephalosporin carbapenem aztreonam delabel de-label anaphylaxis sjs dress
     - name: Positive blood culture triage
       url: "/blood-culture-triage/"
       note: Contaminant or real, and next steps, from the Gram stain
@@ -192,6 +204,10 @@
       url: "/returned-traveller/"
       note: HCID screen, differential by region and incubation, first-line tests
       tags: returned traveller travel fever imported malaria dengue typhoid enteric rickettsia leptospirosis schistosomiasis vhf hcid incubation
+    - name: Spontaneous bacterial peritonitis
+      url: "/sbp/"
+      note: Diagnosis, empirical treatment, albumin and prophylaxis (BSG 2021)
+      tags: sbp spontaneous bacterial peritonitis ascites cirrhosis paracentesis albumin bacterascites liver prophylaxis ciprofloxacin variceal bleed
 
 - category: Mycology
   links:
