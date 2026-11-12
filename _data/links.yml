@@ -239,6 +239,10 @@
       url: "/cryptococcus/"
       note: Meningitis, CrAg, pulmonary (ECMM/ISHAM/ASM 2024)
       tags: cryptococcus cryptococcal meningitis crag ambition amphotericin flucytosine fluconazole hiv guide
+    - name: Fungal markers interpretation
+      url: "/fungal-markers/"
+      note: Galactomannan, beta-D-glucan, PCR, CrAg and more, with cut-offs and pitfalls
+      tags: galactomannan gm beta-d-glucan bdg fungitell aspergillus pcr lateral flow crag cryptococcal antigen pneumocystis pcr mucorales histoplasma antigen aspergillus igg ige abpa cpa biomarker
     - name: Invasive aspergillosis treatment
       url: "/aspergillosis/"
       note: First-line therapy and azole resistance (ESCMID 2017)
@@ -254,6 +258,10 @@
       url: "/scores/"
       note: CURB-65, qSOFA, LRINEC, PEN-FAST, Duke criteria, EORTC/MSGERC aspergillosis
       tags: curb qsofa lrinec duke endocarditis necrotising fasciitis
+    - name: CICE flashcards
+      url: "/flashcards/"
+      note: Revision cards for the Combined Infection Certificate Examination
+      tags: cice exam revision flashcards quiz frcpath combined infection certificate training study
     - name: Key ID & micro trials (this site)
       url: "/trials/"
       note: 60 trials in PICO format with UK takeaways
