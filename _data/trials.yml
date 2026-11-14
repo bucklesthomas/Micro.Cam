@@ -11,8 +11,17 @@ sections:
   id: bloodstream-infection-and-s-aureus-bacteraemia
   lead:
   - Adjuncts to standard SAB therapy have not helped; early oral switch in low-risk SAB is now supported.
-  - For MSSA, the beta-lactam choice (flucloxacillin vs cefazolin) is being tested in the SNAP adaptive platform trial; watch for published results.
+  - For MSSA, SNAP (2026) found cefazolin non-inferior to flucloxacillin with less kidney injury.
   trials:
+  - name: SNAP (cefazolin)
+    cite: NEJM 2026
+    uk: true
+    p: Adults with MSSA bacteraemia (penicillin-resistant strains), adaptive platform trial in 8 countries including the UK
+    i: Cefazolin
+    c: Flucloxacillin or cloxacillin
+    o: 90-day mortality ~15.0% vs 17.0% (cefazolin non-inferior); acute kidney injury ~14% vs 20%; stopped early
+    takeaway: Cefazolin is at least as good as flucloxacillin for MSSA bacteraemia and kinder to the kidneys; endocarditis numbers were small
+    pubmed: cefazolin flucloxacillin Staphylococcus aureus N Engl J Med[ta] 2026[dp]
   - name: ARREST
     cite: Lancet 2018
     uk: true
@@ -240,7 +249,7 @@ sections:
     i: Stop at 3 days
     c: Continue to 8 days
     o: Cure at day 15 ~77% vs 68%; 3 days non-inferior
-    takeaway: Stop at 3–5 days in stable CAP, in line with NICE NG138
+    takeaway: Stop at 3–5 days in stable CAP; NICE NG250 (2025) says stop at 5 days if stable
     pubmed: Dinh[au] community-acquired pneumonia Lancet[ta] 2021[dp]
   - name: CAP-IT
     cite: JAMA 2021
@@ -258,7 +267,7 @@ sections:
     i: Hydrocortisone for 8–14 days
     c: Placebo
     o: 28-day mortality ~6% vs 12%
-    takeaway: Consider hydrocortisone in severe CAP; mind the exclusions and the neutral ESCAPe trial
+    takeaway: NICE NG250 (2025) now says consider a corticosteroid in high-severity CAP; mind the exclusions and the neutral ESCAPe trial
     pubmed: hydrocortisone pneumonia N Engl J Med[ta] 2023[dp]
   - name: RECOVERY dexamethasone
     cite: NEJM 2021

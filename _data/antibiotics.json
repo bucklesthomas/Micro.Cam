@@ -167,7 +167,7 @@
    "dose": [
     [
      "IV",
-     "1.2 g every 4 hours (600 mg–2.4 g every 6 hours); up to 2.4 g every 4 hours for meningitis or endocarditis"
+     "0.6–1.2 g every 6 hours; 1.2–2.4 g every 4 hours for severe infection (e.g. meningitis, endocarditis, necrotising fasciitis)"
     ]
    ],
    "uses": [
@@ -305,7 +305,7 @@
     ]
    ],
    "uses": [
-    "MSSA infection, including bacteraemia, endocarditis, bone and joint infection",
+    "MSSA infection, including bacteraemia (cefazolin is an alternative with less kidney injury: SNAP 2026), endocarditis, bone and joint infection",
     "Cellulitis and other skin and soft tissue infection"
    ],
    "pkpd": {
@@ -556,7 +556,7 @@
     ]
    ],
    "uses": [
-    "MSSA bacteraemia and endocarditis (alternative to flucloxacillin)",
+    "MSSA bacteraemia: non-inferior to flucloxacillin with less kidney injury in SNAP (NEJM 2026); endocarditis (ESC 2023 option)",
     "MSSA bone and joint infection; OPAT and haemodialysis patients (dosed after dialysis)",
     "Surgical prophylaxis (local policy)"
    ],
@@ -947,7 +947,7 @@
     "elim": "Renal",
     "pen": "Limited data"
    },
-   "renal": "Reduce dose when eGFR < 90 ml/min (product information), increase with augmented clearance.",
+   "renal": "Reduce dose when CrCl < 60 ml/min; give every 6 hours with augmented clearance (CrCl ≥ 120 ml/min).",
    "cautions": [
     "Reserve agent: microbiology approval",
     "Higher mortality than best available therapy in Acinetobacter infection (CREDIBLE-CR)",

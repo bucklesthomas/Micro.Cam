@@ -21,7 +21,7 @@
     severe: 'Markers of severe infection: WCC > 15 × 10⁹/L, creatinine > 50% above baseline, temperature > 38.5 °C, or signs of severe colitis. Refer to hospital if severely unwell or worsening rapidly.',
     response: 'Response is judged clinically and is usually not clear until about day 7; diarrhoea can take 1–2 weeks to settle.',
     fmt: 'Consider faecal microbiota transplant (FMT) for a recurrent episode after two or more previous episodes.',
-    bezlo: 'NICE does not recommend bezlotoxumab to prevent recurrence (not cost effective).'
+    bezlo: 'Bezlotoxumab is not recommended by NICE and has since been withdrawn from the market.'
   };
 
   var Q = {

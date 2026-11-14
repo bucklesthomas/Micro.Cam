@@ -90,7 +90,7 @@
       var nf = /vivax|ovale/.test(sp);
       var notes = ['Manage in a high-dependency or intensive care setting. Watch for ARDS, DIC, acute kidney injury, seizures and Gram-negative sepsis (give broad-spectrum antibiotics if shocked).',
                    'Pregnancy: severe malaria in any trimester is treated as above, with artesunate preferred over quinine. IV quinine with clindamycin is the alternative.',
-                   'Give IV quinine immediately if artesunate is not available: never delay treatment while obtaining it. Exchange transfusion is no longer recommended.',
+                   'Give IV quinine immediately if artesunate is not available: never delay treatment while obtaining it. Exchange transfusion is no longer recommended.', 'A UK-licensed IV artesunate product has been available since 2025: check where your hospital keeps it.',
                    N.glucose, N.films];
       if (nf) notes.push('After treatment, give primaquine to prevent relapse (P. vivax 30 mg daily, P. ovale 15 mg daily, for 14 days). ' + N.g6pd);
       notes.push(N.haemolysis, N.resistance, N.notify, N.expert);
@@ -112,7 +112,7 @@
         { name: 'If an artemisinin combination is not available', items: [I('Atovaquone–proguanil', D.ap, '3 days')] },
         { name: 'Or', noOr: true, items: [I('Quinine', D.quinine, '5–7 days'), I('plus Doxycycline', D.doxy, '7 days')] }
       ],
-      notes: [N.admitF, N.films, 'If the patient vomits or cannot take tablets, give IV treatment as for severe malaria.', 'The 2016 guideline gave artenimol–piperaquine bands of 36–60 kg (3 tablets) and > 60 kg (4 tablets); the bands shown follow UKHSA’s corrected 2025 table and the product licence.', N.prophylaxis, N.resistance, N.recurrence, N.notify]
+      notes: [N.admitF, N.films, 'If the patient vomits or cannot take tablets, give IV treatment as for severe malaria.', 'The UK-licensed artenimol–piperaquine product (Eurartesim) was discontinued in 2024: supply is now imported, so check availability with pharmacy.', 'The 2016 guideline gave artenimol–piperaquine bands of 36–60 kg (3 tablets) and > 60 kg (4 tablets); the bands shown follow UKHSA’s corrected 2025 table and the product licence.', N.prophylaxis, N.resistance, N.recurrence, N.notify]
     },
     R_falc_preg1: {
       title: 'Uncomplicated falciparum malaria, first trimester of pregnancy',

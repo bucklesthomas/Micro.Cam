@@ -82,6 +82,10 @@
       url: "https://www.journalofinfection.com/action/showPdf?pii=S0163-4453%2816%2900047-5"
       note: Journal of Infection (PDF)
       tags: malaria falciparum artesunate imported fever bia
+    - name: Meningitis (NICE NG240)
+      url: "https://www.nice.org.uk/guidance/ng240"
+      note: Bacterial meningitis and meningococcal disease (2024)
+      tags: meningitis meningococcal nice ng240 lumbar puncture dexamethasone
     - name: Meningitis (UK 2016)
       url: "https://www.journalofinfection.com/action/showPdf?pii=S0163-4453%2816%2900024-4"
       note: Journal of Infection (PDF)
@@ -89,6 +93,10 @@
     - name: NICE antimicrobial guidance
       url: "https://www.nice.org.uk/guidance/health-protection/communicable-diseases/antimicrobial-stewardship"
       tags: nice prescribing stewardship
+    - name: Pneumonia (NICE NG250)
+      url: "https://www.nice.org.uk/guidance/ng250"
+      note: Community- and hospital-acquired pneumonia (2025)
+      tags: pneumonia cap hap nice ng250 curb65 corticosteroid duration
 
 - category: Microbiology & lab
   links:

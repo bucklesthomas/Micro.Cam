@@ -1,6 +1,7 @@
 /*
  * Acute meningitis and encephalitis in adults.
- * Meningitis: UK joint specialist societies guideline (McGill F et al. J Infect 2016;72:405-438).
+ * Meningitis: NICE NG240, Meningitis (bacterial) and meningococcal disease (March 2024), with drug doses and
+ *   penicillin-susceptible pneumococcal options from the UK joint specialist societies guideline (McGill F et al. J Infect 2016).
  * Encephalitis: Management of suspected infectious and autoimmune encephalitis in adults: UK Joint Societies (Michael BD et al. J Infect 2026).
  * Contact prophylaxis: UKHSA meningococcal guidance (December 2025).
  */
@@ -24,10 +25,10 @@
 
   var N = {
     time: 'Give antibiotics within 1 hour of arrival. If the LP cannot be done within 1 hour, take blood cultures and give antibiotics first.',
-    ct: 'CT before LP only if there are signs of raised pressure or mass effect: focal neurology (not isolated cranial nerve palsy), papilloedema, continuous or uncontrolled seizures, or GCS ≤ 12. Do not delay antibiotics for the scan.',
-    lpNo: 'Do not do an LP if there is shock or a rapidly evolving rash, severe respiratory or cardiac compromise, a significant bleeding risk, or infection at the LP site.',
+    ct: 'CT before LP only if there are risk factors for a space-occupying lesion or signs of raised intracranial pressure (NICE NG240): new focal neurological features (including seizures or posturing), abnormal pupillary reactions, GCS ≤ 9, or a progressive, sustained or rapid fall in consciousness. Do not delay antibiotics for the scan.',
+    lpNo: 'Do not do an LP with extensive or rapidly spreading purpura, infection at the LP site, or the features above. Treat and stabilise first if there is an unprotected airway, respiratory compromise, shock, uncontrolled seizures or a bleeding risk.',
     csf: 'CSF: opening pressure, cell count, protein, paired glucose, Gram stain, culture, and PCR for meningococcus, pneumococcus, HSV-1/2, VZV and enterovirus. Blood: cultures, meningococcal and pneumococcal PCR, glucose, HIV test.',
-    dex: 'Give dexamethasone shortly before or with the first antibiotic dose (up to 12 hours after). Continue for 4 days if pneumococcal meningitis is confirmed or likely; stop if another cause is confirmed.',
+    dex: 'Give dexamethasone with or just before the first antibiotic dose, without delaying antibiotics (up to 12 hours after; later only on specialist advice). Continue for 4 days only if pneumococcus or H. influenzae type b is found; stop for other organisms. If no organism is found, take infection specialist advice.',
     notify: 'Notify suspected bacterial meningitis and meningococcal disease to the local health protection team now: they arrange contact prophylaxis (see the contact prophylaxis guide).',
     enc: 'If there are features of encephalitis (altered behaviour, cognition or consciousness, seizures or focal signs), add aciclovir.',
     hiv: 'Test for HIV in everyone with meningitis or encephalitis.'
@@ -55,8 +56,8 @@
       help: 'Choose the most important one.',
       options: [
         { label: 'None of these', next: 'R_emp' },
-        { label: 'Age over 60, immunocompromised, pregnant or alcohol excess', sub: 'Listeria risk', next: 'R_emp' },
-        { label: 'Travel in the last 6 months to an area with resistant pneumococci', sub: 'Most countries outside the UK and Europe', next: 'R_emp' },
+        { label: 'Listeria risk factors', sub: 'Older age (e.g. over 60), immunosuppression, pregnancy, cancer, diabetes, kidney or liver disease, alcohol misuse', next: 'R_emp' },
+        { label: 'Recent travel outside the UK, or known resistant organisms', sub: 'Risk of penicillin-resistant pneumococci or cephalosporin-resistant Enterobacterales', next: 'R_emp' },
         { label: 'Anaphylaxis to penicillin or cephalosporin', next: 'R_emp' }
       ]
     },
@@ -68,6 +69,8 @@
         { label: 'Streptococcus pneumoniae', next: 'pnc' },
         { label: 'Listeria monocytogenes', next: 'R_lis' },
         { label: 'Haemophilus influenzae', next: 'R_hflu' },
+        { label: 'Group B streptococcus', next: 'R_gbs' },
+        { label: 'Enterobacterales (coliforms)', next: 'R_coli' },
         { label: 'HSV or VZV PCR positive', next: 'R_hsv' },
         { label: 'Enterovirus PCR positive', sub: 'Viral meningitis', next: 'R_ent' },
         { label: 'Cryptococcal antigen positive', next: 'R_crypto' },
@@ -89,16 +92,17 @@
     var h = a.host ? a.host.i : 0, late = a.lp && a.lp.i === 1;
     var regs = [];
     if (h === 3) {
-      regs.push({ name: 'Severe β-lactam allergy', noOr: true, items: [I('Chloramphenicol', D.chlor), I('plus Vancomycin', D.vanc + ' (if travel risk)'), I('plus Co-trimoxazole', D.sxt + ' (if Listeria risk)')] });
+      regs.push({ name: 'Severe penicillin or cephalosporin allergy (NICE)', noOr: true, items: [I('Chloramphenicol', D.chlor), I('plus Co-trimoxazole', D.sxt + ' (if Listeria risk factors)')] });
     } else {
       var items = [I('Ceftriaxone', D.cro + '; or ' + D.ctx)];
       if (h === 1) items.push(I('plus Amoxicillin', D.amox + ' (Listeria cover)'));
-      if (h === 2) items.push(I('plus Vancomycin', D.vanc), I('or plus Rifampicin', D.rif));
+      if (h === 2) items.push(I('Get infection specialist advice now (NICE)', 'The UK 2016 guideline adds ' + D.vanc + '; or ' + D.rif + ', for possible penicillin-resistant pneumococci'));
       regs.push({ name: 'Empirical antibiotics', noOr: true, items: items });
     }
     regs.push({ name: 'Adjunct', noOr: true, items: [I('Dexamethasone', D.dex)] });
     var notes = [N.time];
     if (late) notes.push('LP delayed: send blood cultures and blood PCR now, and do the LP once safe (ideally within 4 hours of antibiotics: CSF PCR stays positive for longer than culture).');
+    if (h === 3) notes.push('Non-severe allergy: ceftriaxone can still be given (add co-trimoxazole instead of amoxicillin for Listeria risk). Take infection specialist advice, especially in pregnancy.');
     notes.push(N.dex, N.enc, N.csf, N.notify, N.hiv);
     return { title: 'Suspected bacterial meningitis: empirical treatment', tone: 'red', summary: 'Medical emergency: blood cultures, then antibiotics within 1 hour.', regimens: regs, notes: notes };
   }
@@ -121,43 +125,53 @@
     },
     R_unk: {
       title: 'Bacterial meningitis, no organism identified', tone: 'amber',
-      regimens: [{ items: [I('Ceftriaxone', D.cro, '14 days')] }, { name: 'If Listeria risk', noOr: true, items: [I('plus Amoxicillin', D.amox, '21 days if Listeria not excluded')] }],
-      notes: ['Check blood and CSF PCR results before settling on a duration; a partially treated meningococcal infection is common.', N.dex, N.hiv]
+      regimens: [{ items: [I('Ceftriaxone', D.cro, '10 days, then stop if recovered (NICE)')] }, { name: 'If Listeria risk', noOr: true, items: [I('plus Amoxicillin', D.amox, 'Until Listeria is excluded (21 days if not)')] }],
+      notes: ['Applies when the CSF suggests bacterial meningitis but blood culture and blood PCR are negative. Take infection specialist advice if not recovered at 10 days.', 'Check blood and CSF PCR results before settling on a duration; a partially treated meningococcal infection is common.', N.dex, N.hiv]
     },
     R_men: {
       title: 'Meningococcal meningitis or septicaemia', tone: 'amber',
       regimens: [{ items: [I('Ceftriaxone', D.cro, '5 days')] }, { items: [I('Benzylpenicillin', D.benpen + ' (if susceptible)', '5 days')] }],
-      notes: ['Dexamethasone can be stopped once meningococcal disease is confirmed (no clear benefit).', 'Ceftriaxone clears carriage; other antibiotics need a dose of ciprofloxacin before discharge.', 'Notify urgently: close contacts need ciprofloxacin and, for serogroups A, C, W and Y, MenACWY vaccine (see the contact prophylaxis guide).', 'Check for complement deficiency after recurrent or unusual-serogroup disease, and offer the missed vaccines.']
+      notes: ['Stop dexamethasone once meningococcal disease is confirmed (NICE).', 'Ceftriaxone clears carriage; other antibiotics need a dose of ciprofloxacin before discharge.', 'Notify urgently: close contacts need ciprofloxacin and, for serogroups A, C, W and Y, MenACWY vaccine (see the contact prophylaxis guide).', 'Check for complement deficiency after recurrent or unusual-serogroup disease, and offer the missed vaccines.']
     },
     R_pncS: {
       title: 'Pneumococcal meningitis, penicillin susceptible', tone: 'amber',
-      regimens: [{ items: [I('Benzylpenicillin', D.benpen, '14 days')] }, { items: [I('Ceftriaxone', D.cro, '14 days')] }],
-      notes: ['Continue dexamethasone for 4 days.', 'Look for a source: otitis, sinusitis, CSF leak (recurrent cases), and test for HIV, hyposplenism and immunoglobulin deficiency.', 'Hearing assessment before or soon after discharge.']
+      regimens: [{ items: [I('Ceftriaxone', D.cro, '10 days if recovered')] }, { items: [I('Benzylpenicillin', D.benpen + ' (UK 2016 option if MIC ≤ 0.06 mg/L)', '10 days if recovered')] }],
+      notes: ['NICE NG240: stop at 10 days if recovered; take specialist advice if not (the UK 2016 guideline used up to 14 days).', 'Continue dexamethasone for 4 days.', 'Look for a source: otitis, sinusitis, CSF leak (recurrent cases), and test for HIV, hyposplenism and immunoglobulin deficiency.', 'Hearing assessment before or soon after discharge.']
     },
     R_pncR: {
       title: 'Pneumococcal meningitis, penicillin resistant, ceftriaxone susceptible', tone: 'amber',
-      regimens: [{ items: [I('Ceftriaxone', D.cro, '14 days')] }],
-      notes: ['Stop vancomycin or rifampicin if they were started empirically.', 'Continue dexamethasone for 4 days.', 'Hearing assessment.']
+      regimens: [{ items: [I('Ceftriaxone', D.cro, '10 days if recovered')] }],
+      notes: ['Stop vancomycin or rifampicin if they were started empirically.', 'Continue dexamethasone for 4 days.', 'Audiological assessment within 4 weeks of being well enough, preferably before discharge.']
     },
     R_pncCR: {
       title: 'Pneumococcal meningitis, ceftriaxone resistant', tone: 'red',
       regimens: [{ name: 'Discuss with microbiology', noOr: true, items: [I('Ceftriaxone', D.cro), I('plus Vancomycin', D.vanc), I('and/or Rifampicin', D.rif)] }],
-      notes: ['Dexamethasone reduces vancomycin penetration into CSF; rifampicin is often added for this reason.', 'Consider a repeat LP at 48 hours if not improving.', 'Duration usually 14 days.']
+      notes: ['Dexamethasone reduces vancomycin penetration into CSF; rifampicin is often added for this reason.', 'Consider a repeat LP at 48 hours if not improving.', 'Duration usually 14 days: specialist advice.']
     },
     R_pncU: {
       title: 'Pneumococcal meningitis, susceptibilities pending', tone: 'amber',
       regimens: [{ items: [I('Ceftriaxone', D.cro)] }, { name: 'If travel risk', noOr: true, items: [I('plus Vancomycin or rifampicin', D.vanc + '; or ' + D.rif)] }],
-      notes: ['Continue dexamethasone for 4 days.', 'Rationalise once the penicillin and ceftriaxone MICs are back. Total 14 days.']
+      notes: ['Continue dexamethasone for 4 days.', 'Rationalise once the penicillin and ceftriaxone MICs are back. Total 10 days if recovered (NICE).']
     },
     R_lis: {
       title: 'Listeria meningitis or rhombencephalitis', tone: 'red',
-      regimens: [{ noOr: true, items: [I('Amoxicillin', D.amox, '21 days'), I('plus Gentamicin', D.gent, 'First 7 days')] }, { name: 'Penicillin allergy', items: [I('Co-trimoxazole', D.sxt, '21 days')] }],
-      notes: ['Cephalosporins are not active against Listeria.', 'Observational data suggest dexamethasone may be harmful in Listeria meningitis: stop it once Listeria is confirmed.', 'Look for immunosuppression; pregnancy needs obstetric input.']
+      regimens: [{ noOr: true, items: [I('Amoxicillin', D.amox, '21 days'), I('Consider adding Co-trimoxazole (specialist advice, NICE)', D.sxt, 'First 7 days')] }, { name: 'Penicillin allergy', items: [I('Co-trimoxazole', D.sxt, '21 days')] }],
+      notes: ['Cephalosporins are not active against Listeria.', 'Older guidance (UK 2016) added gentamicin for the first 7 days instead of co-trimoxazole.', 'Observational data suggest dexamethasone may be harmful in Listeria meningitis: stop it once Listeria is confirmed.', 'Look for immunosuppression; pregnancy needs obstetric input.']
     },
     R_hflu: {
       title: 'Haemophilus influenzae meningitis', tone: 'amber',
-      regimens: [{ items: [I('Ceftriaxone', D.cro, '10 days')] }],
-      notes: ['Continue dexamethasone for 4 days.', 'Type b (Hib): rifampicin prophylaxis for household contacts if there is a vulnerable member (child under 10 or immunosuppressed), and clearance for the index case.']
+      regimens: [{ items: [I('Ceftriaxone', D.cro, '7 days if recovered, otherwise 10 days')] }],
+      notes: ['Continue dexamethasone for 4 days (type b).', 'Take infection specialist advice at the start (NICE).', 'Type b (Hib): rifampicin prophylaxis for household contacts if there is a vulnerable member (child under 10 or immunosuppressed), and clearance for the index case.']
+    },
+    R_gbs: {
+      title: 'Group B streptococcal meningitis', tone: 'amber',
+      regimens: [{ items: [I('Ceftriaxone', D.cro, '14 days if recovered')] }],
+      notes: ['Take infection specialist advice at the start (NICE). Stop dexamethasone.', 'Look for endocarditis and, in adults, underlying diabetes, malignancy or recent pregnancy.']
+    },
+    R_coli: {
+      title: 'Enterobacterales (coliform) meningitis', tone: 'red',
+      regimens: [{ items: [I('Ceftriaxone', D.cro, '21 days if recovered')] }, { name: 'While susceptibilities are awaited, or ESBL risk', items: [I('Meropenem', 'Meropenem 2 g IV every 8 hours (specialist advice)')] }],
+      notes: ['Review once susceptibilities are known. Stop dexamethasone.', 'Usually follows neurosurgery, head injury or bacteraemia; in adults without these, consider Strongyloides hyperinfection.']
     },
     R_hsv: {
       title: 'HSV or VZV encephalitis', tone: 'red',
@@ -185,6 +199,6 @@
 
   window.GUIDES.cns = {
     Q: Q, R: R, eyebrow: 'Suggested management',
-    ref: 'From the UK joint specialist societies meningitis guideline (2016) and the UK encephalitis guideline (2026). Adult doses; adjust for renal function and follow local policy.'
+    ref: 'From NICE NG240 (2024), the UK joint specialist societies meningitis guideline (2016) and the UK encephalitis guideline (2026). Adult doses; adjust for renal function and follow local policy.'
   };
 })();

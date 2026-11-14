@@ -28,7 +28,8 @@ var SCORES = [
       { max: 2, level: 'mid', text: 'Moderate severity — consider hospital-based care' },
       { max: 5, level: 'high', text: 'High severity — manage as severe CAP; consider critical care review if 4–5' }
     ],
-    ref: 'Lim WS et al. Thorax 2003; BTS & NICE pneumonia guidance'
+    note: 'NICE NG250 (2025): stop antibiotics at 5 days if clinically stable. For high-severity CAP in hospital (CURB-65 3–5 with clinical judgement), consider a corticosteroid (IV hydrocortisone first) for 4–7 days or until discharge.',
+    ref: 'Lim WS et al. Thorax 2003; NICE NG250 Pneumonia: diagnosis and management (2025)'
   },
   {
     id: 'qsofa',

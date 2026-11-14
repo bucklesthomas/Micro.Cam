@@ -70,8 +70,8 @@
     R_sab: {
       title: 'Staphylococcus aureus bacteraemia', tone: 'red',
       summary: 'Never a contaminant. Treat, find the source, and follow the S. aureus bacteraemia bundle.',
-      regimens: [{ name: 'MSSA', items: [I('Flucloxacillin', '2 g IV every 6 hours (every 4 hours for endocarditis)'), I('or Cefazolin', '2 g IV every 8 hours')] }, { name: 'MRSA or severe penicillin allergy', items: [I('Vancomycin', 'Loading dose 25–30 mg/kg, then by levels'), I('or Daptomycin', '8–10 mg/kg IV once daily (specialist)')] }],
-      notes: ['Repeat blood cultures every 24–48 hours until negative.', 'Echocardiography for all (TTE; TOE if high risk: device or prosthetic valve, persistent bacteraemia, community onset without a clear source, embolic signs).', 'Remove infected lines; look for deep foci (spine, joints, abscess) and image if symptoms or persistent bacteraemia.', 'Infection specialist review (reduces mortality).', 'Duration: at least 14 days IV from the first negative culture if uncomplicated; 4–6 weeks if complicated (endocarditis, deep focus, persistent bacteraemia > 72 hours, prosthetic material). Selected patients can complete treatment orally after a period of IV therapy with specialist input.', 'S. lugdunensis behaves like S. aureus: treat the same way.']
+      regimens: [{ name: 'MSSA', items: [I('Cefazolin', '2 g IV every 8 hours'), I('or Flucloxacillin', '2 g IV every 6 hours (every 4 hours for endocarditis)')] }, { name: 'MRSA or severe penicillin allergy', items: [I('Vancomycin', 'Loading dose 25–30 mg/kg, then by levels'), I('or Daptomycin', '8–10 mg/kg IV once daily (specialist)')] }],
+      notes: ['Repeat blood cultures every 24–48 hours until negative.', 'Echocardiography for all (TTE; TOE if high risk: device or prosthetic valve, persistent bacteraemia, community onset without a clear source, embolic signs).', 'Remove infected lines; look for deep foci (spine, joints, abscess) and image if symptoms or persistent bacteraemia.', 'Infection specialist review (reduces mortality).', 'SNAP (NEJM 2026): cefazolin was non-inferior to flucloxacillin for 90-day mortality, with less acute kidney injury; data in endocarditis were limited, and cefazolin is unsuitable for CNS infection.', 'Duration: at least 14 days IV from the first negative culture if uncomplicated; 4–6 weeks if complicated (endocarditis, deep focus, persistent bacteraemia > 72 hours, prosthetic material). Selected patients can complete treatment orally after a period of IV therapy with specialist input.', 'S. lugdunensis behaves like S. aureus: treat the same way.']
     },
     R_clusPend: {
       title: 'Gram-positive cocci in clusters, identification pending', tone: 'amber',
@@ -165,7 +165,7 @@
       title: 'Listeria monocytogenes bacteraemia', tone: 'red',
       summary: 'Always significant. Look for CNS infection.',
       regimens: [{ noOr: true, items: [I('Amoxicillin', '2 g IV every 4 hours'), I('plus Gentamicin', '5 mg/kg once daily (first 7 days, if CNS involved)')] }, { name: 'Penicillin allergy', items: [I('Co-trimoxazole', 'High dose, IV')] }],
-      notes: ['Cephalosporins are inactive.', 'LP or MRI if any neurological features; pregnancy needs obstetric input.', 'Duration: at least 14 days for bacteraemia, 21 days for meningitis.']
+      notes: ['Cephalosporins are inactive.', 'NICE NG240 suggests co-trimoxazole rather than gentamicin as the added agent for Listeria meningitis (specialist advice).', 'LP or MRI if any neurological features; pregnancy needs obstetric input.', 'Duration: at least 14 days for bacteraemia, 21 days for meningitis.']
     },
     R_clos: {
       title: 'Clostridium bacteraemia', tone: 'amber',

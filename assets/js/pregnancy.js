@@ -21,7 +21,7 @@
     ['Daptomycin', 'Antibacterials', 'care', 'Very limited data.', 'care', 'Small amounts in milk; limited data.'],
     ['Linezolid', 'Antibacterials', 'care', 'Very limited data; use only if no alternative.', 'care', 'Present in milk; monitor the infant.'],
     ['Erythromycin', 'Antibacterials', 'ok', 'The macrolide with most experience; used in preterm rupture of membranes.', 'ok', 'Compatible; reports of pyloric stenosis with direct neonatal use.'],
-    ['Clarithromycin', 'Antibacterials', 'care', 'BNF: avoid, especially in the first trimester, unless benefit outweighs risk (some studies suggest miscarriage risk).', 'ok', 'Compatible.'],
+    ['Clarithromycin', 'Antibacterials', 'care', 'UKTIS: no major concerns with macrolides overall, but less experience than erythromycin; BNF advises avoiding unless the benefit outweighs the risk.', 'ok', 'Compatible.'],
     ['Azithromycin', 'Antibacterials', 'ok', 'Used in pregnancy (e.g. chlamydia, BASHH); some data on miscarriage risk are inconsistent.', 'ok', 'Compatible.'],
     ['Clindamycin', 'Antibacterials', 'ok', 'No evidence of harm.', 'care', 'Compatible; watch the infant for diarrhoea or bloody stools.'],
     ['Doxycycline and other tetracyclines', 'Antibacterials', 'avoid', 'Avoid from about 15 weeks (tooth discolouration, bone growth); first-trimester exposure is not an indication to stop the pregnancy.', 'care', 'Short courses (up to 3 weeks) are acceptable; avoid prolonged use.'],

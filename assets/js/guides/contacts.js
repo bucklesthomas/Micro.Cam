@@ -187,9 +187,9 @@
       regimens: [
         { name: 'Children over 1 month and adults', items: [I('Azithromycin', 'Adults 500 mg once daily (children 10 mg/kg)', '3 days'), I('or Clarithromycin', 'Adults 500 mg twice daily (children by weight)', '7 days')] },
         { name: 'Infants under 1 month', items: [I('Clarithromycin', '7.5 mg/kg twice daily', '7 days')] },
-        { name: 'Pregnancy', items: [I('Erythromycin', '250–500 mg 4 times daily', '7 days')] }
+        { name: 'Pregnancy', items: [I('Erythromycin', '500 mg 4 times daily', '7 days')] }
       ],
-      notes: ['Macrolide intolerance: co-trimoxazole (not under 6 weeks; avoid in pregnancy).', 'Vaccinate: pregnant contacts from 16 weeks if not vaccinated this pregnancy; boosters for eligible contacts and healthcare workers (no pertussis vaccine in 5 years).', 'Exclude cases for 48 hours after starting antibiotics (21 days from cough onset if untreated). Asymptomatic contacts are not excluded.', 'Check doses in the UKHSA guidance appendix or the BNF.', HPT]
+      notes: ['Macrolide intolerance: co-trimoxazole (not under 6 weeks; avoid in pregnancy).', 'Vaccinate: pregnant contacts from 16 weeks if not vaccinated this pregnancy; boosters for eligible contacts and healthcare workers (no pertussis vaccine in 5 years).', 'Exclude cases for 48 hours after starting antibiotics (21 days from cough onset if untreated). Asymptomatic contacts are not excluded.', 'Doses are the same for treatment and prophylaxis. Children: weight-banded doses in the BNF for Children.', HPT]
     },
     R_pertNo: {
       title: 'Pertussis: no priority contacts', tone: 'green',

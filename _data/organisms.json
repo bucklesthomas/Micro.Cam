@@ -19,7 +19,7 @@
     "Skin and soft tissue, bone and joint, line, device and endovascular infection.",
     "PVL-producing strains cause recurrent boils and necrotising pneumonia (send for PVL testing)."
    ],
-   "tx": "Flucloxacillin 2 g IV every 6 hours (every 4 hours for endocarditis), or cefazolin 2 g IV every 8 hours.",
+   "tx": "Cefazolin 2 g IV every 8 hours, or flucloxacillin 2 g IV every 6 hours (every 4 hours for endocarditis). SNAP (NEJM 2026) found cefazolin non-inferior for bacteraemia with less kidney injury.",
    "alt": "Penicillin allergy: vancomycin or teicoplanin (inferior to β-lactams for MSSA). Oral options by susceptibility: doxycycline, co-trimoxazole, clindamycin, linezolid; rifampicin only in combination for prosthetic material.",
    "links": [
     [
@@ -169,7 +169,7 @@
     "Penicillin resistance is uncommon in the UK but common in many other countries.",
     "Urinary antigen test helps in pneumonia."
    ],
-   "tx": "Pneumonia: amoxicillin or benzylpenicillin. Meningitis: ceftriaxone 2 g IV every 12 hours with dexamethasone (benzylpenicillin if MIC ≤ 0.06).",
+   "tx": "Pneumonia: amoxicillin or benzylpenicillin. Meningitis: ceftriaxone 2 g IV every 12 hours with dexamethasone, 10 days if recovered (NICE NG240).",
    "alt": "Doxycycline or a macrolide for non-severe pneumonia in penicillin allergy; levofloxacin for severe allergy.",
    "links": [
     [
@@ -290,7 +290,7 @@
     "Foodborne (soft cheese, pâté, deli meat).",
     "Intrinsically resistant to all cephalosporins."
    ],
-   "tx": "Amoxicillin 2 g IV every 4 hours, plus gentamicin for the first 7 days in CNS infection; 21 days for meningitis.",
+   "tx": "Amoxicillin 2 g IV every 4 hours; 21 days for meningitis, with co-trimoxazole considered for the first 7 days (NICE NG240; older guidance added gentamicin).",
    "alt": "Penicillin allergy: co-trimoxazole. Add amoxicillin to empirical meningitis treatment when Listeria is possible.",
    "links": [
     [
@@ -669,7 +669,7 @@
     "About 15–20% produce β-lactamase."
    ],
    "tx": "Amoxicillin if β-lactamase negative; co-amoxiclav, doxycycline or ceftriaxone otherwise.",
-   "alt": "Meningitis: ceftriaxone for 10 days.",
+   "alt": "Type b meningitis: ceftriaxone for 7 days if recovered, otherwise 10 (NICE NG240).",
    "links": [
     [
      "Meningitis and encephalitis",
@@ -710,7 +710,7 @@
     "Close contacts need ciprofloxacin; serogroup A, C, W or Y contacts also need MenACWY.",
     "Recurrent disease: test for complement deficiency."
    ],
-   "tx": "Ceftriaxone 2 g IV every 12 hours for 5 days (benzylpenicillin if susceptible).",
+   "tx": "Ceftriaxone 2 g IV every 12 hours for 5 days.",
    "alt": "Index case: ciprofloxacin before discharge if not treated with ceftriaxone.",
    "links": [
     [
