@@ -301,7 +301,7 @@
     ],
     [
      "IV",
-     "1–2 g every 6 hours; 2 g every 4 hours for endocarditis, osteomyelitis or S. aureus bacteraemia"
+     "1–2 g every 6 hours (2 g for S. aureus bacteraemia, osteomyelitis and endocarditis; 2 g every 4 hours for endocarditis if over 85 kg)"
     ]
    ],
    "uses": [
@@ -432,7 +432,7 @@
    "dose": [
     [
      "IV",
-     "2 g every 12 hours; 2 g every 8 hours in severe infection"
+     "2 g every 8 hours for systemic infection (the EUCAST breakpoints assume this dose); 2 g every 12 hours for uncomplicated urinary infection"
     ]
    ],
    "uses": [
@@ -1159,7 +1159,7 @@
     "elim": "Renal",
     "pen": "As gentamicin"
    },
-   "tdm": "Pre-dose trough < 2.5–5 mg/L (local policy); peak 50–60 mg/L in critical illness.",
+   "tdm": "Pre-dose trough < 5 mg/L (many units aim for < 2.5 mg/L; local policy); peak 50–60 mg/L in critical illness.",
    "renal": "Dose interval extended by levels.",
    "cautions": [
     "Ototoxicity (more cochlear than gentamicin) and nephrotoxicity",
@@ -1329,7 +1329,7 @@
     "elim": "Renal",
     "pen": "Good bone; poor CSF"
    },
-   "tdm": "Pre-dose trough ≥ 15 mg/L for most infections; 20–40 mg/L (product information) or ≥ 20 mg/L for bone and joint infection and endocarditis; check at day 3–5.",
+   "tdm": "Pre-dose trough (product information): > 15 mg/L for most infections, > 20 mg/L for bone and joint infection, 30–40 mg/L for endocarditis; check at day 3–5.",
    "renal": "Reduce maintenance dose from day 4 when eGFR < 80 ml/min.",
    "cautions": [
     "Less nephrotoxic than vancomycin",
@@ -1484,7 +1484,7 @@
     ],
     [
      "Oral, sexual health",
-     "1 g single dose or as per BASHH (e.g. Mycoplasma genitalium regimens)"
+     "Chlamydia, second line to doxycycline: 1 g, then 500 mg once daily for 2 days; other regimens per BASHH (e.g. Mycoplasma genitalium)"
     ]
    ],
    "uses": [

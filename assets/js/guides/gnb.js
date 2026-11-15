@@ -16,7 +16,7 @@
     tazo: 'Piperacillin–tazobactam 4.5 g IV every 8 hours (every 6 hours if severe; extended infusion)',
     mero: 'Meropenem 1 g IV every 8 hours (2 g every 8 hours for CNS infection or Pseudomonas with high MIC)',
     erta: 'Ertapenem 1 g IV once daily',
-    temo: 'Temocillin 2 g IV every 12 hours (every 8 hours if severe)',
+    temo: 'Temocillin 2 g IV every 8 hours',
     fep:  'Cefepime 2 g IV every 8 hours',
     caz:  'Ceftazidime 2 g IV every 8 hours',
     cza:  'Ceftazidime–avibactam 2.5 g IV every 8 hours over 2 hours',
@@ -165,8 +165,8 @@
     R_ampc: {
       title: 'High-risk AmpC producer (Enterobacter, K. aerogenes, C. freundii)', tone: 'amber',
       summary: 'Avoid ceftriaxone, cefotaxime, ceftazidime and piperacillin–tazobactam for serious infection: resistance can emerge during treatment.',
-      regimens: [{ name: 'Preferred if cefepime MIC ≤ 2 mg/L', items: [I('Cefepime', D.fep)] }, { name: 'Otherwise, or if ESBL also produced', items: [I('Meropenem or ertapenem', D.mero + '; or ' + D.erta)] }, { name: 'Alternative', items: [I('Temocillin', D.temo)] }, { name: 'Oral step-down', noOr: true, items: [I('By susceptibility', D.cipro + '; or ' + D.sxt)] }],
-      notes: ['A cefepime MIC of 4–8 mg/L suggests ESBL co-production: use a carbapenem.', N.dur7, N.ivos, N.source]
+      regimens: [{ name: 'Preferred if cefepime MIC ≤ 2 mg/L', items: [I('Cefepime', D.fep)] }, { name: 'Otherwise, or if ESBL also produced', items: [I('Meropenem or ertapenem', D.mero + '; or ' + D.erta)] }, { name: 'Oral step-down', noOr: true, items: [I('By susceptibility', D.cipro + '; or ' + D.sxt)] }],
+      notes: ['Temocillin is stable to AmpC, but EUCAST breakpoints cover only E. coli, Klebsiella (not K. aerogenes) and P. mirabilis: use for these species only on microbiology advice.', 'A cefepime MIC of 4–8 mg/L suggests ESBL co-production: use a carbapenem.', N.dur7, N.ivos, N.source]
     },
     R_ampcLow: {
       title: 'Low-risk AmpC producer (Serratia, Morganella, Providencia)', tone: 'green',

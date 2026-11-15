@@ -70,7 +70,7 @@
     R_sab: {
       title: 'Staphylococcus aureus bacteraemia', tone: 'red',
       summary: 'Never a contaminant. Treat, find the source, and follow the S. aureus bacteraemia bundle.',
-      regimens: [{ name: 'MSSA', items: [I('Cefazolin', '2 g IV every 8 hours'), I('or Flucloxacillin', '2 g IV every 6 hours (every 4 hours for endocarditis)')] }, { name: 'MRSA or severe penicillin allergy', items: [I('Vancomycin', 'Loading dose 25–30 mg/kg, then by levels'), I('or Daptomycin', '8–10 mg/kg IV once daily (specialist)')] }],
+      regimens: [{ name: 'MSSA', items: [I('Cefazolin', '2 g IV every 8 hours'), I('or Flucloxacillin', '2 g IV every 6 hours (every 4 hours for endocarditis if over 85 kg)')] }, { name: 'MRSA or severe penicillin allergy', items: [I('Vancomycin', 'Loading dose 25–30 mg/kg, then by levels'), I('or Daptomycin', '8–10 mg/kg IV once daily (specialist)')] }],
       notes: ['Repeat blood cultures every 24–48 hours until negative.', 'Echocardiography for all (TTE; TOE if high risk: device or prosthetic valve, persistent bacteraemia, community onset without a clear source, embolic signs).', 'Remove infected lines; look for deep foci (spine, joints, abscess) and image if symptoms or persistent bacteraemia.', 'Infection specialist review (reduces mortality).', 'SNAP (NEJM 2026): cefazolin was non-inferior to flucloxacillin for 90-day mortality, with less acute kidney injury; data in endocarditis were limited, and cefazolin is unsuitable for CNS infection.', 'Duration: at least 14 days IV from the first negative culture if uncomplicated; 4–6 weeks if complicated (endocarditis, deep focus, persistent bacteraemia > 72 hours, prosthetic material). Selected patients can complete treatment orally after a period of IV therapy with specialist input.', 'S. lugdunensis behaves like S. aureus: treat the same way.']
     },
     R_clusPend: {
@@ -106,13 +106,13 @@
     R_pnc: {
       title: 'Streptococcus pneumoniae bacteraemia', tone: 'amber',
       summary: 'Always significant.',
-      regimens: [{ items: [I('Benzylpenicillin', '1.2–2.4 g IV every 4 hours, if susceptible'), I('or Ceftriaxone', '2 g IV once daily')] }],
-      notes: ['Look for pneumonia, meningitis (LP if any neurological features), endocarditis or septic arthritis.', 'Test for HIV; consider hyposplenism, myeloma or immunoglobulin deficiency.', 'Usually 7–10 days if pneumonia with good response.']
+      regimens: [{ items: [I('Benzylpenicillin', '1.2 g IV every 6 hours if susceptible (2.4 g every 4 hours for meningitis)'), I('or Ceftriaxone', '2 g IV once daily')] }],
+      notes: ['Look for pneumonia, meningitis (LP if any neurological features), endocarditis or septic arthritis.', 'Test for HIV; consider hyposplenism, myeloma or immunoglobulin deficiency.', 'Usually 5–7 days for pneumonia with a good response; longer for meningitis, endocarditis, empyema or septic arthritis.']
     },
     R_bhs: {
       title: 'β-haemolytic streptococcal bacteraemia', tone: 'red',
       summary: 'Always significant. Group A (S. pyogenes) is invasive group A strep: notify.',
-      regimens: [{ items: [I('Benzylpenicillin', '2.4 g IV every 4 hours')] }, { name: 'Necrotising infection or toxic shock: add', noOr: true, items: [I('Clindamycin', '1.2 g IV every 6 hours (toxin suppression)'), I('and consider IVIG', 'Specialist advice')] }],
+      regimens: [{ items: [I('Benzylpenicillin', '1.2–2.4 g IV every 4–6 hours (2.4 g every 4 hours if severe)')] }, { name: 'Necrotising infection or toxic shock: add', noOr: true, items: [I('Clindamycin', '1.2 g IV every 6 hours (toxin suppression)'), I('and consider IVIG', 'Specialist advice')] }],
       notes: ['Look for skin and soft tissue infection, necrotising fasciitis (LRINEC on the Scores page), septic arthritis.', 'Group A: notify the health protection team; high-risk household contacts need prophylaxis (see contact prophylaxis guide).', 'Group B in adults: look for endocarditis, diabetes, malignancy; group B in pregnancy or postpartum needs obstetric input.']
     },
     R_vgs: {

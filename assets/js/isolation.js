@@ -45,7 +45,7 @@
     ['PVL-positive Staphylococcus aureus', 'C', SR, FR + ' (only if pneumonia)', 'Until decolonisation complete and lesions healed', 0],
     ['RSV', 'D', SR, FR, 'Duration of symptoms', 0],
     ['Rotavirus', 'C', SR, NO, GI, 0],
-    ['Rubella', 'D', SR, FR, 'Until 7 days after rash onset; keep away from pregnant women', 1],
+    ['Rubella', 'D', SR, FR, 'Until 5 days after rash onset (UKHSA exclusion period; some policies use 7 days); keep away from pregnant women', 1],
     ['Serratia marcescens', 'C', SRH, NO, 'Local policy (neonatal units: outbreak control)', 0],
     ['Shingles (herpes zoster), localised', 'C', 'Single room if lesions cannot be covered', NO, 'Until lesions are crusted; non-immune staff should not care for the patient', 0],
     ['Shingles, disseminated (or immunocompromised)', 'A', NPR, FR, 'Until all lesions are crusted', 0],

@@ -19,7 +19,7 @@
     "Skin and soft tissue, bone and joint, line, device and endovascular infection.",
     "PVL-producing strains cause recurrent boils and necrotising pneumonia (send for PVL testing)."
    ],
-   "tx": "Cefazolin 2 g IV every 8 hours, or flucloxacillin 2 g IV every 6 hours (every 4 hours for endocarditis). SNAP (NEJM 2026) found cefazolin non-inferior for bacteraemia with less kidney injury.",
+   "tx": "Cefazolin 2 g IV every 8 hours, or flucloxacillin 2 g IV every 6 hours (every 4 hours for endocarditis if over 85 kg). SNAP (NEJM 2026) found cefazolin non-inferior for bacteraemia with less kidney injury.",
    "alt": "Penicillin allergy: vancomycin or teicoplanin (inferior to β-lactams for MSSA). Oral options by susceptibility: doxycycline, co-trimoxazole, clindamycin, linezolid; rifampicin only in combination for prosthetic material.",
    "links": [
     [
@@ -118,7 +118,7 @@
     "Invasive disease is notifiable; high-risk household contacts need prophylaxis.",
     "Always penicillin susceptible; macrolide and clindamycin resistance about 5–15%."
    ],
-   "tx": "Benzylpenicillin 2.4 g IV every 4 hours; add clindamycin 1.2 g IV every 6 hours for necrotising infection or toxic shock.",
+   "tx": "Benzylpenicillin 1.2–2.4 g IV every 4–6 hours (2.4 g every 4 hours if severe); add clindamycin 1.2 g IV every 6 hours for necrotising infection or toxic shock.",
    "alt": "Consider IVIG in streptococcal toxic shock. Urgent surgical review for necrotising fasciitis.",
    "links": [
     [
@@ -147,7 +147,7 @@
     "Neonatal sepsis and meningitis; maternal colonisation guides intrapartum prophylaxis.",
     "In adults: diabetes, malignancy, older age; skin, bone, joint and endocarditis."
    ],
-   "tx": "Benzylpenicillin 2.4 g IV every 4 hours (or amoxicillin).",
+   "tx": "Benzylpenicillin 1.2–2.4 g IV every 4–6 hours (or amoxicillin).",
    "alt": "Clindamycin resistance is common (about 30%): not reliable as an alternative without susceptibility results.",
    "links": [
     [
