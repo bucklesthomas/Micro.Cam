@@ -126,6 +126,10 @@
 
 - category: Public health & notification
   links:
+    - name: Exclusion and clearance
+      url: "/exclusion/"
+      note: Cases and contacts in risk groups (food handlers, care staff, childcare); school exclusion periods
+      tags: exclusion clearance work school nursery childcare food handler risk group typhoid paratyphoid enteric fever stec e coli o157 hus shigella hepatitis a norovirus salmonella campylobacter cryptosporidium giardia cholera amoebiasis stool samples return to work chickenpox impetigo scarlet fever
     - name: Find your local health protection team
       url: "https://www.gov.uk/health-protection-team"
       tags: hpt phe ukhsa
@@ -176,6 +180,10 @@
       url: "/endocarditis/"
       note: Antibiotic choice by organism, based on ESC 2023
       tags: ie infective endocarditis antibiotics regimen treatment staphylococcus streptococcus enterococcus hacek empirical esc guide
+    - name: Exclusion and clearance
+      url: "/exclusion/"
+      note: Cases and contacts in risk groups (food handlers, care staff, childcare); school exclusion periods
+      tags: exclusion clearance work school nursery childcare food handler risk group typhoid paratyphoid enteric fever stec e coli o157 hus shigella hepatitis a norovirus salmonella campylobacter cryptosporidium giardia cholera amoebiasis stool samples return to work chickenpox impetigo scarlet fever
     - name: Gram-negative bacteraemia
       url: "/gram-negative-bacteraemia/"
       note: Empirical, ESBL, AmpC, CPE, Pseudomonas; duration and oral switch
