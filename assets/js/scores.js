@@ -170,6 +170,27 @@ var SCORES = [
 ];
 
 (function () {
+  // Copy plain text to the clipboard (Epic notes); falls back to a selectable box if the browser blocks it.
+  function copyText(text, btn) {
+    function done(ok) {
+      var old = btn.getAttribute('data-label') || btn.textContent;
+      btn.setAttribute('data-label', old);
+      btn.textContent = ok ? 'Copied' : 'Select and copy below';
+      setTimeout(function () { btn.textContent = old; }, 1800);
+    }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.className = 'mc-copy-box';
+      btn.parentNode.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      if (ok) ta.parentNode.removeChild(ta);
+      done(ok);
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(function () { done(true); }, fallback);
+    else fallback();
+  }
+
   var host = document.getElementById('scores');
   var nav = document.getElementById('score-nav');
 
@@ -206,7 +227,7 @@ var SCORES = [
     });
     html += (opened ? '</div>' : '') + '</form><div class="result" aria-live="polite"><span class="total">0</span><span class="interp"></span></div>' +
             (s.note ? '<p class="note">' + s.note + '</p>' : '') +
-            '<div class="foot"><button type="button" class="reset">Reset</button><small>' + s.ref + '</small></div>';
+            '<div class="foot"><button type="button" class="reset">Reset</button><button type="button" class="reset sc-copy" title="Copy this score as plain text for a clinical note">Copy for Epic</button><small>' + s.ref + '</small></div>';
     card.innerHTML = html;
     host.appendChild(card);
 
@@ -244,6 +265,17 @@ var SCORES = [
     }
     form.addEventListener('change', update);
     card.querySelector('.reset').addEventListener('click', function () { form.reset(); update(); });
+    card.querySelector('.sc-copy').addEventListener('click', function (e) {
+      var L = [s.name + ': ' + totalEl.textContent + ' (' + result.querySelector('.interp').textContent + ')'];
+      form.querySelectorAll('input:checked').forEach(function (el) {
+        var lab = el.closest('label'), fs = el.closest('fieldset');
+        var txt = lab.querySelector('.opt-text').textContent;
+        L.push('- ' + (fs ? fs.querySelector('legend').textContent + ': ' + txt : txt));
+      });
+      if (L.length === 1) L.push('- No criteria selected');
+      L.push('Ref: ' + String(s.ref).replace(/<[^>]+>/g, ''));
+      copyText(L.join('\n'), e.target);
+    });
     update();
   });
 })();

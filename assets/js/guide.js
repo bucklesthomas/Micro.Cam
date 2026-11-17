@@ -19,6 +19,49 @@
     });
   }
 
+  // Copy plain text to the clipboard (Epic notes); falls back to a selectable box if the browser blocks it.
+  function copyText(text, btn) {
+    function done(ok) {
+      var old = btn.getAttribute('data-label') || btn.textContent;
+      btn.setAttribute('data-label', old);
+      btn.textContent = ok ? 'Copied' : 'Select and copy below';
+      setTimeout(function () { btn.textContent = old; }, 1800);
+    }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.className = 'mc-copy-box';
+      btn.parentNode.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      if (ok) ta.parentNode.removeChild(ta);
+      done(ok);
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(function () { done(true); }, fallback);
+    else fallback();
+  }
+
+  // Plain-text version of a result for pasting into a clinical note.
+  function asText(st, G, page) {
+    var r = st.result, L = [r.title];
+    if (r.summary) L.push(r.summary);
+    L.push('');
+    st.steps.forEach(function (s) { L.push(s.q.q + ' ' + s.o.label); });
+    (r.regimens || []).forEach(function (g, gi) {
+      L.push('');
+      if (gi > 0 && !g.noOr) L.push('or');
+      if (g.name) L.push(g.name + ':');
+      g.items.forEach(function (it) {
+        var name = it.drug.replace(/^(or|and|plus|with or without) /i, ''), dose = String(it.dose || '');
+        var line = dose.toLowerCase().indexOf(name.toLowerCase()) === 0 ? (it.drug.slice(0, it.drug.length - name.length) + dose) : (it.drug + ': ' + dose);
+        L.push('- ' + line + (it.dur ? ' (' + it.dur + ')' : ''));
+      });
+    });
+    var notes = (r.notes || []).filter(function (n) { return !/this guide|the .* (guide|page)\b|^choose |choose "/i.test(n); });
+    if (notes.length) { L.push(''); notes.forEach(function (n) { L.push('- ' + n); }); }
+    L.push('', 'Guide: ' + page + ' (Micro.Cam). ' + (G.ref || ''));
+    return L.join('\n').replace(/\n{3,}/g, '\n\n');
+  }
+
   // Follow a list of option indexes from the start; returns the steps taken and where we ended up.
   function resolve(G, picks) {
     var id = 'start', answers = {}, steps = [];
@@ -64,7 +107,12 @@
     var name = host.getAttribute('data-guide');
     var G = GUIDES[name];
     if (!G) return;
-    var picks = [];
+    var picks = [], lastState = null;
+    function pageName() {
+      var box = host.parentNode, h;
+      while (box && box !== document.body) { h = box.querySelector && box.querySelector('h1'); if (h) return h.textContent.trim(); box = box.parentNode; }
+      return name;
+    }
 
     function render(focus) {
       var st = resolve(G, picks);
@@ -86,7 +134,9 @@
       } else if (st.result) {
         html += renderResult(st.result, G);
       }
-      if (picks.length) html += '<div class="ie-actions"><button type="button" class="reset" data-restart>Start again</button></div>';
+      if (picks.length) html += '<div class="ie-actions"><button type="button" class="reset" data-restart>Start again</button>' +
+        (st.result ? '<button type="button" class="reset ie-copy" data-copy title="Copy this result as plain text for a clinical note">Copy for Epic</button>' : '') + '</div>';
+      lastState = st;
       host.innerHTML = html;
       host.setAttribute('data-node', st.id);
 
@@ -108,6 +158,7 @@
       if (pick) { picks.push(Number(pick.getAttribute('data-pick'))); render(true); }
       else if (back) { picks = picks.slice(0, Number(back.getAttribute('data-back'))); render(true); }
       else if (e.target.closest('[data-restart]')) { picks = []; render(true); }
+      else if (e.target.closest('[data-copy]') && lastState && lastState.result) copyText(asText(lastState, G, pageName()), e.target.closest('[data-copy]'));
     });
     render(false);
   }

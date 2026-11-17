@@ -455,7 +455,9 @@ fieldset.row.choice:first-child { border-top: 0; }
 .ie-or { margin: 6px 0; text-align: center; font-size: 12px; font-style: italic; color: var(--muted); }
 .ie-notes { margin: 14px 0 0; padding-left: 18px; font-size: 13.5px; line-height: 1.55; display: flex; flex-direction: column; gap: 5px; }
 .ie-ref { margin: 12px 0 0; font-size: 12px; color: var(--muted); }
-.ie-actions { display: flex; justify-content: flex-start; }
+.ie-actions { display: flex; justify-content: flex-start; gap: 8px; flex-wrap: wrap; }
+.mc-copy-box { display: block; width: 100%; min-height: 140px; margin-top: 8px; font: 12px/1.4 ui-monospace, monospace; background: var(--card, var(--bg)); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 8px; }
+.foot .sc-copy { margin-left: 6px; }
 .ie-source { margin: 22px 0 0; font-size: 12.5px; color: var(--muted); }
 
 /* Four nav tabs: let them scroll sideways on narrow phones rather than squash */
@@ -768,6 +770,9 @@ a.sp-chip { display: inline-block; text-decoration: none; }
 .pg-cls { display: block; margin-top: 2px; font-size: 11.5px; color: var(--muted); }
 .pg-tbl tbody th { width: 30%; font-weight: 700; }
 .pg-tbl td { width: 35%; }
+.lab-tbl tbody th { width: 18%; }
+.lab-tbl td { width: auto; }
+.lab-tbl td:nth-of-type(2) { width: 38%; }
 .ab-key .pg-tag { margin-right: 6px; }
 @media (max-width: 640px) {
   .pg-tbl, .pg-tbl tbody, .pg-tbl tr, .pg-tbl th, .pg-tbl td { display: block; width: auto !important; }
@@ -779,6 +784,9 @@ a.sp-chip { display: inline-block; text-decoration: none; }
   .pg-tbl td:nth-of-type(2)::before { content: 'Breastfeeding'; }
   .ex-tbl td:nth-of-type(1)::before { content: 'Exclusion'; }
   .ex-tbl td:nth-of-type(2)::before { content: 'Tell the HPT'; }
+  .lab-tbl td:nth-of-type(1)::before { content: 'Sample'; }
+  .lab-tbl td:nth-of-type(2)::before { content: 'How to send'; }
+  .lab-tbl td:nth-of-type(3)::before { content: 'Where'; }
 }
 
 /* ── Isolation table ──────────────────────────────────── */

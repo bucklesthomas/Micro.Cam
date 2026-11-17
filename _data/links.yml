@@ -115,6 +115,10 @@
       url: "/intrinsic-resistance/"
       note: Expected resistance by organism or antibiotic (EUCAST)
       tags: intrinsic resistance ampc derepression hecks eschpm expected resistant phenotypes eucast ampc stenotrophomonas enterococcus proteus serratia listeria colistin nitrofurantoin
+    - name: Lab test finder
+      url: "/lab-tests/"
+      note: Which sample, how to send it, and which reference lab
+      tags: lab test sample bottle container tube send reference laboratory ripl porton malaria parasitology mycology amrhai igra csf blood culture
     - name: Organisms
       url: "/organisms/"
       note: Key facts, first-line treatment and resistance for common organisms
@@ -224,10 +228,22 @@
       url: "/returned-traveller/"
       note: HCID screen, differential by region and incubation, first-line tests
       tags: returned traveller travel fever imported malaria dengue typhoid enteric rickettsia leptospirosis schistosomiasis vhf hcid incubation
+    - name: S. aureus bacteraemia
+      url: "/sab/"
+      note: First-line treatment, SAB bundle, risk, duration and oral switch
+      tags: sab staph aureus bacteraemia bacteremia mssa mrsa cefazolin flucloxacillin echo toe snap sabato duration oral switch
     - name: Spontaneous bacterial peritonitis
       url: "/sbp/"
       note: Diagnosis, empirical treatment, albumin and prophylaxis (BSG 2021)
       tags: sbp spontaneous bacterial peritonitis ascites cirrhosis paracentesis albumin bacterascites liver prophylaxis ciprofloxacin variceal bleed
+    - name: Syphilis serology
+      url: "/syphilis/"
+      note: Interpret treponemal tests and RPR; treatment and follow-up
+      tags: syphilis serology rpr tppa tpha treponemal benzathine penicillin neurosyphilis serofast reinfection
+    - name: Tuberculosis
+      url: "/tb/"
+      note: Latent TB, standard treatment doses, liver toxicity, isolation
+      tags: tb tuberculosis latent ltbi igra quantiferon mantoux rifampicin isoniazid pyrazinamide ethambutol rifater rifinah hepatotoxicity dili biologic anti-tnf mdr
 
 - category: Mycology
   links:
