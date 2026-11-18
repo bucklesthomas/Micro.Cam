@@ -99,7 +99,7 @@
       title: 'Latent TB screening before immunosuppression', tone: 'amber',
       summary: 'Test before starting: an IGRA, plus a Mantoux in the severely immunocompromised (NICE NG33).',
       regimens: [{ name: 'Testing', noOr: true, items: [I('Other immunocompromise (including anti-TNF and other biologics)', 'IGRA alone, or IGRA plus Mantoux'), I('Severe immunocompromise (e.g. HIV with CD4 < 200, after transplant)', 'IGRA plus a concurrent Mantoux test')] }],
-      notes: ['Also take a TB exposure and travel history, and a chest X-ray if there are risk factors or symptoms.', 'Positive test: exclude active TB, then treat latent TB (choose "Positive test: which treatment?").', 'Timing of the biologic: many specialty guidelines allow it to start after at least 1 month of latent TB treatment; follow the relevant specialty guidance.', 'An IGRA can be falsely negative or indeterminate on high-dose steroids or with lymphopenia: interpret with the history.', 'Screen for hepatitis B, hepatitis C and HIV at the same time.']
+      notes: ['Also take a TB exposure and travel history, and a chest X-ray if there are risk factors or symptoms.', 'Positive test: exclude active TB, then treat latent TB (choose "Positive test: which treatment?").', 'To weigh the benefit of treatment for an individual, the Online TST/IGRA Interpreter (tstin3d.com, on the Links page) estimates the risk of active TB and of hepatotoxicity.', 'Timing of the biologic: many specialty guidelines allow it to start after at least 1 month of latent TB treatment; follow the relevant specialty guidance.', 'An IGRA can be falsely negative or indeterminate on high-dose steroids or with lymphopenia: interpret with the history.', 'Screen for hepatitis B, hepatitis C and HIV at the same time.']
     },
     R_ltbiContact: {
       title: 'Contact of active TB', tone: 'amber',
@@ -119,7 +119,7 @@
         { name: '3 months (preferred under 35 if no hepatotoxicity concern)', noOr: true, items: [I('Isoniazid', '300 mg once daily'), I('plus Rifampicin', '450 mg (under 50 kg) or 600 mg (50 kg or over) once daily'), I('plus Pyridoxine', '10 mg once daily')] },
         { name: '6 months (if rifamycin interactions matter, e.g. HIV or transplant)', noOr: true, items: [I('Isoniazid', '300 mg once daily'), I('plus Pyridoxine', '10 mg once daily')] }
       ],
-      notes: [N.ltbiTests, N.ltbiAge, 'Combination tablet for the 3-month regimen: Rifinah (150/100 under 50 kg, 3 tablets; 300/150 50 kg or over, 2 tablets).', 'Severe liver disease (Child–Pugh B or C): specialist TB team.', N.rif, 'Warn about hepatitis symptoms: stop and seek help for nausea, vomiting, abdominal pain or jaundice.']
+      notes: [N.ltbiTests, N.ltbiAge, 'To weigh the benefit of treatment for an individual, the Online TST/IGRA Interpreter (tstin3d.com, on the Links page) estimates the risk of active TB and of hepatotoxicity.', 'Combination tablet for the 3-month regimen: Rifinah (150/100 under 50 kg, 3 tablets; 300/150 50 kg or over, 2 tablets).', 'Severe liver disease (Child–Pugh B or C): specialist TB team.', N.rif, 'Warn about hepatitis symptoms: stop and seek help for nausea, vomiting, abdominal pain or jaundice.']
     },
     R_dili: {
       title: 'Abnormal liver tests on TB treatment', tone: 'red',

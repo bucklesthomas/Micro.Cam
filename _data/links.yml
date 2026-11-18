@@ -301,3 +301,7 @@
     - name: MDCalc
       url: "https://www.mdcalc.com/"
       tags: scores calculators
+    - name: TST/IGRA Interpreter
+      url: "https://www.tstin3d.com/en/calc.html"
+      note: Risk of active TB from a positive TST or IGRA, and hepatotoxicity risk, to guide latent TB treatment (Menzies, McGill)
+      tags: tst igra mantoux quantiferon tspot latent tb ltbi interpreter risk calculator tuberculosis menzies mcgill
