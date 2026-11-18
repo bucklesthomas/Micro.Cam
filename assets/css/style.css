@@ -855,3 +855,25 @@ a.sp-chip { display: inline-block; text-decoration: none; }
 .td-t, .td-x { display: block; font-size: 13.5px; margin-top: 3px; }
 .td-x { color: var(--muted); }
 .td-t em { font-style: normal; font-weight: 700; }
+
+/* Vancomycin AUC calculator */
+.vc-modes { margin-bottom: 12px; }
+.vc-big { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 12px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line); margin-bottom: 12px; }
+.vc-big span { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.vc-big b { font-size: 30px; line-height: 1; font-variant-numeric: tabular-nums; }
+.vc-big small { font-size: 13px; color: var(--muted); }
+.vc-big.green { border-color: #8cc9a0; background: rgba(60, 160, 90, .08); }
+.vc-big.amber { border-color: #e6c27a; background: rgba(230, 170, 40, .10); }
+.vc-big.red { border-color: #e3a0a0; background: rgba(214, 69, 69, .08); }
+.vc-tbl th { width: 45%; }
+.vc-tbl td { font-variant-numeric: tabular-nums; }
+.vc-h { margin: 16px 0 8px; font-size: 14px; }
+.vc-opt td { font-variant-numeric: tabular-nums; }
+.vc-opt th, .vc-opt td { padding: 8px 6px; font-size: 13px; letter-spacing: 0; }
+.vc-opt td:first-child { white-space: nowrap; }
+.vc-err { color: #b23b3b; font-size: 14px; }
+.vc-warn { margin: 10px 0 0; padding-left: 18px; font-size: 13.5px; color: #8a5a00; }
+:root[data-theme="dark"] .vc-warn, :root[data-theme="dark"] .vc-err { color: #f0b56a; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .vc-warn, :root:not([data-theme="light"]) .vc-err { color: #f0b56a; } }
+.vc-notes { padding-left: 18px; font-size: 14px; }
+.vc-notes li { margin-bottom: 6px; }

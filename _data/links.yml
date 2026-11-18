@@ -317,3 +317,7 @@
       url: "https://www.tstin3d.com/en/calc.html"
       note: Risk of active TB from a positive TST or IGRA, and hepatotoxicity risk, to guide latent TB treatment (Menzies, McGill)
       tags: tst igra mantoux quantiferon tspot latent tb ltbi interpreter risk calculator tuberculosis menzies mcgill
+    - name: Vancomycin AUC calculator
+      url: "/vancomycin-auc/"
+      note: AUC24 from peak and trough, or a continuous-infusion level, with suggested regimens
+      tags: vancomycin vanc auc auc24 trough peak level tdm calculator sawchuk zaske continuous infusion pharmacokinetics mrsa

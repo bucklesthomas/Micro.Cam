@@ -1,0 +1,27 @@
+---
+layout: default
+title: Vancomycin AUC calculator
+permalink: /vancomycin-auc/
+scripts:
+  - /assets/js/vanc.js
+---
+<div class="ie-wrap">
+  <h1 class="page-title">Vancomycin AUC calculator</h1>
+  <p class="lede">AUC24 from a peak and trough (intermittent dosing) or a steady-state level (continuous infusion), with half-life, Vd and clearance, and regimens predicted to reach your target.</p>
+  <p class="ie-disclaimer">Adults with stable renal function only. Not for haemodialysis, CRRT, ECMO, rapidly changing renal function, children or pregnancy. Follow your trust's vancomycin protocol and check with pharmacy before changing a dose.</p>
+
+  <section class="card af-card">
+    <div id="vanc"><noscript>This calculator needs JavaScript turned on.</noscript></div>
+  </section>
+
+  <h2 class="section-title">Notes</h2>
+  <ul class="vc-notes">
+    <li>Target AUC24 400–600 mg·h/L for serious MRSA infection, assuming a vancomycin MIC of 1 mg/L (2020 ASHP/IDSA/PIDS/SIDP consensus). Above 600, kidney injury becomes more likely.</li>
+    <li>Two-level method: take both levels in the same dosing interval, ideally at steady state (around the 4th dose): a peak 1–2 hours after the end of the infusion, and a trough within 1 hour before the next dose.</li>
+    <li>Record the exact infusion start, end and sample times: small timing errors change the AUC noticeably.</li>
+    <li>A trough alone underestimates or overestimates the AUC in many patients; Bayesian software (where your trust has it) can estimate the AUC from a single level.</li>
+    <li>Recheck levels after any dose change, and at least weekly (more often with changing renal function, nephrotoxins or critical illness).</li>
+  </ul>
+
+  <p class="ie-source">Sources: Rybak MJ et al. Therapeutic monitoring of vancomycin for serious MRSA infections: a revised consensus guideline (Am J Health Syst Pharm 2020); Pai MP et al. Innovative approaches to optimizing the delivery of vancomycin in individual patients (Adv Drug Deliv Rev 2014); Sawchuk RJ, Zaske DE (J Pharmacokinet Biopharm 1976); BNF vancomycin (maximum infusion rate 10 mg/min).</p>
+</div>

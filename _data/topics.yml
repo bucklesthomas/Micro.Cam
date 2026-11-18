@@ -8,6 +8,7 @@
     - { name: "Neutropenic sepsis", url: /neutropenic-sepsis/, kind: guide }
     - { name: "qSOFA", url: "/scores/#qsofa", kind: score }
     - { name: "IV-to-oral switch and durations", url: /iv-oral-durations/, kind: tool }
+    - { name: "Vancomycin AUC calculator", url: /vancomycin-auc/, kind: tool }
     - { name: "Bloodstream infection and SAB trials", url: "/trials/#bloodstream-infection-and-s-aureus-bacteraemia", kind: trials }
     - { name: "Treatment duration trials", url: "/trials/#treatment-duration", kind: trials }
 
@@ -125,6 +126,7 @@
     - { name: "Antibiotic coverage checker", url: /coverage/, kind: tool }
     - { name: "EUCAST breakpoint interpreter", url: /breakpoints/, kind: tool }
     - { name: "Intrinsic resistance table", url: /intrinsic-resistance/, kind: tool }
+    - { name: "Vancomycin AUC calculator", url: /vancomycin-auc/, kind: tool }
     - { name: "Organisms", url: /organisms/, kind: tool }
     - { name: "Penicillin allergy and cross-reactivity", url: /penicillin-allergy/, kind: guide }
     - { name: "PEN-FAST", url: "/scores/#penfast", kind: score }
