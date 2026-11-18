@@ -1,0 +1,41 @@
+---
+layout: default
+title: Topics
+permalink: /topics/
+scripts:
+  - /assets/js/search.js
+---
+<h1 class="page-title">Topics</h1>
+<p class="lede">Everything on the site for each kind of infection in one place: guides, tools, scores, trials and key external guidelines.</p>
+
+<div class="search">
+  <input id="tp-q" type="search" placeholder="Filter topics…" autocomplete="off" aria-label="Filter topics">
+  <span id="tp-count" class="count" aria-live="polite"></span>
+</div>
+
+<nav class="jump" aria-label="Topics">
+  {% for t in site.data.topics %}<a href="#tp-{{ t.title | slugify }}">{{ t.title }}</a>{% endfor %}
+</nav>
+
+<div class="grid masonry topics">
+{% for t in site.data.topics %}
+  <section class="card cat" id="tp-{{ t.title | slugify }}">
+    <h2>{{ t.title }}</h2>
+    <ul>
+    {% for l in t.items %}
+      {% assign first = l.url | slice: 0 %}
+      {% case l.kind %}{% when 'guide' %}{% assign k = 'Guide' %}{% when 'tool' %}{% assign k = 'Tool' %}{% when 'score' %}{% assign k = 'Score' %}{% when 'trials' %}{% assign k = 'Trials' %}{% else %}{% assign k = 'External' %}{% endcase %}
+      <li data-search="{{ l.name | downcase }} {{ t.title | downcase }} {{ k | downcase }}">
+        <span class="tp-kind tp-{{ l.kind }}">{{ k }}</span>
+        {% if first == "/" %}
+        <a href="{{ l.url | relative_url }}">{{ l.name }}</a>
+        {% else %}
+        <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }} <span class="ext" aria-hidden="true">↗</span></a>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+{% endfor %}
+</div>
+<p id="tp-empty" class="empty" hidden>No topics match that filter.</p>

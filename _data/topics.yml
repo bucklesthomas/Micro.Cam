@@ -1,0 +1,146 @@
+# Topics page: everything on the site grouped by infection type.
+# kind: guide (click-through guide), tool (reference page or calculator on this site), score, trials, link (external).
+- title: Bloodstream infection and sepsis
+  items:
+    - { name: "Positive blood culture triage", url: /blood-culture-triage/, kind: guide }
+    - { name: "S. aureus bacteraemia", url: /sab/, kind: guide }
+    - { name: "Gram-negative bacteraemia", url: /gram-negative-bacteraemia/, kind: guide }
+    - { name: "Neutropenic sepsis", url: /neutropenic-sepsis/, kind: guide }
+    - { name: "qSOFA", url: "/scores/#qsofa", kind: score }
+    - { name: "IV-to-oral switch and durations", url: /iv-oral-durations/, kind: tool }
+    - { name: "Bloodstream infection and SAB trials", url: "/trials/#bloodstream-infection-and-s-aureus-bacteraemia", kind: trials }
+    - { name: "Treatment duration trials", url: "/trials/#treatment-duration", kind: trials }
+
+- title: Endocarditis
+  items:
+    - { name: "Endocarditis therapy", url: /endocarditis/, kind: guide }
+    - { name: "S. aureus bacteraemia", url: /sab/, kind: guide }
+    - { name: "Duke-ISCVID criteria (2023)", url: "/scores/#duke", kind: score }
+    - { name: "Endocarditis trials (POET, POET II, EASE)", url: "/trials/#endocarditis", kind: trials }
+    - { name: "Lab test finder: blood cultures, Q fever, Bartonella, 16S PCR", url: /lab-tests/, kind: tool }
+    - { name: "Endocarditis (ESC 2023)", url: "https://doi.org/10.1093/eurheartj/ehad193", kind: link }
+    - { name: "WikiGuidelines – infective endocarditis", url: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2807791", kind: link }
+
+- title: CNS infection
+  items:
+    - { name: "Meningitis and encephalitis", url: /meningitis-encephalitis/, kind: guide }
+    - { name: "Cryptococcal disease treatment", url: /cryptococcus/, kind: guide }
+    - { name: "Contact prophylaxis (meningococcal, Hib)", url: /contact-prophylaxis/, kind: guide }
+    - { name: "HIV opportunistic infections (toxoplasma, PML)", url: /hiv-oi/, kind: guide }
+    - { name: "CNS infection trials", url: "/trials/#cns-infection", kind: trials }
+    - { name: "Meningitis (NICE NG240)", url: "https://www.nice.org.uk/guidance/ng240", kind: link }
+    - { name: "Meningitis (UK 2016)", url: "https://www.journalofinfection.com/action/showPdf?pii=S0163-4453%2816%2900024-4", kind: link }
+    - { name: "Encephalitis (UK 2026)", url: "https://www.encephalitis.info/wp-content/uploads/2026/11/Management-of-suspected-infectious-and-autoimmune-encephalitis-in-adults_United-Kingdom_2026.pdf", kind: link }
+
+- title: Respiratory infection
+  items:
+    - { name: "CURB-65", url: "/scores/#curb65", kind: score }
+    - { name: "Tuberculosis", url: /tb/, kind: guide }
+    - { name: "Invasive aspergillosis treatment", url: /aspergillosis/, kind: guide }
+    - { name: "Invasive aspergillosis (EORTC/MSGERC)", url: "/scores/#ipa", kind: score }
+    - { name: "Isolation and precautions", url: /isolation/, kind: tool }
+    - { name: "Pneumonia and respiratory trials", url: "/trials/#pneumonia-and-respiratory-infection-including-covid-19", kind: trials }
+    - { name: "Pneumonia (NICE NG250)", url: "https://www.nice.org.uk/guidance/ng250", kind: link }
+    - { name: "TST/IGRA Interpreter", url: "https://www.tstin3d.com/en/calc.html", kind: link }
+
+- title: Gastrointestinal and liver
+  items:
+    - { name: "C. difficile treatment", url: /cdiff/, kind: guide }
+    - { name: "Spontaneous bacterial peritonitis", url: /sbp/, kind: guide }
+    - { name: "Exclusion and clearance (enteric fever, STEC, Shigella)", url: /exclusion/, kind: guide }
+    - { name: "Returned traveller with fever (enteric fever)", url: /returned-traveller/, kind: guide }
+    - { name: "Lab test finder: stool, C. difficile, parasites", url: /lab-tests/, kind: tool }
+    - { name: "C. difficile trials", url: "/trials/#c-difficile-infection", kind: trials }
+    - { name: "Liverpool hepatitis drug interactions", url: "https://www.hep-druginteractions.org/checker", kind: link }
+
+- title: Urinary tract infection
+  items:
+    - { name: "Gram-negative bacteraemia", url: /gram-negative-bacteraemia/, kind: guide }
+    - { name: "IV-to-oral switch and durations", url: /iv-oral-durations/, kind: tool }
+    - { name: "Antimicrobials in pregnancy and breastfeeding", url: /pregnancy/, kind: tool }
+    - { name: "Treatment duration trials", url: "/trials/#treatment-duration", kind: trials }
+    - { name: "WikiGuidelines – urinary tract infection", url: "https://pubmed.ncbi.nlm.nih.gov/39495518/", kind: link }
+    - { name: "NICE antimicrobial guidance", url: "https://www.nice.org.uk/guidance/health-protection/communicable-diseases/antimicrobial-stewardship", kind: link }
+
+- title: Bone, joint and soft tissue
+  items:
+    - { name: "S. aureus bacteraemia (bone, joint and implant foci)", url: /sab/, kind: guide }
+    - { name: "LRINEC", url: "/scores/#lrinec", kind: score }
+    - { name: "IV-to-oral switch and durations", url: /iv-oral-durations/, kind: tool }
+    - { name: "Bone and joint infection trials (OVIVA, DATIPO)", url: "/trials/#bone-and-joint-infection", kind: trials }
+    - { name: "Lab test finder: joint fluid, 16S PCR", url: /lab-tests/, kind: tool }
+    - { name: "WikiGuidelines – pyogenic osteomyelitis", url: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2792124", kind: link }
+
+- title: Fungal infection
+  items:
+    - { name: "Candidaemia treatment", url: /candidaemia/, kind: guide }
+    - { name: "Invasive aspergillosis treatment", url: /aspergillosis/, kind: guide }
+    - { name: "Cryptococcal disease treatment", url: /cryptococcus/, kind: guide }
+    - { name: "Fungal markers interpretation", url: /fungal-markers/, kind: tool }
+    - { name: "Antifungal spectrum and TDM", url: /antifungals/, kind: tool }
+    - { name: "Invasive aspergillosis (EORTC/MSGERC)", url: "/scores/#ipa", kind: score }
+    - { name: "Fungal infection trials", url: "/trials/#fungal-infection", kind: trials }
+    - { name: "Antifungal drug interactions", url: "https://antifungalinteractions.org/", kind: link }
+    - { name: "Candida auris (UKHSA)", url: "https://www.gov.uk/government/publications/candida-auris-laboratory-investigation-management-and-infection-prevention-and-control", kind: link }
+    - { name: "UKHSA Mycology Reference Laboratory", url: "https://www.gov.uk/guidance/mycology-reference-laboratory-mrl-reference-and-diagnostic-services", kind: link }
+
+- title: HIV, TB and sexual health
+  items:
+    - { name: "HIV opportunistic infections", url: /hiv-oi/, kind: guide }
+    - { name: "Tuberculosis", url: /tb/, kind: guide }
+    - { name: "Syphilis serology", url: /syphilis/, kind: guide }
+    - { name: "Needlestick and BBV exposure", url: /needlestick/, kind: guide }
+    - { name: "HIV, TB, malaria and sexual health trials", url: "/trials/#hiv-tb-malaria-and-sexual-health", kind: trials }
+    - { name: "BHIVA guidelines", url: "https://www.bhiva.org/guidelines", kind: link }
+    - { name: "BASHH guidelines", url: "https://www.bashh.org/resources/guidelines", kind: link }
+    - { name: "Liverpool HIV drug interactions", url: "https://www.hiv-druginteractions.org/checker", kind: link }
+    - { name: "TST/IGRA Interpreter", url: "https://www.tstin3d.com/en/calc.html", kind: link }
+
+- title: Travel and tropical infection
+  items:
+    - { name: "Returned traveller with fever", url: /returned-traveller/, kind: guide }
+    - { name: "Malaria treatment", url: /malaria/, kind: guide }
+    - { name: "Rabies post-exposure advice", url: /rabies/, kind: guide }
+    - { name: "Lab test finder: malaria, arboviruses, rickettsia, leptospira", url: /lab-tests/, kind: tool }
+    - { name: "HIV, TB, malaria and sexual health trials", url: "/trials/#hiv-tb-malaria-and-sexual-health", kind: trials }
+    - { name: "Malaria (UK 2016)", url: "https://www.journalofinfection.com/action/showPdf?pii=S0163-4453%2816%2900047-5", kind: link }
+    - { name: "VHF risk assessment algorithm", url: "https://assets.publishing.service.gov.uk/media/6aa2833e92e72b8ac437f0b8/viral-haemorrhagic-fevers-risk-assessment-algorithm-september-2026.pdf", kind: link }
+    - { name: "HCID (high consequence infectious diseases)", url: "https://www.gov.uk/guidance/high-consequence-infectious-diseases-hcid", kind: link }
+    - { name: "TravelHealthPro (NaTHNaC)", url: "https://travelhealthpro.org.uk/", kind: link }
+
+- title: Immunocompromised host
+  items:
+    - { name: "Neutropenic sepsis", url: /neutropenic-sepsis/, kind: guide }
+    - { name: "HIV opportunistic infections", url: /hiv-oi/, kind: guide }
+    - { name: "Invasive aspergillosis treatment", url: /aspergillosis/, kind: guide }
+    - { name: "Candidaemia treatment", url: /candidaemia/, kind: guide }
+    - { name: "Tuberculosis (screening before biologics)", url: /tb/, kind: guide }
+    - { name: "Fungal markers interpretation", url: /fungal-markers/, kind: tool }
+    - { name: "Lab test finder: hepatitis B, Strongyloides, CMV", url: /lab-tests/, kind: tool }
+    - { name: "Green Book (immunisation)", url: "https://www.gov.uk/government/collections/immunisation-against-infectious-disease-the-green-book", kind: link }
+
+- title: Antimicrobials and resistance
+  items:
+    - { name: "Antibiotics (UK-AWaRe, dosing, PK/PD)", url: /antibiotics/, kind: tool }
+    - { name: "Antibiotic coverage checker", url: /coverage/, kind: tool }
+    - { name: "EUCAST breakpoint interpreter", url: /breakpoints/, kind: tool }
+    - { name: "Intrinsic resistance table", url: /intrinsic-resistance/, kind: tool }
+    - { name: "Organisms", url: /organisms/, kind: tool }
+    - { name: "Penicillin allergy and cross-reactivity", url: /penicillin-allergy/, kind: guide }
+    - { name: "PEN-FAST", url: "/scores/#penfast", kind: score }
+    - { name: "Antimicrobials in pregnancy and breastfeeding", url: /pregnancy/, kind: tool }
+    - { name: "Gram-negative and resistant organism trials", url: "/trials/#gram-negative-and-resistant-organisms", kind: trials }
+    - { name: "EUCAST clinical breakpoints", url: "https://www.eucast.org/fileadmin/eucast/pdf/breakpoints/v_16.1_Breakpoint_Tables.pdf", kind: link }
+    - { name: "BNF", url: "https://bnf.nice.org.uk/", kind: link }
+
+- title: Infection control and public health
+  items:
+    - { name: "Isolation and precautions", url: /isolation/, kind: tool }
+    - { name: "Exclusion and clearance", url: /exclusion/, kind: guide }
+    - { name: "Contact prophylaxis", url: /contact-prophylaxis/, kind: guide }
+    - { name: "Needlestick and BBV exposure", url: /needlestick/, kind: guide }
+    - { name: "Rabies post-exposure advice", url: /rabies/, kind: guide }
+    - { name: "Stewardship, diagnostics and infection prevention trials", url: "/trials/#stewardship-diagnostics-and-infection-prevention", kind: trials }
+    - { name: "Notifiable diseases (UKHSA)", url: "https://www.gov.uk/guidance/notifiable-diseases-and-causative-organisms-how-to-report", kind: link }
+    - { name: "Find your local health protection team", url: "https://www.gov.uk/health-protection-team", kind: link }
+    - { name: "Green Book (immunisation)", url: "https://www.gov.uk/government/collections/immunisation-against-infectious-disease-the-green-book", kind: link }

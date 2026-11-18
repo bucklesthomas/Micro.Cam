@@ -288,10 +288,13 @@ a:hover { text-decoration: underline; }
   .cite { margin-left: 0; width: 100%; }
 }
 
-/* Links page: stack cards in columns so each sits directly under the one above */
-.grid.masonry { display: block; columns: 3 300px; column-gap: 14px; }
-.grid.masonry > .card { break-inside: avoid; margin-bottom: 14px; display: block; }
+/* Links and Topics pages: cards in rows, so every card in a row starts at the same height */
+.grid.masonry { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; align-items: start; }
 .grid.masonry > .card[hidden] { display: none; }
+/* Topics: kind label in front of each item */
+.topics .cat li { display: flex; align-items: baseline; gap: 8px; }
+.tp-kind { flex: 0 0 64px; font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.tp-guide { color: var(--accent-ink); }
 
 /* Option boxes (e.g. LRINEC): each choice is its own selectable box */
 fieldset.row.choice { display: block; margin: 0; padding: 10px 0; border: 0; border-top: 1px solid var(--line); min-width: 0; cursor: default; }
