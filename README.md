@@ -1,4 +1,4 @@
-# Micro.Cam
+# Micro.Links
 
 A fast, searchable link hub and bedside score calculators, built with Jekyll.
 

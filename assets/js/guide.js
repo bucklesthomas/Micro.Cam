@@ -58,7 +58,7 @@
     });
     var notes = (r.notes || []).filter(function (n) { return !/this guide|the .* (guide|page)\b|^choose |choose "/i.test(n); });
     if (notes.length) { L.push(''); notes.forEach(function (n) { L.push('- ' + n); }); }
-    L.push('', 'Guide: ' + page + ' (Micro.Cam). ' + (G.ref || ''));
+    L.push('', 'Guide: ' + page + ' (Micro.Links). ' + (G.ref || ''));
     return L.join('\n').replace(/\n{3,}/g, '\n\n');
   }
 
