@@ -8,6 +8,13 @@
   <meta name="robots" content="noindex">
   <script>try { var t = localStorage.getItem('mc-theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234da3e0'/><text x='50' y='72' font-family='Baskerville,Georgia,serif' font-size='68' font-weight='700' text-anchor='middle' fill='white'>M</text></svg>">
+  <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
+  <meta name="theme-color" content="#4da3e0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap">
@@ -16,6 +23,7 @@
 <body>
   <header class="topbar">
     <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <span class="offline-pill" id="offline-pill" hidden title="No connection: showing the copy saved on this device">Offline</span>
     <div class="site-search" role="search">
       <svg class="ss-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       <input id="ss" type="search" placeholder="Search links, scores, trials, organisms" aria-label="Search the whole site" autocomplete="off" role="combobox" aria-controls="ss-results" aria-expanded="false" aria-autocomplete="list">
@@ -44,6 +52,16 @@
 
   <script src="{{ '/assets/js/sitesearch.js' | relative_url }}?v={{ site.time | date: '%s' }}" data-index="{{ '/search.json' | relative_url }}?v={{ site.time | date: '%s' }}" data-base="{{ '/' | relative_url }}"></script>
   <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+  <script>
+    (function () {
+      var pill = document.getElementById('offline-pill');
+      function upd() { if (pill) pill.hidden = navigator.onLine !== false; }
+      window.addEventListener('online', upd); window.addEventListener('offline', upd); upd();
+      if ('serviceWorker' in navigator && location.protocol === 'https:') {
+        window.addEventListener('load', function () { navigator.serviceWorker.register('{{ '/sw.js' | relative_url }}', { scope: '{{ '/' | relative_url }}' }).catch(function () {}); });
+      }
+    })();
+  </script>
   {% for s in page.scripts %}<script src="{{ s | relative_url }}?v={{ site.time | date: '%s' }}"></script>{% endfor %}
 </body>
 </html>

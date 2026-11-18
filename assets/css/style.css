@@ -877,3 +877,7 @@ a.sp-chip { display: inline-block; text-decoration: none; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .vc-warn, :root:not([data-theme="light"]) .vc-err { color: #f0b56a; } }
 .vc-notes { padding-left: 18px; font-size: 14px; }
 .vc-notes li { margin-bottom: 6px; }
+
+/* Offline indicator */
+.offline-pill { align-self: center; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; border: 1px solid #e6c27a; background: rgba(230, 170, 40, .12); color: var(--ink); margin-left: 8px; }
+.offline-pill[hidden] { display: none; }
