@@ -840,3 +840,18 @@ a.sp-chip { display: inline-block; text-decoration: none; }
 .fc-got { background: var(--low-bg) !important; color: var(--low) !important; border-color: var(--low) !important; }
 .fc-again { background: var(--mid-bg) !important; color: var(--mid) !important; border-color: var(--mid) !important; }
 @media (max-width: 640px) { .fc-card { min-height: 200px; padding: 18px; } .fc-side { font-size: 16px; } }
+
+/* Returned traveller differential finder */
+.td-sec { margin-bottom: 14px; }
+.td-sec h3, .td-res h3 { margin: 0 0 8px; font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.td-res { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 6px; }
+.td-alert { border: 1px solid #e3a0a0; background: rgba(214, 69, 69, .08); color: inherit; border-radius: 10px; padding: 10px 12px; margin-bottom: 10px; font-size: 14px; }
+.td-alert.amber { border-color: #e6c27a; background: rgba(230, 170, 40, .10); }
+.td-list { margin: 0 0 12px; padding-left: 22px; }
+.td-list li { padding: 8px 0; border-top: 1px solid var(--line); }
+.td-list li:first-child { border-top: 0; }
+.td-list b { display: block; }
+.td-why { display: block; font-size: 12.5px; color: var(--accent-ink); margin-top: 2px; }
+.td-t, .td-x { display: block; font-size: 13.5px; margin-top: 3px; }
+.td-x { color: var(--muted); }
+.td-t em { font-style: normal; font-weight: 700; }
