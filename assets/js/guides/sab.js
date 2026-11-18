@@ -126,7 +126,7 @@
       title: 'S. aureus endocarditis or cardiac device infection', tone: 'red',
       summary: 'Treat as endocarditis: see the endocarditis guide for regimens and durations.',
       regimens: [{ name: 'Usual durations (ESC 2023)', noOr: true, items: [I('Native valve', '4–6 weeks'), I('Prosthetic valve', 'At least 6 weeks, with rifampicin once cultures are negative (and gentamicin for the first 2 weeks)'), I('Cardiac device', 'Remove the whole device; then 4–6 weeks if the leads or valves are involved')] }],
-      notes: ['Early referral to the endocarditis team and cardiac surgery.', 'Partial oral treatment (POET) can be considered for stable left-sided endocarditis after at least 10 days of IV treatment, with specialist input.', N.day1]
+      notes: ['Early referral to the endocarditis team and cardiac surgery.', 'Partial oral treatment (POET) can be considered for stable left-sided endocarditis after at least 10 days of IV treatment, with specialist input.', 'POET II (NEJM 2026): response-tailored shorter courses (minimum 2–4 weeks) were non-inferior for death, surgery or embolism in stable left-sided IE, with more relapses; not yet in guidelines.', N.day1]
     },
     R_bone: {
       title: 'SAB with bone, joint or spinal infection', tone: 'amber',

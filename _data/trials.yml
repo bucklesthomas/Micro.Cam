@@ -62,7 +62,7 @@ sections:
   short: Endocarditis
   id: endocarditis
   lead:
-  - Stable left-sided endocarditis can be finished orally, and large vegetations favour early surgery.
+  - Stable left-sided endocarditis can be finished orally (POET) and, in selected patients, treated for shorter, response-tailored courses (POET II); large vegetations favour early surgery.
   trials:
   - name: POET
     cite: NEJM 2019
@@ -73,6 +73,15 @@ sections:
     o: Oral non-inferior for the composite of death, embolism, unplanned surgery or relapse at 6 months (~9% vs 12%); 5-year follow-up favoured oral
     takeaway: Adopted in ESC 2023; oral step-down is reasonable in selected stable patients
     pubmed: partial oral endocarditis N Engl J Med[ta] 2019[dp]
+  - name: POET II
+    cite: NEJM 2026 (ESC Congress 2026)
+    uk: false
+    p: 508 clinically stable adults with left-sided IE due to S. aureus, E. faecalis or streptococci, 13 centres in Denmark, Sweden and the US
+    i: Response-tailored duration, stopping after a minimum of 2–4 weeks once POET stabilisation criteria were met
+    c: Standard duration (up to 6 weeks)
+    o: Days alive without antibiotics at 6 months 183 vs 169; median total treatment 26 vs 41 days; death, unplanned surgery or embolism 8.2% vs 10.7% (non-inferior); relapse 5.1% vs 1.6%
+    takeaway: Shorter, response-guided courses look safe for stable left-sided IE, at the cost of more relapses; not yet in UK or ESC guidance, so specialist decision
+    pubmed: tailored antibiotic endocarditis N Engl J Med[ta] 2026[dp]
   - name: EASE
     cite: Kang, NEJM 2012
     uk: false

@@ -46,6 +46,7 @@ window.CARD_DECKS = [
     ['What did the BALANCE trial show?', '7 days of antibiotics was non-inferior to 14 days for bloodstream infection (excluding S. aureus and candidaemia) in hospitalised patients.'],
     ['What did OVIVA show?', 'Oral antibiotics were non-inferior to IV for the first 6 weeks of treatment of bone and joint infection.'],
     ['What did POET show?', 'Partial oral treatment was non-inferior to continued IV treatment for stable left-sided endocarditis (streptococci, E. faecalis, S. aureus, CoNS).'],
+    ['What did POET II (2026) show?', 'In stable left-sided endocarditis, stopping antibiotics after a minimum of 2–4 weeks once stabilisation criteria were met shortened treatment by about 2 weeks (26 vs 41 days) and was non-inferior for death, unplanned surgery or embolism, but relapse was more frequent (5.1% vs 1.6%).'],
     ['Plasmid-mediated colistin resistance gene?', 'mcr-1 (and variants mcr-2 to mcr-10).'],
     ['Which organisms are intrinsically resistant to colistin?', 'Proteus, Providencia, Morganella, Serratia, Burkholderia cepacia complex, Neisseria, all Gram-positives and anaerobes.'],
     ['What does the EUCAST category "I" now mean?', 'Susceptible, increased exposure: likely to work with a higher dose or where the drug concentrates at the site (e.g. urine).'],

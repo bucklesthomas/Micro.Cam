@@ -97,6 +97,18 @@
       url: "https://www.nice.org.uk/guidance/ng250"
       note: Community- and hospital-acquired pneumonia (2025)
       tags: pneumonia cap hap nice ng250 curb65 corticosteroid duration
+    - name: WikiGuidelines – infective endocarditis
+      url: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2807791"
+      note: WikiGuidelines Group consensus statement, JAMA Netw Open 2023
+      tags: wikiguidelines wiki consensus endocarditis ie diagnosis management oral
+    - name: WikiGuidelines – pyogenic osteomyelitis
+      url: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2792124"
+      note: WikiGuidelines Group consensus statement, JAMA Netw Open 2022
+      tags: wikiguidelines wiki consensus osteomyelitis bone infection oral duration
+    - name: WikiGuidelines – urinary tract infection
+      url: "https://pubmed.ncbi.nlm.nih.gov/39495518/"
+      note: WikiGuidelines Group consensus statement (children and adults), JAMA Netw Open 2024
+      tags: wikiguidelines wiki consensus uti urinary tract infection cystitis pyelonephritis
 
 - category: Microbiology & lab
   links:
