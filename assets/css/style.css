@@ -288,8 +288,10 @@ a:hover { text-decoration: underline; }
   .cite { margin-left: 0; width: 100%; }
 }
 
-/* Links and Topics pages: cards in rows, so every card in a row starts at the same height */
-.grid.masonry { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; align-items: start; }
+/* Links and Topics pages: cards flow down in columns. inline-block (not block + margin) stops Safari
+   carrying the previous card's bottom margin to the top of the next column, so every column starts flush. */
+.grid.masonry { display: block; columns: 3 300px; column-gap: 14px; }
+.grid.masonry > .card { display: inline-block; width: 100%; vertical-align: top; margin: 0 0 14px; break-inside: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid; }
 .grid.masonry > .card[hidden] { display: none; }
 /* Topics: kind label in front of each item */
 .topics .cat li { display: flex; align-items: baseline; gap: 8px; }
